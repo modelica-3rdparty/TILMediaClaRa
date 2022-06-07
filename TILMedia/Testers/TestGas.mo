@@ -2,11 +2,8 @@
 model TestGas
   extends TILMedia.Internals.ClassTypes.ExampleModel;
 
-  // This tester demonstrates the calculation of therodynamic properties of dry air
+  // This tester demonstrates the calculation of therodynamic properties of flue gas
   // using the gas objects Gas_ph, Gas_ps and Gas_pT
-  // Note: Since the gasType "TILMedia.DryAir" is defined with nc = 1 (Number of compenents),
-  // there is no need to define a mass fraction vector xi.
-  // In contrast, the tester TILMedia.Testers.TestGas_mixture demonstrates the usage of the gas objects for nc > 1
 
   SI.Pressure p;
   SI.Temperature T;
