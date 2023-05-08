@@ -35,7 +35,7 @@ class TILMediaExternalObject
 */
 #ifndef TILMEDIAEXTERNALOBJECTCONSTRUCTOR
 #define TILMEDIAEXTERNALOBJECTCONSTRUCTOR
-#if defined(_JMI_GLOBAL_H) || defined(WSM_VERSION) || defined(DYMOLA_STATIC) || (defined(ITI_CRT_INCLUDE) && !defined(ITI_COMP_SIM))
+#if defined(_JMI_GLOBAL_H) || defined(WSM_VERSION) || defined(DYMOLA_STATIC) || (defined(ITI_CRT_INCLUDE) && !defined(ITI_COMP_SIM)) || defined(OPENMODELICA_H_)
 void* TILMedia_createExternalObject_errorInterface(const char* objectType, const char* mixtureName, int flags, double* xi, int _nc, int condensingIndex, const char* instanceName, void* formatMessage, void* formatError, void* dymolaErrorLev);
 #if defined(DYMOLA_STATIC)
 #ifndef _WIN32
@@ -53,8 +53,10 @@ void* TILMedia_createExternalObject(const char* objectType, const char* mixtureN
 #endif
 }
 #endif
+#else
+void* TILMedia_createExternalObject(const char* objectType, const char* mixtureName, int flags, double* xi, int _nc, int condensingIndex, const char* instanceName);
 #endif
-",    Library="TILMedia180ClaRa");
+",    Library="TILMedia181ClaRa");
   end constructor;
 
   function destructor "free memory"
@@ -62,6 +64,6 @@ void* TILMedia_createExternalObject(const char* objectType, const char* mixtureN
   external "C" TILMedia_destroyExternalObject(externalObject) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_destroyExternalObject(void*);",
-      Library="TILMedia180ClaRa");
+      Library="TILMedia181ClaRa");
   end destructor;
 end TILMediaExternalObject;

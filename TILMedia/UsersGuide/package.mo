@@ -25,15 +25,15 @@ You may select substance data from different sources for your calculation:
 <li> Liquid substances</li>
 <li>
   <ul> 
-    <li> TLK Implementation: 71 mediums</li>
-    <li> International Institute of Refrigeration (IIR), Secondary Working Fluids (SWF): 21 mediums</li>
+    <li> TLK Implementation: 74 mediums</li>
+    <li> International Institute of Refrigeration (IIR), Secondary Working Fluids (SWF): 8 mediums</li>
     <li> VDI Heat Atlas: 272 mediums</li>
   </ul>
 </li>
 <li> VLEFluid substances</li>
 <li>
   <ul> 
-    <li> TLK Implementation: 98 mediums</li>
+    <li> TLK Implementation: 99 mediums</li>
     <li> External library Refprop: 279 mediums</li>
     <li> External library CoolProp: 123 mediums</li>
     <li> VDI Heat Atlas: 275 mediums</li>

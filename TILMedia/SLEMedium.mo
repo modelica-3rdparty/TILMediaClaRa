@@ -52,7 +52,7 @@ equation
     sleMedium.T_l);
 
   cp = sleMedium.cp_s + (sleMedium.cp_l - sleMedium.cp_s)*q;
-  1/d = 1/sleMedium.d_s + (1/sleMedium.d_l - 1/sleMedium.d_s)*q;
+  d = 1/(1/sleMedium.d_s + (1/sleMedium.d_l - 1/sleMedium.d_s)*q);
   lambda = sleMedium.lambda_s + (sleMedium.lambda_l - sleMedium.lambda_s)*q;
 
   annotation (Icon(graphics={Text(

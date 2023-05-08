@@ -12,8 +12,8 @@ model VLEFluid_pT
         0,
         getInstanceName()),
         M_i = {TILMedia.VLEFluidObjectFunctions.molarMass_n(i-1,vleFluidPointer) for i in 1:vleFluidType.nc});
+
 protected
-  constant Real invalidValue=-1;
   final parameter Integer computeFlags=TILMedia.Internals.calcComputeFlags(
       computeTransportProperties,
       interpolateTransportProperties,
@@ -99,10 +99,10 @@ equation
       vleFluidPointer);
   else
     transp = TILMedia.Internals.TransportPropertyRecord(
-      invalidValue,
-      invalidValue,
-      invalidValue,
-      invalidValue);
+      -1,
+      -1,
+      -1,
+      -1);
   end if;
 
   //compute VLE Additional Properties
@@ -127,12 +127,12 @@ equation
         vleFluidPointer);
     end if;
   else
-    VLEAdditional.cp_l = invalidValue;
-    VLEAdditional.beta_l = invalidValue;
-    VLEAdditional.kappa_l = invalidValue;
-    VLEAdditional.cp_v = invalidValue;
-    VLEAdditional.beta_v = invalidValue;
-    VLEAdditional.kappa_v = invalidValue;
+    VLEAdditional.cp_l = -1;
+    VLEAdditional.beta_l = -1;
+    VLEAdditional.kappa_l = -1;
+    VLEAdditional.cp_v = -1;
+    VLEAdditional.beta_v = -1;
+    VLEAdditional.kappa_v = -1;
   end if;
 
   //compute VLE Transport Properties
@@ -157,12 +157,12 @@ equation
         vleFluidPointer);
     end if;
   else
-    VLETransp.Pr_l = invalidValue;
-    VLETransp.Pr_v = invalidValue;
-    VLETransp.lambda_l = invalidValue;
-    VLETransp.lambda_v = invalidValue;
-    VLETransp.eta_l = invalidValue;
-    VLETransp.eta_v = invalidValue;
+    VLETransp.Pr_l = -1;
+    VLETransp.Pr_v = -1;
+    VLETransp.lambda_l = -1;
+    VLETransp.lambda_v = -1;
+    VLETransp.eta_l = -1;
+    VLETransp.eta_v = -1;
   end if;
 
   annotation (

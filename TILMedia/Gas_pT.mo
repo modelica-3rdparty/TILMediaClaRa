@@ -12,7 +12,6 @@ model Gas_pT
         getInstanceName()),
         M_i = {TILMedia.GasObjectFunctions.molarMass_n(i-1,gasPointer) for i in 1:gasType.nc});
 protected
-  constant Real invalidValue=-1;
   final parameter Integer computeFlags = TILMedia.Internals.calcComputeFlags(computeTransportProperties,false,true,false,false);
 equation
   //calculate molar mass
@@ -32,24 +31,24 @@ equation
       end for;
     end if;
     h1px = h*(1+humRatio);
-    phi=TILMedia.Internals.GasObjectFunctions.phi_pThumRatioxidg(p,T,humRatio,xi_dryGas,gasPointer);
-    humRatio_s = TILMedia.Internals.GasObjectFunctions.humRatio_s_pTxidg(p, T, xi_dryGas, gasPointer);
-    xi_s = TILMedia.Internals.GasObjectFunctions.xi_s_pTxidg(p, T, xi_dryGas, gasPointer);
+    phi = TILMedia.Internals.GasObjectFunctions.relativeHumidity_pThumRatioxidg(p, T, humRatio, xi_dryGas, gasPointer);
+    humRatio_s = TILMedia.Internals.GasObjectFunctions.saturationHumidityRatio_pTxidg(p, T, xi_dryGas, gasPointer);
+    xi_s = TILMedia.Internals.GasObjectFunctions.saturationMassFraction_pTxidg(p, T, xi_dryGas, gasPointer);
   else
-    phi = invalidValue;
-    humRatio = invalidValue;
-    h1px = invalidValue;
-    humRatio_s = invalidValue;
-    xi_s = invalidValue;
+    phi = -1;
+    humRatio = -1;
+    h1px = -1;
+    humRatio_s = -1;
+    xi_s = -1;
   end if;
 
   if (gasType.condensingIndex<=0) then
     // some properties are only pressure dependent if there is vapour in the mixture
     h = TILMedia.Internals.GasObjectFunctions.specificEnthalpy_pTxi(-1, T, xi, gasPointer);
     (cp, cv, beta, w) = TILMedia.Internals.GasObjectFunctions.simpleCondensingProperties_pTxi(-1, T, xi, gasPointer);
-    p_s = invalidValue;
-    delta_hv = invalidValue;
-    delta_hd = invalidValue;
+    p_s = -1;
+    delta_hv = -1;
+    delta_hd = -1;
     h_i = {TILMedia.GasObjectFunctions.specificEnthalpyOfPureGas_Tn(T,i,gasPointer) for i in 0:gasType.nc-1};
   else
     h = TILMedia.Internals.GasObjectFunctions.specificEnthalpy_pTxi(p, T, xi, gasPointer);
@@ -65,10 +64,10 @@ equation
      transp.sigma) = TILMedia.Internals.GasObjectFunctions.transportProperties_pTxi(p, T, xi, gasPointer);
   else
     transp = TILMedia.Internals.TransportPropertyRecord(
-      invalidValue,
-      invalidValue,
-      invalidValue,
-      invalidValue);
+      -1,
+      -1,
+      -1,
+      -1);
   end if;
 
   annotation (defaultComponentName="gas",

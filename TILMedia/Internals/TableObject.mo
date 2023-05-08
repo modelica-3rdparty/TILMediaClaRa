@@ -20,7 +20,7 @@ class TableObject
 */
 #ifndef TILMEDIATABLEALLOCATOR
 #define TILMEDIATABLEALLOCATOR
-#if defined(_JMI_GLOBAL_H) || defined(WSM_VERSION) || defined(DYMOLA_STATIC) || (defined(ITI_CRT_INCLUDE) && !defined(ITI_COMP_SIM))
+#if defined(_JMI_GLOBAL_H) || defined(WSM_VERSION) || defined(DYMOLA_STATIC) || (defined(ITI_CRT_INCLUDE) && !defined(ITI_COMP_SIM)) || defined(OPENMODELICA_H_)
 void* TILMedia_allocateTable_errorInterface(const char* table, const char* parameters, void* formatMessage, void* formatError, void* dymolaErrorLev);
 #if defined(DYMOLA_STATIC)
 #ifndef _WIN32
@@ -38,14 +38,16 @@ void* TILMedia_allocateTable(const char* table, const char* parameters){
 #endif
 }
 #endif
+#else
+void* TILMedia_allocateTable(const char* table, const char* parameters);
 #endif
-",    Library="TILMedia180ClaRa");
+",    Library="TILMedia181ClaRa");
    end constructor;
 
    function destructor "free memory"
     input TableObject pointer;
     external "C" TILMedia_freeTable(pointer)
-              annotation(__iti_dllNoExport = true,Include="void TILMedia_freeTable(void*);",Library="TILMedia180ClaRa");
+              annotation(__iti_dllNoExport = true,Include="void TILMedia_freeTable(void*);",Library="TILMedia181ClaRa");
    end destructor;
 
   annotation(Protection(access=Access.documentation));

@@ -11,7 +11,6 @@ model Liquid_pT
         0,
         getInstanceName()));
 protected
-  constant Real invalidValue=-1;
   final parameter Integer computeFlags=TILMedia.Internals.calcComputeFlags(
       computeTransportProperties,
       false,
@@ -44,10 +43,10 @@ equation
       liquidPointer);
   else
     transp = TILMedia.Internals.TransportPropertyRecord(
-      invalidValue,
-      invalidValue,
-      invalidValue,
-      invalidValue);
+      -1,
+      -1,
+      -1,
+      -1);
   end if;
 
   annotation (

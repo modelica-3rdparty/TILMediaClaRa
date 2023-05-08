@@ -1,7 +1,7 @@
 ﻿within TILMedia.BaseClasses;
 partial model PartialVLEFluid "Compressible fluid model for object and member function based evaluation"
-  replaceable parameter TILMedia.VLEFluidTypes.TILMedia_Water vleFluidType constrainedby
-    TILMedia.VLEFluidTypes.BaseVLEFluid
+  replaceable parameter TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType
+    constrainedby TILMedia.VLEFluidTypes.BaseVLEFluid
     "type record of the VLE fluid or VLE fluid mixture"
     annotation (choicesAllMatching=true);
 

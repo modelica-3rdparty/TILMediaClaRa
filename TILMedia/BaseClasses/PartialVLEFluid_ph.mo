@@ -1,7 +1,7 @@
 ﻿within TILMedia.BaseClasses;
 partial model PartialVLEFluid_ph
   "Compressible fluid model with p, h and xi as independent variables"
-  replaceable parameter TILMedia.VLEFluidTypes.TILMedia_Water vleFluidType
+  replaceable parameter TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType
     constrainedby TILMedia.VLEFluidTypes.BaseVLEFluid
     "type record of the VLE fluid or VLE fluid mixture"
     annotation (choicesAllMatching=true);

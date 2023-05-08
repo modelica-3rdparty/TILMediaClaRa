@@ -15,7 +15,7 @@ package VLEFluidObjectFunctions
         p,
         h,
         xi, vleFluidPointer)
-  annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_density_phxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_density_phxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
   annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.der_density_phxi,Impure=false);
   end density_phxi;
 
@@ -87,7 +87,7 @@ package VLEFluidObjectFunctions
         drhodxi,
         a,
         gamma)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_dTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_dTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end additionalProperties_dTxi;
 
@@ -126,7 +126,7 @@ package VLEFluidObjectFunctions
         drhodxi,
         a,
         gamma)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end additionalProperties_phxi;
 
@@ -165,7 +165,7 @@ package VLEFluidObjectFunctions
         drhodxi,
         a,
         gamma)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_psxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_psxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end additionalProperties_psxi;
 
@@ -204,7 +204,7 @@ package VLEFluidObjectFunctions
         drhodxi,
         a,
         gamma)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end additionalProperties_pTxi;
 
@@ -222,7 +222,7 @@ package VLEFluidObjectFunctions
         p,
         s,
         T)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_criticalDataRecord_xi(double*, void*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_criticalDataRecord_xi(double*, void*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                                                                                         annotation(Impure=false);
   end criticalDataRecord_xi;
 
@@ -234,7 +234,7 @@ package VLEFluidObjectFunctions
       vleFluidPointer;
     output SI.MolarMass mm "Molar mass";
   external "C" mm = TILMedia_VLEFluid_Cached_molarMass_xi(xi)
-  annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_molarMass_xi(double*,void*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_molarMass_xi(double*,void*);",Library="TILMedia181ClaRa");
                                                                                                         annotation(Impure=false);
   end molarMass_xi;
 
@@ -256,7 +256,7 @@ package VLEFluidObjectFunctions
         h,
         p,
         s)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_dTxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_dTxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end properties_dTxi;
 
@@ -278,7 +278,7 @@ package VLEFluidObjectFunctions
         d,
         s,
         T)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_phxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_phxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end properties_phxi;
 
@@ -300,7 +300,7 @@ package VLEFluidObjectFunctions
         d,
         h,
         T)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_psxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_psxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end properties_psxi;
 
@@ -322,7 +322,7 @@ package VLEFluidObjectFunctions
         d,
         h,
         s)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_pTxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_pTxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end properties_pTxi;
 
@@ -346,7 +346,7 @@ package VLEFluidObjectFunctions
         lambda,
         eta,
         sigma)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_dTxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_dTxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end transportPropertyRecord_dTxi;
 
@@ -370,7 +370,7 @@ package VLEFluidObjectFunctions
         lambda,
         eta,
         sigma)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_phxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_phxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end transportPropertyRecord_phxi;
 
@@ -394,7 +394,7 @@ package VLEFluidObjectFunctions
         lambda,
         eta,
         sigma)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_psxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_psxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end transportPropertyRecord_psxi;
 
@@ -418,7 +418,7 @@ package VLEFluidObjectFunctions
         lambda,
         eta,
         sigma)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end transportPropertyRecord_pTxi;
 
@@ -446,7 +446,7 @@ package VLEFluidObjectFunctions
         lambda_v,
         eta_l,
         eta_v)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_dTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_dTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLETransportPropertyRecord_dTxi;
 
@@ -474,7 +474,7 @@ package VLEFluidObjectFunctions
         lambda_v,
         eta_l,
         eta_v)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLETransportPropertyRecord_phxi;
 
@@ -502,7 +502,7 @@ package VLEFluidObjectFunctions
         lambda_v,
         eta_l,
         eta_v)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_psxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_psxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLETransportPropertyRecord_psxi;
 
@@ -530,7 +530,7 @@ package VLEFluidObjectFunctions
         lambda_v,
         eta_l,
         eta_v)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLETransportPropertyRecord_pTxi;
 
@@ -540,8 +540,8 @@ package VLEFluidObjectFunctions
     output Boolean isValid;
   external "C" isValid = TILMedia_VLEFluid_isValid(mediumName) annotation (
       __iti_dllNoExport=true,
-      Include="int TILMedia_VLEFluid_isValid(const char*, int*);",
-      Library="TILMedia180ClaRa");
+      Include="int TILMedia_VLEFluid_isValid(const char*);",
+      Library="TILMedia181ClaRa");
                                                                                                  annotation(Impure=false);
   end fluidIsValid;
 
@@ -559,7 +559,7 @@ package VLEFluidObjectFunctions
       T,
       xi, vleFluidPointer,
       phase)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_Cached_phase_dTxi(double, double, double*, void*, int*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_Cached_phase_dTxi(double, double, double*, void*, int*);",Library="TILMedia181ClaRa");
   end phase_dTxi;
 
   function phase_phxi2
@@ -576,7 +576,7 @@ package VLEFluidObjectFunctions
         h,
         xi, vleFluidPointer,
         phase)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_Cached_phase_phxi(double, double, double*, void*, int*)",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_Cached_phase_phxi(double, double, double*, void*, int*)",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end phase_phxi2;
 
@@ -623,7 +623,7 @@ package VLEFluidObjectFunctions
         xi, vleFluidPointer,
     cp_l, beta_l, kappa_l,
     cp_v, beta_v, kappa_v)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_dTxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_dTxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLEAdditionalProperties_dTxi;
 
@@ -653,7 +653,7 @@ package VLEFluidObjectFunctions
         xi, vleFluidPointer,
     cp_l, beta_l, kappa_l,
     cp_v, beta_v, kappa_v)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_phxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_phxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLEAdditionalProperties_phxi;
 
@@ -683,7 +683,7 @@ package VLEFluidObjectFunctions
         xi, vleFluidPointer,
     cp_l, beta_l, kappa_l,
     cp_v, beta_v, kappa_v)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_psxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_psxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLEAdditionalProperties_psxi;
 
@@ -713,7 +713,7 @@ package VLEFluidObjectFunctions
         xi, vleFluidPointer,
     cp_l, beta_l, kappa_l,
     cp_v, beta_v, kappa_v)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_pTxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_pTxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLEAdditionalProperties_pTxi;
 
@@ -744,7 +744,7 @@ package VLEFluidObjectFunctions
     d_l, h_l, p_l, s_l, T_l, xi_l,
     d_v, h_v, p_v, s_v, T_v, xi_v)
   annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEProperties_dTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*,
-                double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+                double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLEProperties_dTxi;
 
@@ -775,7 +775,7 @@ package VLEFluidObjectFunctions
     d_l, h_l, p_l, s_l, T_l, xi_l,
     d_v, h_v, p_v, s_v, T_v, xi_v)
   annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*,
-                double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+                double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
            annotation(Impure=false);
   end VLEProperties_phxi;
 
@@ -806,7 +806,7 @@ package VLEFluidObjectFunctions
     d_l, h_l, p_l, s_l, T_l, xi_l,
     d_v, h_v, p_v, s_v, T_v, xi_v)
   annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEProperties_psxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*,
-                double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+                double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLEProperties_psxi;
 
@@ -837,7 +837,7 @@ package VLEFluidObjectFunctions
     d_l, h_l, p_l, s_l, T_l, xi_l,
     d_v, h_v, p_v, s_v, T_v, xi_v)
   annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*,
-                double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+                double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end VLEProperties_pTxi;
 
@@ -850,7 +850,7 @@ package VLEFluidObjectFunctions
   external "C" TILMedia_VLEFluid_Cached_molarMass(vleFluidPointer, mm_i) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_VLEFluid_Cached_molarMass(void*,double*);",
-      Library="TILMedia180ClaRa");
+      Library="TILMedia181ClaRa");
                                                                                                         annotation(Impure=false);
   end molarMass_nc;
 
@@ -861,7 +861,7 @@ package VLEFluidObjectFunctions
       vleFluidPointer;
     output SI.AbsolutePressure p_triple "Triple pressure";
   external "C" p_triple = TILMedia_VLEFluid_Cached_triplePressure_n(compNo, vleFluidPointer)
-  annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_triplePressure_n(int, void*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_triplePressure_n(int, void*);",Library="TILMedia181ClaRa");
                                                                                                         annotation(Impure=false);
   end triplePressure_n;
 
@@ -872,7 +872,7 @@ package VLEFluidObjectFunctions
       vleFluidPointer;
     output SI.Temperature T_triple "Triple temperature";
   external "C" T_triple = TILMedia_VLEFluid_Cached_tripleTemperature_n(compNo, vleFluidPointer)
-  annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_tripleTemperature_n(int, void*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_tripleTemperature_n(int, void*);",Library="TILMedia181ClaRa");
                                                                                                         annotation(Impure=false);
   end tripleTemperature_n;
 
@@ -890,7 +890,7 @@ package VLEFluidObjectFunctions
         p,
         s,
         T)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_cricondenbar_xi(double*, void*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_cricondenbar_xi(double*, void*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                                                                                         annotation(Impure=false);
   end cricondenbar_xi;
 
@@ -908,7 +908,7 @@ package VLEFluidObjectFunctions
         p,
         s,
         T)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_cricondentherm_xi(double*, void*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_cricondentherm_xi(double*, void*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                                                                                         annotation(Impure=false);
   end cricondentherm_xi;
 
@@ -930,7 +930,7 @@ package VLEFluidObjectFunctions
         h,
         s,
         T)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_pdxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_pdxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end properties_pdxi;
 
@@ -962,7 +962,7 @@ package VLEFluidObjectFunctions
         drhobar_dh1,
         drhobar_dh2,
         onePhase)
-    annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_meanDensity_phAhB(double, double*, double, double, void*, void*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_meanDensity_phAhB(double, double*, double, double, void*, void*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
   end meanDensity_phAhB;
 
   function properties_Thxi
@@ -983,7 +983,7 @@ package VLEFluidObjectFunctions
         d,
         p,
         s)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_Thxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_Thxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end properties_Thxi;
 
@@ -1005,7 +1005,7 @@ package VLEFluidObjectFunctions
         d,
         h,
         p)
-  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_Tsxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia180ClaRa");
+  annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_properties_Tsxi(double, double, double*, void*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                     annotation(Impure=false);
   end properties_Tsxi;
 
@@ -1025,7 +1025,7 @@ package VLEFluidObjectFunctions
           d,
           T,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEntropy_dTxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEntropy_dTxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_specificEntropy_dTxi,
       Impure=false);
 
@@ -1051,7 +1051,7 @@ package VLEFluidObjectFunctions
           der_d,
           der_T,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEntropy_dTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEntropy_dTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_specificEntropy_dTxi;
 
@@ -1068,7 +1068,7 @@ package VLEFluidObjectFunctions
           d,
           T,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEnthalpy_dTxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEnthalpy_dTxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_specificEnthalpy_dTxi,Impure=false);
     end specificEnthalpy_dTxi;
 
@@ -1092,7 +1092,7 @@ package VLEFluidObjectFunctions
           der_d,
           der_T,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEnthalpy_dTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEnthalpy_dTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_specificEnthalpy_dTxi;
 
@@ -1109,7 +1109,7 @@ package VLEFluidObjectFunctions
           d,
           T,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_pressure_dTxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_pressure_dTxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_pressure_dTxi,
       inverse(d=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.density_pTxi(p, T, xi, vleFluidPointer)),Impure=false);
     end pressure_dTxi;
@@ -1134,7 +1134,7 @@ package VLEFluidObjectFunctions
           der_d,
           der_T,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_pressure_dTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_pressure_dTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_pressure_dTxi;
 
@@ -1151,7 +1151,7 @@ package VLEFluidObjectFunctions
           p,
           s,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_temperature_psxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_temperature_psxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_temperature_psxi,
       inverse(s=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.specificEntropy_pTxi(p, T, xi, vleFluidPointer)),Impure=false);
     end temperature_psxi;
@@ -1176,7 +1176,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_s,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_temperature_psxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_temperature_psxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_temperature_psxi;
 
@@ -1193,7 +1193,7 @@ package VLEFluidObjectFunctions
           p,
           s,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_density_psxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_density_psxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_density_psxi,Impure=false);
     end density_psxi;
 
@@ -1217,7 +1217,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_s,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_density_psxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_density_psxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_density_psxi;
 
@@ -1234,7 +1234,7 @@ package VLEFluidObjectFunctions
           p,
           s,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEnthalpy_psxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEnthalpy_psxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_specificEnthalpy_psxi, inverse(s=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.specificEntropy_phxi(p, h, xi, vleFluidPointer)),Impure=false);
     end specificEnthalpy_psxi;
 
@@ -1258,7 +1258,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_s,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEnthalpy_psxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEnthalpy_psxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_specificEnthalpy_psxi;
 
@@ -1275,7 +1275,7 @@ package VLEFluidObjectFunctions
           p,
           h,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_temperature_phxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_temperature_phxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_temperature_phxi, inverse(h=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.specificEnthalpy_pTxi(p, T, xi, vleFluidPointer)),Impure=false);
     end temperature_phxi;
 
@@ -1299,7 +1299,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_h,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_temperature_phxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_temperature_phxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_temperature_phxi;
 
@@ -1316,7 +1316,7 @@ package VLEFluidObjectFunctions
           p,
           h,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEntropy_phxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEntropy_phxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_specificEntropy_phxi, inverse(h=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.specificEnthalpy_psxi(p, s, xi, vleFluidPointer)),Impure=false);
     end specificEntropy_phxi;
 
@@ -1340,7 +1340,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_h,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEntropy_phxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEntropy_phxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_specificEntropy_phxi;
 
@@ -1357,7 +1357,7 @@ package VLEFluidObjectFunctions
           p,
           h,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_density_phxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_density_phxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_density_phxi,Impure=false);
     end density_phxi;
 
@@ -1381,7 +1381,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_h,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_density_phxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_density_phxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_density_phxi;
 
@@ -1398,7 +1398,7 @@ package VLEFluidObjectFunctions
           p,
           T,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEntropy_pTxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEntropy_pTxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_specificEntropy_pTxi, inverse(T=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.temperature_psxi(p, s, xi, vleFluidPointer)),Impure=false);
     end specificEntropy_pTxi;
 
@@ -1422,7 +1422,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_T,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEntropy_pTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEntropy_pTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_specificEntropy_pTxi;
 
@@ -1439,7 +1439,7 @@ package VLEFluidObjectFunctions
           p,
           T,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_density_pTxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_density_pTxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_density_pTxi);
     end density_pTxi;
 
@@ -1463,7 +1463,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_T,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_density_pTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_density_pTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_density_pTxi;
 
@@ -1480,7 +1480,7 @@ package VLEFluidObjectFunctions
           p,
           T,
           xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEnthalpy_pTxi(double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_specificEnthalpy_pTxi(double, double, double*, void*);",Library="TILMedia181ClaRa");
     annotation(derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_specificEnthalpy_pTxi, inverse(T=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.temperature_phxi(p, h, xi, vleFluidPointer)),Impure=false);
     end specificEnthalpy_pTxi;
 
@@ -1504,7 +1504,7 @@ package VLEFluidObjectFunctions
           der_p,
           der_T,
           der_xi, vleFluidPointer)
-    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEnthalpy_pTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="double TILMedia_VLEFluid_Cached_der_specificEnthalpy_pTxi(double, double, double*, double, double, double*, void*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false);
     end der_specificEnthalpy_pTxi;
 
@@ -1535,7 +1535,7 @@ package VLEFluidObjectFunctions
       d_l, h_l, p_l, s_l, T_l, xi_l,
       d_v, h_v, p_v, s_v, T_v, xi_v)
     annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*,
-                double*, double*, double*, double*, double*, double*);",  Library="TILMedia180ClaRa");
+                double*, double*, double*, double*, double*, double*);",  Library="TILMedia181ClaRa");
              annotation(Impure=false,derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_VLEProperties_phxi);
     end VLEProperties_phxi;
 
@@ -1571,7 +1571,7 @@ package VLEFluidObjectFunctions
           der_xi,
       der_d_l, der_h_l, der_p_l, der_s_l, der_T_l, der_xi_l,
       der_d_v, der_h_v, der_p_v, der_s_v, der_T_v, der_xi_v)
-    annotation(Library="TILMedia180ClaRa",__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_VLEProperties_phxi(double, double, double*, void*,
+    annotation(Library="TILMedia181ClaRa",__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_VLEProperties_phxi(double, double, double*, void*,
                 double, double, double*,double*, double*, double*, double*, double*, double*,double*, double*, double*, double*, double*, double*);");
                                       annotation(Impure=false);
     end der_VLEProperties_phxi;
@@ -1596,7 +1596,7 @@ package VLEFluidObjectFunctions
           lambda,
           eta,
           sigma)
-    annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_phxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_transportProperties_phxi(double, double, double*, void*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false, derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_transportPropertyRecord_phxi);
     end transportPropertyRecord_phxi;
 
@@ -1626,7 +1626,7 @@ package VLEFluidObjectFunctions
           der_lambda,
           der_eta,
           der_sigma)
-    annotation(Library="TILMedia180ClaRa",__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_transportProperties_phxi(double, double, double*, void*, double, double, double*, double*, double*, double*, double*);");
+    annotation(Library="TILMedia181ClaRa",__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_transportProperties_phxi(double, double, double*, void*, double, double, double*, double*, double*, double*, double*);");
                                       annotation(Impure=false);
     end der_transportPropertyRecord_phxi;
 
@@ -1665,7 +1665,7 @@ package VLEFluidObjectFunctions
           drhodxi,
           a,
           gamma)
-    annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia180ClaRa");
+    annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_additionalProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
                                       annotation(Impure=false,derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_additionalProperties_phxi);
     end additionalProperties_phxi;
 
@@ -1707,9 +1707,214 @@ package VLEFluidObjectFunctions
           drhodxi,
           a,
           gamma)
-    annotation(Library="TILMedia180ClaRa",__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_additionalProperties_phxi(double, double, double*, void*, double, double, double*, double*, double*, double*, double*, double*, double*
+    annotation(Library="TILMedia181ClaRa",__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_additionalProperties_phxi(double, double, double*, void*, double, double, double*, double*, double*, double*, double*, double*, double*
         , double*, double*, double*, double*);");
                                       annotation(Impure=false);
     end der_additionalProperties_phxi;
+
+    function VLETransportPropertyRecord_phxi
+      extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+      input SI.AbsolutePressure p "Pressure";
+      input SI.SpecificEnthalpy h "Specific enthalpy";
+      input SI.MassFraction[:] xi
+        "Mass fractions of the first nc-1 components";
+      input TILMedia.Internals.TILMediaExternalObject
+        vleFluidPointer;
+      output SI.PrandtlNumber Pr_l "Prandtl number";
+      output SI.PrandtlNumber Pr_v "Prandtl number";
+      output SI.ThermalConductivity lambda_l "Thermal conductivity";
+      output SI.ThermalConductivity lambda_v "Thermal conductivity";
+      output SI.DynamicViscosity eta_l "Dynamic viscosity";
+      output SI.DynamicViscosity eta_v "Dynamic viscosity";
+    external "C" TILMedia_VLEFluid_VLETransportProperties_phxi(
+          p,
+          h,
+          xi,
+          vleFluidPointer,
+          Pr_l,
+          Pr_v,
+          lambda_l,
+          lambda_v,
+          eta_l,
+          eta_v)
+      annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLETransportProperties_phxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
+      annotation(Impure=false, derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_VLETransportPropertyRecord_phxi);
+    end VLETransportPropertyRecord_phxi;
+
+    function der_VLETransportPropertyRecord_phxi
+      extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+      input SI.AbsolutePressure p "Pressure";
+      input SI.SpecificEnthalpy h "Specific enthalpy";
+      input SI.MassFraction[:] xi
+        "Mass fractions of the first nc-1 components";
+      input TILMedia.Internals.TILMediaExternalObject
+        vleFluidPointer;
+      input Real der_p "Pressure";
+      input Real der_h "Specific enthalpy";
+      input Real[:] der_xi "Mass fractions of the first nc-1 components";
+      output Real der_Pr_l "Prandtl number";
+      output Real der_Pr_v "Prandtl number";
+      output Real der_lambda_l "Thermal conductivity";
+      output Real der_lambda_v "Thermal conductivity";
+      output Real der_eta_l "Dynamic viscosity";
+      output Real der_eta_v "Dynamic viscosity";
+    external "C" TILMedia_VLEFluid_der_VLETransportProperties_phxi(
+          p,
+          h,
+          xi,
+          vleFluidPointer,
+          der_p,
+          der_h,
+          der_xi,
+          der_Pr_l,
+          der_Pr_v,
+          der_lambda_l,
+          der_lambda_v,
+          der_eta_l,
+          der_eta_v)
+      annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_VLETransportProperties_phxi(double, double, double*, void*, double, double, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
+      annotation(Impure=false);
+    end der_VLETransportPropertyRecord_phxi;
+
+    function VLEAdditionalProperties_phxi
+      extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+      input SI.AbsolutePressure p "Pressure";
+      input SI.SpecificEnthalpy h "Specific enthalpy";
+      input SI.MassFraction[:] xi
+        "Mass fractions of the first nc-1 components";
+      input TILMedia.Internals.TILMediaExternalObject
+        vleFluidPointer;
+      output SI.SpecificHeatCapacity cp_l
+        "Specific heat capacity cp";
+      output SI.LinearExpansionCoefficient beta_l
+        "Isobaric expansion coefficient";
+      output SI.Compressibility kappa_l
+        "Isothermal compressibility";
+      output SI.SpecificHeatCapacity cp_v
+        "Specific heat capacity cp";
+      output SI.LinearExpansionCoefficient beta_v
+        "Isobaric expansion coefficient";
+      output SI.Compressibility kappa_v
+        "Isothermal compressibility";
+    external "C" TILMedia_VLEFluid_VLEAdditionalProperties_phxi(
+          p,
+          h,
+          xi, vleFluidPointer,
+      cp_l, beta_l, kappa_l,
+      cp_v, beta_v, kappa_v)
+      annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_VLEAdditionalProperties_phxi(double, double, double*, void*,double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
+      annotation(Impure=false, derivative(noDerivative=vleFluidPointer)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_VLEAdditionalProperties_phxi);
+    end VLEAdditionalProperties_phxi;
+
+    function der_VLEAdditionalProperties_phxi
+      extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+      input SI.AbsolutePressure p "Pressure";
+      input SI.SpecificEnthalpy h "Specific enthalpy";
+      input SI.MassFraction[:] xi
+        "Mass fractions of the first nc-1 components";
+      input TILMedia.Internals.TILMediaExternalObject
+        vleFluidPointer;
+      input Real der_p "Pressure";
+      input Real der_h "Specific enthalpy";
+      input Real[:] der_xi "Mass fractions of the first nc-1 components";
+      output Real der_cp_l
+        "Specific heat capacity cp";
+      output Real der_beta_l
+        "Isobaric expansion coefficient";
+      output Real der_kappa_l
+        "Isothermal compressibility";
+      output Real der_cp_v
+        "Specific heat capacity cp";
+      output Real der_beta_v
+        "Isobaric expansion coefficient";
+      output Real der_kappa_v "Isothermal compressibility";
+    external "C" TILMedia_VLEFluid_der_VLEAdditionalProperties_phxi(
+          p,
+          h,
+          xi,
+          vleFluidPointer,
+          der_p,
+          der_h,
+          der_xi,
+          der_cp_l,
+          der_beta_l,
+          der_kappa_l,
+          der_cp_v,
+          der_beta_v,
+          der_kappa_v)
+      annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_VLEAdditionalProperties_phxi(double, double, double*, void*, double, double, double*, double*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
+      annotation(Impure=false);
+    end der_VLEAdditionalProperties_phxi;
+
+    function meanDensity_phAhB
+      extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+      input Real p;
+      input SI.MassFraction[:] xi
+        "Mass fractions of the first nc-1 components";
+      input Real h_A;
+      input Real h_B;
+      input TILMedia.Internals.TILMediaExternalObject
+        cache_A "Pointer to external medium mem||y";
+      input TILMedia.Internals.TILMediaExternalObject
+        cache_B "Pointer to external medium mem||y";
+      output Real rhobar;
+      output Real drhobar_dp;
+      output Real drhobar_dh1;
+      output Real drhobar_dh2;
+      output Real onePhase;
+    external "C" TILMedia_VLEFluid_meanDensity_phAhB(
+          p,
+          xi,
+          h_A,
+          h_B,
+          cache_A,
+          cache_B,
+          rhobar,
+          drhobar_dp,
+          drhobar_dh1,
+          drhobar_dh2,
+          onePhase)
+      annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_meanDensity_phAhB(double, double*, double, double, void*, void*, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
+      annotation(derivative(noDerivative=cache_A, noDerivative=cache_B)=TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives.der_meanDensity_phAhB);
+    end meanDensity_phAhB;
+
+    function der_meanDensity_phAhB
+      extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+      input Real p;
+      input SI.MassFraction[:] xi
+        "Mass fractions of the first nc-1 components";
+      input Real h_A;
+      input Real h_B;
+      input TILMedia.Internals.TILMediaExternalObject
+        cache_A "Pointer to external medium mem||y";
+      input TILMedia.Internals.TILMediaExternalObject
+        cache_B "Pointer to external medium mem||y";
+      input Real der_p;
+      input Real[:] der_xi;
+      input Real der_h_A;
+      input Real der_h_B;
+      output Real der_rhobar;
+      output Real der_drhobar_dp;
+      output Real der_drhobar_dh1;
+      output Real der_drhobar_dh2;
+      output Real der_onePhase;
+    external "C" TILMedia_VLEFluid_der_meanDensity_phAhB(
+          p,
+          xi,
+          h_A,
+          h_B,
+          cache_A,
+          cache_B,
+          der_p,
+          der_xi,
+          der_h_A,
+          der_h_B,
+          der_rhobar,
+          der_drhobar_dp,
+          der_drhobar_dh1,
+          der_drhobar_dh2,
+          der_onePhase)
+      annotation(__iti_dllNoExport = true,Include="void TILMedia_VLEFluid_der_meanDensity_phAhB(double, double*, double, double, void*, void*, double, double*, double, double, double*, double*, double*, double*, double*);",Library="TILMedia181ClaRa");
+    end der_meanDensity_phAhB;
   end PureComponentDerivatives;
 end VLEFluidObjectFunctions;

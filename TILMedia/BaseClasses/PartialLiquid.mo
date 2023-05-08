@@ -1,9 +1,9 @@
 ﻿within TILMedia.BaseClasses;
 partial model PartialLiquid "Incompressible liquid model for object and member function based evaluation"
 
-  replaceable parameter TILMedia.LiquidTypes.TILMedia_Water liquidType
-    constrainedby TILMedia.LiquidTypes.BaseLiquid "type record of the liquid"
-    annotation (choicesAllMatching=true);
+  replaceable parameter TILMedia.LiquidTypes.BaseLiquid liquidType
+    constrainedby TILMedia.LiquidTypes.BaseLiquid
+    "type record of the liquid" annotation (choicesAllMatching=true);
 
   parameter TILMedia.Internals.TILMediaExternalObject liquidPointer annotation (Dialog(tab="Advanced"));
 
