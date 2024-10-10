@@ -11,7 +11,6 @@ partial model PartialGas "Gas vapor model for object and member function based e
     "=true, if transport properties are calculated"
     annotation (Dialog(tab="Advanced"));
 
-
   replaceable partial function d_phxi =
       TILMedia.BaseClasses.PartialGasObjectFunctions.density_phxi
     constrainedby
@@ -127,7 +126,6 @@ partial model PartialGas "Gas vapor model for object and member function based e
     constrainedby
       TILMedia.BaseClasses.PartialGasObjectFunctions.iceBulbTemperature_phxi(
         xi=gasType.xi_default, gasPointer=gasPointer);
-
   replaceable partial function d_psxi =
       TILMedia.BaseClasses.PartialGasObjectFunctions.density_psxi
     constrainedby
@@ -243,7 +241,6 @@ partial model PartialGas "Gas vapor model for object and member function based e
     constrainedby
       TILMedia.BaseClasses.PartialGasObjectFunctions.iceBulbTemperature_psxi(
         xi=gasType.xi_default, gasPointer=gasPointer);
-
   replaceable partial function d_pTxi =
       TILMedia.BaseClasses.PartialGasObjectFunctions.density_pTxi
     constrainedby
@@ -359,9 +356,6 @@ partial model PartialGas "Gas vapor model for object and member function based e
     constrainedby
       TILMedia.BaseClasses.PartialGasObjectFunctions.iceBulbTemperature_pTxi(
         xi=gasType.xi_default, gasPointer=gasPointer);
-
-
-
   replaceable partial function p_s_T =
       TILMedia.BaseClasses.PartialGasObjectFunctions.saturationPartialPressure_T
     constrainedby
@@ -387,8 +381,6 @@ partial model PartialGas "Gas vapor model for object and member function based e
     constrainedby
       TILMedia.BaseClasses.PartialGasObjectFunctions.specificIsobaricHeatCapacityOfPureGas_Tn(
         gasPointer=gasPointer);
-
-
   replaceable partial function M_xi =
       TILMedia.BaseClasses.PartialGasObjectFunctions.averageMolarMass_xi
     constrainedby
@@ -399,7 +391,6 @@ partial model PartialGas "Gas vapor model for object and member function based e
     constrainedby
       TILMedia.BaseClasses.PartialGasObjectFunctions.humidityRatio_xi(
         xi=gasType.xi_default, gasPointer=gasPointer);
-
   replaceable partial function M_i_n =
       TILMedia.BaseClasses.PartialGasObjectFunctions.molarMass_n
     constrainedby
@@ -415,7 +406,6 @@ partial model PartialGas "Gas vapor model for object and member function based e
     constrainedby
       TILMedia.BaseClasses.PartialGasObjectFunctions.freezingPoint(
         gasPointer=gasPointer);
-
   replaceable partial function xi_s_pTxidg =
     TILMedia.BaseClasses.PartialGasObjectFunctions.saturationMassFraction_pTxidg
       constrainedby

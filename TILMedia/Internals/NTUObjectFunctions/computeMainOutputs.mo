@@ -115,6 +115,6 @@ external"C" TILMedia_NTU_computeMainOutputs(
     const int, double*, double*,
     double*, double*, double*,
     double*);",
-    Library="TILMedia181ClaRa");
+     Library="TILMedia182ClaRa");
 
 end computeMainOutputs;

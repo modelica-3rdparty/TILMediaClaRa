@@ -47,7 +47,6 @@ model VLEFluid "Compressible fluid model for object and member function based ev
       TILMedia.VLEFluidObjectFunctions.dynamicViscosity_dTxi,
   redeclare replaceable function sigma_dTxi =
       TILMedia.VLEFluidObjectFunctions.surfaceTension_dTxi,
-
   redeclare replaceable function d_phxi =
       TILMedia.VLEFluidObjectFunctions.density_phxi,
   redeclare replaceable function s_phxi =
@@ -80,7 +79,6 @@ model VLEFluid "Compressible fluid model for object and member function based ev
       TILMedia.VLEFluidObjectFunctions.dynamicViscosity_phxi,
   redeclare replaceable function sigma_phxi =
       TILMedia.VLEFluidObjectFunctions.surfaceTension_phxi,
-
   redeclare replaceable function d_psxi =
       TILMedia.VLEFluidObjectFunctions.density_psxi,
   redeclare replaceable function h_psxi =
@@ -113,7 +111,6 @@ model VLEFluid "Compressible fluid model for object and member function based ev
       TILMedia.VLEFluidObjectFunctions.dynamicViscosity_psxi,
   redeclare replaceable function sigma_psxi =
       TILMedia.VLEFluidObjectFunctions.surfaceTension_psxi,
-
   redeclare replaceable function d_pTxi =
       TILMedia.VLEFluidObjectFunctions.density_pTxi,
   redeclare replaceable function h_pTxi =
@@ -146,8 +143,6 @@ model VLEFluid "Compressible fluid model for object and member function based ev
       TILMedia.VLEFluidObjectFunctions.dynamicViscosity_pTxi,
   redeclare replaceable function sigma_pTxi =
       TILMedia.VLEFluidObjectFunctions.surfaceTension_pTxi,
-
-
   redeclare replaceable function d_dew_Txi =
       TILMedia.VLEFluidObjectFunctions.dewDensity_Txi,
   redeclare replaceable function d_bubble_Txi =
@@ -176,7 +171,6 @@ model VLEFluid "Compressible fluid model for object and member function based ev
       TILMedia.VLEFluidObjectFunctions.dewIsothermalCompressibility_Txi,
   redeclare replaceable function kappa_bubble_Txi =
       TILMedia.VLEFluidObjectFunctions.bubbleIsothermalCompressibility_Txi,
-
   redeclare replaceable function d_dew_pxi =
       TILMedia.VLEFluidObjectFunctions.dewDensity_pxi,
   redeclare replaceable function d_bubble_pxi =
@@ -205,8 +199,6 @@ model VLEFluid "Compressible fluid model for object and member function based ev
       TILMedia.VLEFluidObjectFunctions.dewIsothermalCompressibility_pxi,
   redeclare replaceable function kappa_bubble_pxi =
       TILMedia.VLEFluidObjectFunctions.bubbleIsothermalCompressibility_pxi,
-
-
   redeclare replaceable function dc_xi =
       TILMedia.VLEFluidObjectFunctions.criticalDensity_xi,
   redeclare replaceable function hc_xi =
@@ -217,7 +209,6 @@ model VLEFluid "Compressible fluid model for object and member function based ev
       TILMedia.VLEFluidObjectFunctions.criticalSpecificEntropy_xi,
   redeclare replaceable function Tc_xi =
       TILMedia.VLEFluidObjectFunctions.criticalTemperature_xi,
-
   redeclare replaceable function M_i_n =
       TILMedia.VLEFluidObjectFunctions.molarMass_n);
   annotation (defaultComponentName="vleFluid", Protection(access=Access.packageDuplicate));

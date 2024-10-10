@@ -3,7 +3,7 @@ function redirectModelicaFormatMessage
   input Real y=0;
   //protected
   output Integer x;
-  external "C" x = TILMedia_redirectModelicaFormatMessage_wrapper() annotation(__iti_dllNoExport = true,Library="TILMedia181ClaRa",
+  external "C" x = TILMedia_redirectModelicaFormatMessage_wrapper() annotation(__iti_dllNoExport = true, Library="TILMedia182ClaRa",
     Include="
 /* uncomment for source code version
 #ifndef TILMEDIA_REAL_TIME
@@ -18,23 +18,26 @@ function redirectModelicaFormatMessage
 */
 #ifndef TILMEDIAMODELICAFORMATMESSAGE
 #define TILMEDIAMODELICAFORMATMESSAGE
+#include \"ModelicaUtilities.h\"
 #if defined(_JMI_GLOBAL_H) || defined(WSM_VERSION) || defined(DYMOLA_STATIC) || (defined(ITI_CRT_INCLUDE) && !defined(ITI_COMP_SIM)) || defined(OPENMODELICA_H_)
-int TILMedia_redirectModelicaFormatMessage(void* _str);
-int TILMedia_redirectModelicaFormatError(void* _str);
-int TILMedia_redirectDymolaErrorFunction(void* _str);
-#if defined(DYMOLA_STATIC)
 #ifndef _WIN32
-#define __stdcall
+#define TILMEDIAMODELICAFORMATMESSAGE_CC
+#else
+#define TILMEDIAMODELICAFORMATMESSAGE_CC __stdcall
 #endif
-double __stdcall TILMedia_DymosimErrorLevWrapper(const char* message, int level) {
-    return DymosimErrorLev(message, level);
+int TILMedia_redirectModelicaFormatMessage(int(TILMEDIAMODELICAFORMATMESSAGE_CC* formatMessage)(const char* _Format, ...));
+int TILMedia_redirectModelicaFormatError(int(TILMEDIAMODELICAFORMATMESSAGE_CC* formatMessage)(const char* _Format, ...));
+int TILMedia_redirectCustomUserErrorFunction(int(TILMEDIAMODELICAFORMATMESSAGE_CC* customFunction)(const char*, int, void*), void* messageUserData);
+#if defined(DYMOLA_STATIC)
+int TILMEDIAMODELICAFORMATMESSAGE_CC TILMedia_DymosimErrorLevWrapper(const char* message, int level, void* messageUserData) {
+    return (int) DymosimErrorLev(message, level >= 5? 2 : 1);
 }
 #endif
 int TILMedia_redirectModelicaFormatMessage_wrapper(void) {
-    TILMedia_redirectModelicaFormatMessage((void*)ModelicaFormatMessage);
-    TILMedia_redirectModelicaFormatError((void*)ModelicaFormatError);
+    TILMedia_redirectModelicaFormatMessage((int(TILMEDIAMODELICAFORMATMESSAGE_CC*)(const char* _Format, ...))ModelicaFormatMessage);
+    TILMedia_redirectModelicaFormatError((int(TILMEDIAMODELICAFORMATMESSAGE_CC*)(const char* _Format, ...))ModelicaFormatError);
 #if defined(DYMOLA_STATIC)
-    TILMedia_redirectDymolaErrorFunction((void*)TILMedia_DymosimErrorLevWrapper);
+    TILMedia_redirectCustomUserErrorFunction(TILMedia_DymosimErrorLevWrapper, NULL);
 #endif
     return 0;
 }

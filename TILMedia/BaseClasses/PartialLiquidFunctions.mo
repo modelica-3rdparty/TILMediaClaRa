@@ -2,14 +2,10 @@
 package PartialLiquidFunctions
   "Package for calculation of liquid properties with a functional call"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   replaceable partial function specificEntropy_phxi =
       TILMedia.BaseClasses.PartialLiquidFunctionPrototypes.specificEntropy_phxi;
-
   replaceable partial function specificEntropy_pTxi =
       TILMedia.BaseClasses.PartialLiquidFunctionPrototypes.specificEntropy_pTxi;
-
-
   replaceable partial function density_Txi =
       TILMedia.BaseClasses.PartialLiquidFunctionPrototypes.density_Txi;
   replaceable partial function specificEnthalpy_Txi =
@@ -24,7 +20,6 @@ package PartialLiquidFunctions
       TILMedia.BaseClasses.PartialLiquidFunctionPrototypes.thermalConductivity_Txi;
   replaceable partial function dynamicViscosity_Txi =
       TILMedia.BaseClasses.PartialLiquidFunctionPrototypes.dynamicViscosity_Txi;
-
   replaceable partial function density_hxi =
       TILMedia.BaseClasses.PartialLiquidFunctionPrototypes.density_hxi;
   replaceable partial function temperature_hxi =
@@ -39,5 +34,4 @@ package PartialLiquidFunctions
       TILMedia.BaseClasses.PartialLiquidFunctionPrototypes.thermalConductivity_hxi;
   replaceable partial function dynamicViscosity_hxi =
       TILMedia.BaseClasses.PartialLiquidFunctionPrototypes.dynamicViscosity_hxi;
-
 end PartialLiquidFunctions;

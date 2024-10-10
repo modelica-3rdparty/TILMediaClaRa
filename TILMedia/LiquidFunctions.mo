@@ -2,22 +2,18 @@
 package LiquidFunctions
   "Package for calculation of liquid properties with a functional call"
   extends TILMedia.BaseClasses.PartialLiquidFunctions;
-
   redeclare replaceable function
     extends specificEntropy_phxi
   algorithm
     s := TILMedia.Internals.LiquidFunctions.specificEntropy_phxi(p,h,xi,liquidType.concatLiquidName, liquidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation (Inline=false, LateInline=true);
   end specificEntropy_phxi;
-
   redeclare replaceable function
     extends specificEntropy_pTxi
   algorithm
     s := TILMedia.Internals.LiquidFunctions.specificEntropy_pTxi(p,T,xi,liquidType.concatLiquidName, liquidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation (Inline=false, LateInline=true);
   end specificEntropy_pTxi;
-
-
   redeclare replaceable function
     extends density_Txi
   algorithm
@@ -60,7 +56,6 @@ package LiquidFunctions
     eta := TILMedia.Internals.LiquidFunctions.dynamicViscosity_Txi(T,xi,liquidType.concatLiquidName, liquidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation (Inline=false, LateInline=true);
   end dynamicViscosity_Txi;
-
   redeclare replaceable function
     extends density_hxi
   algorithm
@@ -103,5 +98,4 @@ package LiquidFunctions
     eta := TILMedia.Internals.LiquidFunctions.dynamicViscosity_hxi(h,xi,liquidType.concatLiquidName, liquidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation (Inline=false, LateInline=true);
   end dynamicViscosity_hxi;
-
 end LiquidFunctions;

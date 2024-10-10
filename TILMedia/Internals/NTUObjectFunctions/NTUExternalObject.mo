@@ -41,7 +41,13 @@ class NTUExternalObject
       Include="
 #ifndef TILMEDIANTUCONSTRUCTOR
 #define TILMEDIANTUCONSTRUCTOR
+#include \"ModelicaUtilities.h\"
 #if defined(_JMI_GLOBAL_H) || defined(WSM_VERSION) || defined(DYMOLA_STATIC) || (defined(ITI_CRT_INCLUDE) && !defined(ITI_COMP_SIM)) || defined(OPENMODELICA_H_)
+#ifndef _WIN32
+#define TILMEDIANTUCONSTRUCTOR_CC
+#else
+#define TILMEDIANTUCONSTRUCTOR_CC __stdcall
+#endif
 void* TILMedia_NTU_createExternalObject_errorInterface(
         const char* mediumType_a,
         const char* name_a, int flags_a, double* xi_a, int nc_a,
@@ -51,16 +57,13 @@ void* TILMedia_NTU_createExternalObject_errorInterface(
         const int condensingIndex_b, const int sideFlag_b,
         const int calculationInputType,
         const char* instanceName,
-        void* formatMessage,
-        void* formatError,
-        void* dymolaErrorLev);
+        int(TILMEDIANTUCONSTRUCTOR_CC* formatMessage)(const char* _Format, ...),
+        int(TILMEDIANTUCONSTRUCTOR_CC* formatError)(const char* _Format, ...),
+        int(TILMEDIANTUCONSTRUCTOR_CC* customFunction)(const char*, int, void*),
+        void* messageUserData);
 #if defined(DYMOLA_STATIC)
-#ifndef _WIN32
-#define __stdcall
-#endif
-double __stdcall TILMedia_DymosimErrorLevWrapper_NTU(const char* message, int level)
-{
-    return DymosimErrorLev(message, level);
+int TILMEDIANTUCONSTRUCTOR_CC TILMedia_DymosimErrorLevWrapper_NTU(const char* message, int level, void* messageUserData) {
+    return (int) DymosimErrorLev(message, level >= 5? 2 : 1);
 }
 #endif
 void* TILMedia_NTU_createExternalObject(
@@ -83,9 +86,10 @@ return TILMedia_NTU_createExternalObject_errorInterface(
         condensingIndex_b, sideFlag_b,
         calculationInputType,
         instanceName,
-        (void*)ModelicaFormatMessage,
-        (void*)ModelicaFormatError,
-        (void*)TILMedia_DymosimErrorLevWrapper_NTU);
+        &ModelicaFormatMessage,
+        &ModelicaFormatError,
+        &TILMedia_DymosimErrorLevWrapper_NTU,
+        NULL);
 #else
 return TILMedia_NTU_createExternalObject_errorInterface(
         mediumType_a,
@@ -96,9 +100,10 @@ return TILMedia_NTU_createExternalObject_errorInterface(
         condensingIndex_b, sideFlag_b,
         calculationInputType,
         instanceName,
-        (void*)ModelicaFormatMessage,
-        (void*)ModelicaFormatError,
-        0);
+        &ModelicaFormatMessage,
+        &ModelicaFormatError,
+        NULL,
+        NULL);
 #endif
 }
 #endif
@@ -113,7 +118,7 @@ void* TILMedia_NTU_createExternalObject(
         const int calculationInputType,
         const char* instanceName);
 #endif
-",    Library="TILMedia181ClaRa");
+",     Library="TILMedia182ClaRa");
   end constructor;
 
   function destructor "free memory"
@@ -121,6 +126,6 @@ void* TILMedia_NTU_createExternalObject(
   external"C" TILMedia_NTU_destroyExternalObject(ntuPointer) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_NTU_destroyExternalObject(void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end destructor;
 end NTUExternalObject;

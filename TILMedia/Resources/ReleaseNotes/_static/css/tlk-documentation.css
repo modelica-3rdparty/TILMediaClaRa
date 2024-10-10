@@ -1,0 +1,163 @@
+/* TLK Dokumentation CSS
+    1. Page settings
+    2. Custom Labels
+    3. Links
+    3. Admonitions
+*/
+
+/* --- 1. Page settings -------------------------------- */
+
+/* maximum pagewidth */
+.wy-nav-content {
+  max-width: 1200px;
+}
+
+/* Sidebar */
+.wy-nav-side {
+  background: #535353; /* background of sidebar*/
+}
+
+.icon-home:before {
+  content: ""; /* don't show house icon in top sidebar*/
+}
+
+.wy-side-nav-search .wy-dropdown > a img.logo,
+.wy-side-nav-search > a.icon img.logo {
+  filter: brightness(100);
+}
+
+/* Hide breadcrumb links at top of page */
+.wy-breadcrumbs {
+  height: 0;
+  overflow: hidden;
+}
+
+/* override table width restrictions as found on https://github.com/getpelican/pelican/issues/1311 */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+  white-space: normal;
+}
+
+.wy-table-responsive {
+  overflow: visible;
+}
+
+/* --- 2. Custom Labels -------------------------------- */
+
+/* used to show menu paths or gui buttons */
+.rst-content .guilabel,
+.rst-content .menuselection {
+  border: 1px solid #37424a;
+  background: #535353;
+  color: #dde1e3;
+  font-family: "Segoe UI";
+  font-size: 80%;
+  font-weight: normal;
+  padding: 0.005em 0.2em 0.1em;
+  border-radius: 1px;
+  margin: 0.1em 0.1em;
+}
+
+/* used to show keyboard buttons like CTRL */
+.kbd {
+  color: inherit;
+  font-size: 80%;
+  background-color: #f0f0f0;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  box-shadow: grey 0px 2px;
+  padding: 2.4px 6px;
+  margin: auto 0;
+}
+
+/* used for code segment from docutils import */
+html.writer-html5
+  .rst-content
+  dl[class]:not(.option-list):not(.field-list):not(.footnote):not(.glossary):not(.simple)
+  > dt {
+  background: #e7f2fa;
+  color: #0f87c9;
+  border-top: 3px solid #0f87c9;
+}
+
+/* --- 3. Links ----------------------------------------- */
+
+/* General Color scheme for links*/
+/* links are defined via inheritance, therefore the order of the various types of links during definition is important!  */
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a:link,
+a:visited {
+  color: #007da4; /*TLK-Türkis*/
+}
+
+a:focus,
+a:hover {
+  background: #e7f2fa; /*TLK-Türkis 80% heller*/
+}
+
+a:active {
+  background: #007da4; /*TLK-Türkis 80% heller */
+  color: #e7f2fa; /*TLK-Türkis*/
+}
+
+/* BUT: on the top and left (in the various menus) the link colour (top level) should not be in the blue link colour scheme
+ but in the light TLK grey*/
+
+.wy-nav-top a {
+  color: #f2f2f2; /*TLK hellgrau*/
+}
+.wy-side-nav-search a {
+  color: #f2f2f2; /*TLK hellgrau*/
+}
+
+.wy-menu-vertical a {
+  color: #f2f2f2; /*TLK hellgrau*/
+}
+
+/* --- 4. Admonitions um Segmente hervorzuheben ---------- */
+
+/* Hint - something good to know */
+.rst-content .tlk-hint .admonition-title {
+  background: #0f87c9;
+}
+.rst-content .tlk-hint {
+  background: #e7f2fa;
+}
+
+/* Danger - strong warning, might lead to fatal errors */
+.rst-content .tlk-danger .admonition-title {
+  background: #c5262e;
+}
+.rst-content .tlk-danger {
+  background: #f6d1d3;
+}
+
+/* Warning - might lead to errors*/
+.rst-content .tlk-warning .admonition-title {
+  background: #e1700d;
+}
+.rst-content .tlk-warning {
+  background: #fce2cc;
+}
+
+/* Tutorial - a segment to learn along */
+.rst-content .tlk-tutorial .admonition-title {
+  background: #ecac00;
+}
+.rst-content .tlk-tutorial {
+  background: #fff0c8;
+}
+
+/* Goal - something of special interest in a positive way */
+.rst-content .tlk-goal .admonition-title {
+  background: #79b829;
+}
+.rst-content .tlk-goal {
+  background: #e5f5d0;
+}

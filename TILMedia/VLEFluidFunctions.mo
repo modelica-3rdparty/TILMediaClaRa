@@ -2,7 +2,6 @@
 package VLEFluidFunctions
   "Package for calculation of VLEFluid properties with a functional call"
   extends TILMedia.BaseClasses.PartialVLEFluidFunctions;
-
   redeclare function extends specificEnthalpy_dTxi
   algorithm
     h := TILMedia.Internals.VLEFluidFunctions.specificEnthalpy_dTxi(d,T,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
@@ -173,7 +172,6 @@ package VLEFluidFunctions
     kappa_v := TILMedia.Internals.VLEFluidFunctions.vapourIsothermalCompressibility_dTxi(d,T,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation(Inline=false, LateInline=true);
   end vapourIsothermalCompressibility_dTxi;
-
   redeclare function extends density_phxi
   algorithm
     d := TILMedia.Internals.VLEFluidFunctions.density_phxi(p,h,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
@@ -344,7 +342,6 @@ package VLEFluidFunctions
     kappa_v := TILMedia.Internals.VLEFluidFunctions.vapourIsothermalCompressibility_phxi(p,h,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation(Inline=false, LateInline=true);
   end vapourIsothermalCompressibility_phxi;
-
   redeclare function extends density_psxi
   algorithm
     d := TILMedia.Internals.VLEFluidFunctions.density_psxi(p,s,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
@@ -515,7 +512,6 @@ package VLEFluidFunctions
     kappa_v := TILMedia.Internals.VLEFluidFunctions.vapourIsothermalCompressibility_psxi(p,s,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation(Inline=false, LateInline=true);
   end vapourIsothermalCompressibility_psxi;
-
   redeclare function extends density_pTxi
   algorithm
     d := TILMedia.Internals.VLEFluidFunctions.density_pTxi(p,T,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
@@ -686,8 +682,6 @@ package VLEFluidFunctions
     kappa_v := TILMedia.Internals.VLEFluidFunctions.vapourIsothermalCompressibility_pTxi(p,T,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation(Inline=false, LateInline=true);
   end vapourIsothermalCompressibility_pTxi;
-
-
   redeclare function extends dewDensity_Txi
   algorithm
     d_dew := TILMedia.Internals.VLEFluidFunctions.dewDensity_Txi(T,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
@@ -768,7 +762,6 @@ package VLEFluidFunctions
     kappa_bubble := TILMedia.Internals.VLEFluidFunctions.bubbleIsothermalCompressibility_Txi(T,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation(Inline=false, LateInline=true);
   end bubbleIsothermalCompressibility_Txi;
-
   redeclare function extends dewDensity_pxi
   algorithm
     d_dew := TILMedia.Internals.VLEFluidFunctions.dewDensity_pxi(p,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
@@ -849,9 +842,6 @@ package VLEFluidFunctions
     kappa_bubble := TILMedia.Internals.VLEFluidFunctions.bubbleIsothermalCompressibility_pxi(p,xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation(Inline=false, LateInline=true);
   end bubbleIsothermalCompressibility_pxi;
-
-
-
   redeclare function extends averageMolarMass_xi
   algorithm
     M := TILMedia.Internals.VLEFluidFunctions.averageMolarMass_xi(xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
@@ -932,11 +922,9 @@ package VLEFluidFunctions
     p_cct := TILMedia.Internals.VLEFluidFunctions.cricondenthermPressure_xi(xi,vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation(Inline=false, LateInline=true);
   end cricondenthermPressure_xi;
-
   redeclare function extends molarMass_n
   algorithm
     M_i := TILMedia.Internals.VLEFluidFunctions.molarMass_n(compNo, vleFluidType.concatVLEFluidName, vleFluidType.nc+TILMedia.Internals.redirectModelicaFormatMessage());
     annotation(Inline=false, LateInline=true);
   end molarMass_n;
-
 end VLEFluidFunctions;

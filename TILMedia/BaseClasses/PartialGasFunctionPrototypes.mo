@@ -2,7 +2,6 @@
 package PartialGasFunctionPrototypes
   "Package for calculation of gas vapor properties with a functional call"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   partial function density_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -159,7 +158,7 @@ package PartialGasFunctionPrototypes
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(gasType.mixingRatio_propertyCalculation)
       "Mass fractions of the first nc-1 components";
-    output SI.MassFraction xi_gas "Mass fraction of gasoues condensing component";
+    output SI.MassFraction xi_gas "Mass fraction of gaseous condensing component";
   end gaseousMassFraction_phxi;
   partial function relativeHumidity_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
@@ -281,7 +280,6 @@ package PartialGasFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Temperature T_iceBulb "Ice bulb temperature";
   end iceBulbTemperature_phxi;
-
   partial function density_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -438,7 +436,7 @@ package PartialGasFunctionPrototypes
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(gasType.mixingRatio_propertyCalculation)
       "Mass fractions of the first nc-1 components";
-    output SI.MassFraction xi_gas "Mass fraction of gasoues condensing component";
+    output SI.MassFraction xi_gas "Mass fraction of gaseous condensing component";
   end gaseousMassFraction_psxi;
   partial function relativeHumidity_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
@@ -560,7 +558,6 @@ package PartialGasFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Temperature T_iceBulb "Ice bulb temperature";
   end iceBulbTemperature_psxi;
-
   partial function density_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -717,7 +714,7 @@ package PartialGasFunctionPrototypes
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(gasType.mixingRatio_propertyCalculation)
       "Mass fractions of the first nc-1 components";
-    output SI.MassFraction xi_gas "Mass fraction of gasoues condensing component";
+    output SI.MassFraction xi_gas "Mass fraction of gaseous condensing component";
   end gaseousMassFraction_pTxi;
   partial function relativeHumidity_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
@@ -839,8 +836,6 @@ package PartialGasFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Temperature T_iceBulb "Ice bulb temperature";
   end iceBulbTemperature_pTxi;
-
-
   partial function saturationPartialPressure_T
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -883,8 +878,6 @@ package PartialGasFunctionPrototypes
     input Integer compNo "Component ID";
     output SI.SpecificHeatCapacity cp_i "Specific isobaric heat capacity of theoretical pure component";
   end specificIsobaricHeatCapacityOfPureGas_Tn;
-
-
   partial function averageMolarMass_xi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -903,7 +896,6 @@ package PartialGasFunctionPrototypes
         TILMedia.Internals.massFraction_mixingRatio(gasType.mixingRatio_propertyCalculation) "Mass fractions of the first nc-1 components";
     output Real humRatio "Content of condensing component aka humidity ratio";
   end humidityRatio_xi;
-
   partial function molarMass_n
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -927,5 +919,4 @@ package PartialGasFunctionPrototypes
       annotation (choicesAllMatching=true);
     output SI.Temperature T_freeze "Freezing point of condensing component";
   end freezingPoint;
-
 end PartialGasFunctionPrototypes;

@@ -23,6 +23,6 @@ external"C" outputFlag = TILMedia_NTU_initializeGeometry(
     Include="int TILMedia_NTU_initializeGeometry(
     const int, const int, const double*,
     void*);",
-    Library="TILMedia181ClaRa");
+     Library="TILMedia182ClaRa");
 
 end initializeGeometry;

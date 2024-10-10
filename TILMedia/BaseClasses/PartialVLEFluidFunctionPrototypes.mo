@@ -2,7 +2,6 @@
 package PartialVLEFluidFunctionPrototypes
   "Package for calculation of VLEFluid properties with a functional call"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   partial function specificEnthalpy_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -415,7 +414,6 @@ package PartialVLEFluidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Compressibility kappa_v "Isothermal compressibility of vapour phase";
   end vapourIsothermalCompressibility_dTxi;
-
   partial function density_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -828,7 +826,6 @@ package PartialVLEFluidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Compressibility kappa_v "Isothermal compressibility of vapour phase";
   end vapourIsothermalCompressibility_phxi;
-
   partial function density_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -1241,7 +1238,6 @@ package PartialVLEFluidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Compressibility kappa_v "Isothermal compressibility of vapour phase";
   end vapourIsothermalCompressibility_psxi;
-
   partial function density_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -1654,8 +1650,6 @@ package PartialVLEFluidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Compressibility kappa_v "Isothermal compressibility of vapour phase";
   end vapourIsothermalCompressibility_pTxi;
-
-
   partial function dewDensity_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -1754,7 +1748,7 @@ package PartialVLEFluidFunctionPrototypes
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
       "Mass fractions of the first nc-1 components";
     input Integer compNo "Component ID";
-    output SI.MassFraction xi_ldew "Mass fration at dew point";
+    output SI.MassFraction xi_ldew "Mass fraction at dew point";
   end dewLiquidMassFraction_Txin;
   partial function bubbleVapourMassFraction_Txin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
@@ -1766,7 +1760,7 @@ package PartialVLEFluidFunctionPrototypes
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
       "Mass fractions of the first nc-1 components";
     input Integer compNo "Component ID";
-    output SI.MassFraction xi_vbubble "Mass fration at bubble point";
+    output SI.MassFraction xi_vbubble "Mass fraction at bubble point";
   end bubbleVapourMassFraction_Txin;
   partial function dewSpecificIsobaricHeatCapacity_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
@@ -1834,7 +1828,6 @@ package PartialVLEFluidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Compressibility kappa_bubble "Isothermal compressibility at bubble point";
   end bubbleIsothermalCompressibility_Txi;
-
   partial function dewDensity_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -1933,7 +1926,7 @@ package PartialVLEFluidFunctionPrototypes
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
       "Mass fractions of the first nc-1 components";
     input Integer compNo "Component ID";
-    output SI.MassFraction xi_ldew "Mass fration at dew point";
+    output SI.MassFraction xi_ldew "Mass fraction at dew point";
   end dewLiquidMassFraction_pxin;
   partial function bubbleVapourMassFraction_pxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
@@ -1945,7 +1938,7 @@ package PartialVLEFluidFunctionPrototypes
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
       "Mass fractions of the first nc-1 components";
     input Integer compNo "Component ID";
-    output SI.MassFraction xi_vbubble "Mass fration at bubble point";
+    output SI.MassFraction xi_vbubble "Mass fraction at bubble point";
   end bubbleVapourMassFraction_pxin;
   partial function dewSpecificIsobaricHeatCapacity_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
@@ -2013,9 +2006,6 @@ package PartialVLEFluidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.Compressibility kappa_bubble "Isothermal compressibility at bubble point";
   end bubbleIsothermalCompressibility_pxi;
-
-
-
   partial function averageMolarMass_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -2176,7 +2166,6 @@ package PartialVLEFluidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.AbsolutePressure p_cct "Cricondentherm pressure";
   end cricondenthermPressure_xi;
-
   partial function molarMass_n
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -2185,5 +2174,4 @@ package PartialVLEFluidFunctionPrototypes
     input Integer compNo "Component ID";
     output SI.MolarMass M_i "Molar mass of component i";
   end molarMass_n;
-
 end PartialVLEFluidFunctionPrototypes;

@@ -19,7 +19,6 @@ partial model PartialVLEFluid "Compressible fluid model for object and member fu
     annotation (Evaluate=true, Dialog(tab="Advanced"));
   parameter Boolean deactivateTwoPhaseRegion=false
     "Deactivate calculation of two phase region" annotation (Evaluate=true);
-
   replaceable partial function h_dTxi =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.specificEnthalpy_dTxi
     constrainedby
@@ -100,7 +99,6 @@ partial model PartialVLEFluid "Compressible fluid model for object and member fu
     constrainedby
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.surfaceTension_dTxi(
         xi=vleFluidType.xi_default, vleFluidPointer=vleFluidPointer);
-
   replaceable partial function d_phxi =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.density_phxi
     constrainedby
@@ -181,7 +179,6 @@ partial model PartialVLEFluid "Compressible fluid model for object and member fu
     constrainedby
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.surfaceTension_phxi(
         xi=vleFluidType.xi_default, vleFluidPointer=vleFluidPointer);
-
   replaceable partial function d_psxi =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.density_psxi
     constrainedby
@@ -262,7 +259,6 @@ partial model PartialVLEFluid "Compressible fluid model for object and member fu
     constrainedby
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.surfaceTension_psxi(
         xi=vleFluidType.xi_default, vleFluidPointer=vleFluidPointer);
-
   replaceable partial function d_pTxi =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.density_pTxi
     constrainedby
@@ -343,8 +339,6 @@ partial model PartialVLEFluid "Compressible fluid model for object and member fu
     constrainedby
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.surfaceTension_pTxi(
         xi=vleFluidType.xi_default, vleFluidPointer=vleFluidPointer);
-
-
   replaceable partial function d_dew_Txi =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.dewDensity_Txi
     constrainedby
@@ -415,7 +409,6 @@ partial model PartialVLEFluid "Compressible fluid model for object and member fu
     constrainedby
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.bubbleIsothermalCompressibility_Txi(
         xi=vleFluidType.xi_default, vleFluidPointer=vleFluidPointer);
-
   replaceable partial function d_dew_pxi =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.dewDensity_pxi
     constrainedby
@@ -486,9 +479,6 @@ partial model PartialVLEFluid "Compressible fluid model for object and member fu
     constrainedby
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.bubbleIsothermalCompressibility_pxi(
         xi=vleFluidType.xi_default, vleFluidPointer=vleFluidPointer);
-
-
-
   replaceable partial function dc_xi =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.criticalDensity_xi
     constrainedby
@@ -514,13 +504,11 @@ partial model PartialVLEFluid "Compressible fluid model for object and member fu
     constrainedby
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.criticalTemperature_xi(
         xi=vleFluidType.xi_default, vleFluidPointer=vleFluidPointer);
-
   replaceable partial function M_i_n =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.molarMass_n
     constrainedby
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctions.molarMass_n(
         vleFluidPointer=vleFluidPointer);
-
   annotation (
     defaultComponentName="vleFluid",
     Icon(graphics={Bitmap(

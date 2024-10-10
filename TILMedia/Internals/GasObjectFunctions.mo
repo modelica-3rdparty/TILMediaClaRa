@@ -12,7 +12,7 @@ package GasObjectFunctions
   external"C" TILMedia_Gas_molarMass(gasPointer, mm_i) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_molarMass(void*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (Impure=false);
   end molarMass_nc;
 
@@ -36,7 +36,7 @@ package GasObjectFunctions
         h_idealGas) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_pureComponentProperties_T(double, void*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (Impure=false);
   end pureComponentProperties_Tnc;
 
@@ -63,7 +63,7 @@ package GasObjectFunctions
         w) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_simpleCondensingProperties_phxi(double p, double h, double*, void*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false, derivative(noDerivative=gasPointer)=TILMedia.Internals.GasObjectFunctions.der_simpleCondensingProperties_phxi);
   end simpleCondensingProperties_phxi;
@@ -96,7 +96,7 @@ package GasObjectFunctions
         der_w) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_der_simpleCondensingProperties_phxi(double, double, double*, double, double, double*, void*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false);
   end der_simpleCondensingProperties_phxi;
@@ -124,7 +124,7 @@ package GasObjectFunctions
         w) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_simpleCondensingProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false, derivative(noDerivative=gasPointer)=TILMedia.Internals.GasObjectFunctions.der_simpleCondensingProperties_pTxi);
   end simpleCondensingProperties_pTxi;
@@ -157,7 +157,7 @@ package GasObjectFunctions
         der_w) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_der_simpleCondensingProperties_pTxi(double, double, double*, double, double, double*, void*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false);
   end der_simpleCondensingProperties_pTxi;
@@ -191,7 +191,7 @@ package GasObjectFunctions
         xi_gas) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_additionalProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false);
   end additionalProperties_pTxi;
@@ -212,7 +212,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_temperature_psxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(s=TILMedia.Internals.GasObjectFunctions.specificEntropy_pTxi(
               p,
               T,
@@ -241,7 +241,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_der_temperature_psxi(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end der_temperature_psxi;
 
   function specificEnthalpy_psxi
@@ -260,7 +260,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_specificEnthalpy_psxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(s=TILMedia.Internals.GasObjectFunctions.specificEntropy_phxi(
               p,
               h,
@@ -289,7 +289,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_der_specificEnthalpy_psxi(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificEnthalpy_psxi;
 
@@ -309,7 +309,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_specificEntropy_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(T=TILMedia.Internals.GasObjectFunctions.temperature_psxi(
               p,
               s,
@@ -338,7 +338,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_der_specificEntropy_pTxi(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificEntropy_pTxi;
 
@@ -358,7 +358,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_specificEntropy_phxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(h=TILMedia.Internals.GasObjectFunctions.specificEnthalpy_psxi(
               p,
               s,
@@ -387,7 +387,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_der_specificEntropy_phxi(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificEntropy_phxi;
 
@@ -405,7 +405,7 @@ package GasObjectFunctions
         xi) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_xi_humRatioxidg(double*, void*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(humRatioxi_dryGas=TILMedia.Internals.GasObjectFunctions.humRatioxidg_xinc(
               xi,
               nc,
@@ -426,7 +426,7 @@ package GasObjectFunctions
         humRatioxi_dryGas) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_humRatioxidg_xi(double*, void*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(xi=TILMedia.Internals.GasObjectFunctions.xi_humRatioxidgnc(
               humRatioxi_dryGas,
               nc,
@@ -449,7 +449,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasMixture_wetBulbTemperatureLiquid_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end wetBulbTemperatureLiquid_pTxi;
 
   function wetBulbTemperatureSolid_pTxi
@@ -468,7 +468,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasMixture_wetBulbTemperatureSolid_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end wetBulbTemperatureSolid_pTxi;
 
   function wetBulbTemperatureLiquid_phxi
@@ -487,7 +487,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasMixture_wetBulbTemperatureLiquid_phxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end wetBulbTemperatureLiquid_phxi;
 
   function wetBulbTemperatureSolid_phxi
@@ -506,7 +506,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasMixture_wetBulbTemperatureSolid_phxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end wetBulbTemperatureSolid_phxi;
 
   function wetBulbTemperatureLiquid_psxi
@@ -525,7 +525,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasMixture_wetBulbTemperatureLiquid_psxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end wetBulbTemperatureLiquid_psxi;
 
   function wetBulbTemperatureSolid_psxi
@@ -544,7 +544,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasMixture_wetBulbTemperatureSolid_psxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end wetBulbTemperatureSolid_psxi;
 
   function temperature_pdxi
@@ -563,7 +563,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasMixture_temperature_pdxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end temperature_pdxi;
 
   function liquidDensity_T
@@ -576,7 +576,7 @@ package GasObjectFunctions
   external"C" d = TILMedia_Gas_liquidDensity_T(T, gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_liquidDensity_T(double, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end liquidDensity_T;
 
   function specificEntropyOfPureGas_pTxin
@@ -597,7 +597,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificEntropyOfPureGas_pTxin(double, double, double*,int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end specificEntropyOfPureGas_pTxin;
 
@@ -615,7 +615,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_dhdT_pxi_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end dhdT_pxi_pTxi;
 
   function dhdp_Txi_pTxi
@@ -632,7 +632,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_dhdp_Txi_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end dhdp_Txi_pTxi;
 
   function dhdxi_pT_pTxin
@@ -651,7 +651,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_dhdxi_pT_pTxi(double, double, double*, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end dhdxi_pT_pTxin;
 
   function dd_dT_pxi_pTxi
@@ -668,7 +668,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_dd_dT_pxi_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end dd_dT_pxi_pTxi;
 
   function dd_dp_Txi_pTxi
@@ -685,7 +685,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_dd_dp_Txi_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end dd_dp_Txi_pTxi;
 
   function dd_dxi_pT_pTxin
@@ -704,7 +704,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_dd_dxi_pT_pTxi(double, double, double*, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end dd_dxi_pT_pTxin;
 
   function density_pTxi
@@ -721,7 +721,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_density_pTxi(double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_density_pTxi);
   end density_pTxi;
 
@@ -766,7 +766,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_density_phxi(double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_density_phxi);
   end density_phxi;
 
@@ -790,7 +790,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_density_phxi(double, double, double*,double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_density_phxi;
 
@@ -809,7 +809,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificAbsoluteGasEntropy_pTn(double, double, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(
         noDerivative=compNo,
@@ -835,7 +835,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificAbsoluteGasEntropy_pTn(double, double, double, double, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificAbsoluteGasEntropy_pTn;
 
@@ -854,7 +854,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificAbsoluteLiquidEntropy_pTn(double, double, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(
         noDerivative=compNo,
@@ -880,7 +880,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificAbsoluteLiquidEntropy_pTn(double, double, double, double, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificAbsoluteLiquidEntropy_pTn;
 
@@ -897,7 +897,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificGasEnthalpy_refStateHf_Tn(double, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(
         noDerivative=compNo,
@@ -919,7 +919,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificGasEnthalpy_refStateHf_Tn(double, double, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end der_specificGasEnthalpy_refStateHf_Tn;
 
   function specificLiquidEnthalpy_refStateHf_Tn
@@ -935,7 +935,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificLiquidEnthalpy_refStateHf_Tn(double, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(
         noDerivative=compNo,
@@ -957,7 +957,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificLiquidEnthalpy_refStateHf_Tn(double, double, int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificLiquidEnthalpy_refStateHf_Tn;
 
@@ -974,7 +974,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificIsobaricHeatCapacityOfPureGas_Tn(double,int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
       annotation(derivative(noDerivative=compNo, noDerivative=gasPointer)=TILMedia.Internals.GasObjectFunctions.der_specificIsobaricHeatCapacityOfPureGas_Tn);
   end specificIsobaricHeatCapacityOfPureGas_Tn;
@@ -994,7 +994,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificIsobaricHeatCapacityOfPureGas_Tn(double,double,int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end der_specificIsobaricHeatCapacityOfPureGas_Tn;
 
   function temperature_phxi
@@ -1011,7 +1011,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_temperature_phxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(h=TILMedia.Internals.GasObjectFunctions.specificEnthalpy_pTxi(
               p,
               T,
@@ -1039,7 +1039,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_temperature_phxi(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_temperature_phxi;
 
@@ -1058,7 +1058,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_specificEnthalpy_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(T=TILMedia.Internals.GasObjectFunctions.temperature_phxi(
               p,
               h,
@@ -1114,7 +1114,7 @@ package GasObjectFunctions
         sigma) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_transportProperties_pTxi(double, double, double*, void*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false, derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_transportProperties_pTxi);
   end transportProperties_pTxi;
@@ -1146,7 +1146,7 @@ package GasObjectFunctions
         der_sigma) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Gas_der_transportProperties_pTxi(double, double, double*, double, double, double*, void*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false);
   end der_transportProperties_pTxi;
@@ -1165,7 +1165,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificIsobaricHeatCapacity_phxi(double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_specificIsobaricHeatCapacity_phxi);
   end specificIsobaricHeatCapacity_phxi;
 
@@ -1189,7 +1189,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificIsobaricHeatCapacity_phxi(double, double, double*,double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificIsobaricHeatCapacity_phxi;
 
@@ -1207,7 +1207,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificIsochoricHeatCapacity_phxi(double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_specificIsochoricHeatCapacity_phxi);
 
   end specificIsochoricHeatCapacity_phxi;
@@ -1232,9 +1232,95 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificIsochoricHeatCapacity_phxi(double, double, double*,double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificIsochoricHeatCapacity_phxi;
+
+  function isobaricThermalExpansionCoefficient_phxi
+    extends TILMedia.BaseClasses.PartialGasObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEnthalpy h "Specific enthalpy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject gasPointer;
+    output SI.LinearExpansionCoefficient beta "Isobaric thermal expansion coefficient";
+  external"C" beta = TILMedia_GasObjectFunctions_isobaricThermalExpansionCoefficient_phxi(
+        p,
+        h,
+        xi,
+        gasPointer) annotation (
+      __iti_dllNoExport=true,
+      Include="double TILMedia_GasObjectFunctions_isobaricThermalExpansionCoefficient_phxi(double,double,double*,void*);",
+       Library="TILMedia182ClaRa");
+
+    annotation(derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_isobaricThermalExpansionCoefficient_phxi);
+  end isobaricThermalExpansionCoefficient_phxi;
+
+  function der_isobaricThermalExpansionCoefficient_phxi
+    extends TILMedia.BaseClasses.PartialGasObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEnthalpy h "Specific enthalpy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject gasPointer;
+    input Real der_p "Pressure";
+    input Real der_h "Specific enthalpy";
+    input Real[:] der_xi "Mass fractions of the first nc-1 components";
+    output Real der_beta "Isobaric thermal expansion coefficient";
+  external"C" der_beta = TILMedia_GasObjectFunctions_der_isobaricThermalExpansionCoefficient_phxi(
+        p,
+        h,
+        xi,
+        der_p,
+        der_h,
+        der_xi,
+        gasPointer) annotation (
+      __iti_dllNoExport=true,
+      Include="double TILMedia_GasObjectFunctions_der_isobaricThermalExpansionCoefficient_phxi(double,double,double*,double,double,double*,void*);",
+       Library="TILMedia182ClaRa");
+  end der_isobaricThermalExpansionCoefficient_phxi;
+
+  function isothermalCompressibility_phxi
+    extends TILMedia.BaseClasses.PartialGasObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEnthalpy h "Specific enthalpy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject gasPointer;
+    output SI.Compressibility kappa "Isothermal compressibility";
+
+  external"C" kappa = TILMedia_GasObjectFunctions_isothermalCompressibility_phxi(
+        p,
+        h,
+        xi,
+        gasPointer) annotation (
+      __iti_dllNoExport=true,
+      Include="double TILMedia_GasObjectFunctions_isothermalCompressibility_phxi(double,double,double*,void*);",
+       Library="TILMedia182ClaRa");
+    annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_isothermalCompressibility_phxi);
+  end isothermalCompressibility_phxi;
+
+  function der_isothermalCompressibility_phxi
+    extends TILMedia.BaseClasses.PartialGasObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEnthalpy h "Specific enthalpy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject gasPointer;
+    input Real der_p "Pressure";
+    input Real der_h "Specific enthalpy";
+    input Real[:] der_xi "Mass fraction";
+    output Real der_kappa "Isothermal compressibility";
+
+  external"C" der_kappa = TILMedia_GasObjectFunctions_der_isothermalCompressibility_phxi(
+        p,
+        h,
+        xi,
+        der_p,
+        der_h,
+        der_xi,
+        gasPointer) annotation (
+      __iti_dllNoExport=true,
+      Include="double TILMedia_GasObjectFunctions_der_isothermalCompressibility_phxi(double,double,double*,double,double,double*,void*);",
+       Library="TILMedia182ClaRa");
+
+  end der_isothermalCompressibility_phxi;
 
   function speedOfSound_phxi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
@@ -1250,7 +1336,7 @@ package GasObjectFunctions
       gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_speedOfSound_phxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_speedOfSound_phxi);
   end speedOfSound_phxi;
 
@@ -1274,7 +1360,7 @@ package GasObjectFunctions
       gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_speedOfSound_phxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end der_speedOfSound_phxi;
 
   function densityDerivativeWRTspecificEnthalpy_phxi
@@ -1292,7 +1378,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_densityDerivativeWRTspecificEnthalpy_phxi(double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_densityDerivativeWRTspecificEnthalpy_phxi);
   end densityDerivativeWRTspecificEnthalpy_phxi;
@@ -1317,7 +1403,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_densityDerivativeWRTspecificEnthalpy_phxi(double, double, double*,double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_densityDerivativeWRTspecificEnthalpy_phxi;
 
@@ -1336,7 +1422,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_densityDerivativeWRTpressure_phxi(double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_densityDerivativeWRTpressure_phxi);
   end densityDerivativeWRTpressure_phxi;
 
@@ -1360,7 +1446,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_densityDerivativeWRTpressure_phxi(double, double, double*,double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_densityDerivativeWRTpressure_phxi;
 
@@ -1381,7 +1467,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_densityDerivativeWRTmassFraction_phxin(double, double, double*,int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_densityDerivativeWRTmassFraction_phxin);
   end densityDerivativeWRTmassFraction_phxin;
@@ -1408,7 +1494,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_densityDerivativeWRTmassFraction_phxin(double, double, double*,double, double, double*,int,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_densityDerivativeWRTmassFraction_phxin;
 
@@ -1426,7 +1512,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificIsobaricHeatCapacity_pTxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = der_specificIsobaricHeatCapacity_pTxi);
   end specificIsobaricHeatCapacity_pTxi;
 
@@ -1450,7 +1536,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificIsobaricHeatCapacity_pTxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificIsobaricHeatCapacity_pTxi;
 
@@ -1468,7 +1554,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificIsochoricHeatCapacity_pTxi(double, double, double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_specificIsochoricHeatCapacity_pTxi);
 
   end specificIsochoricHeatCapacity_pTxi;
@@ -1493,9 +1579,95 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificIsochoricHeatCapacity_pTxi(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificIsochoricHeatCapacity_pTxi;
+
+  function isobaricThermalExpansionCoefficient_pTxi
+    extends TILMedia.BaseClasses.PartialGasObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject gasPointer;
+    output SI.LinearExpansionCoefficient beta "Isobaric thermal expansion coefficient";
+  external"C" beta = TILMedia_GasObjectFunctions_isobaricThermalExpansionCoefficient_pTxi(
+        p,
+        T,
+        xi,
+        gasPointer) annotation (
+      __iti_dllNoExport=true,
+      Include="double TILMedia_GasObjectFunctions_isobaricThermalExpansionCoefficient_pTxi(double,double,double*,void*);",
+       Library="TILMedia182ClaRa");
+
+    annotation(derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_isobaricThermalExpansionCoefficient_pTxi);
+  end isobaricThermalExpansionCoefficient_pTxi;
+
+  function der_isobaricThermalExpansionCoefficient_pTxi
+    extends TILMedia.BaseClasses.PartialGasObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject gasPointer;
+    input Real der_p "Pressure";
+    input Real der_T "Temperature";
+    input Real[:] der_xi "Mass fractions of the first nc-1 components";
+    output Real der_beta "Isobaric thermal expansion coefficient";
+  external"C" der_beta = TILMedia_GasObjectFunctions_der_isobaricThermalExpansionCoefficient_pTxi(
+        p,
+        T,
+        xi,
+        p,
+        der_T,
+        der_xi,
+        gasPointer) annotation (
+      __iti_dllNoExport=true,
+      Include="double TILMedia_GasObjectFunctions_der_isobaricThermalExpansionCoefficient_pTxi(double,double,double*,double,double,double*,void*);",
+       Library="TILMedia182ClaRa");
+  end der_isobaricThermalExpansionCoefficient_pTxi;
+
+  function isothermalCompressibility_pTxi
+    extends TILMedia.BaseClasses.PartialGasObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject gasPointer;
+    output SI.Compressibility kappa "Isothermal compressibility";
+
+  external"C" kappa = TILMedia_GasObjectFunctions_isothermalCompressibility_pTxi(
+        p,
+        T,
+        xi,
+        gasPointer) annotation (
+      __iti_dllNoExport=true,
+      Include="double TILMedia_GasObjectFunctions_isothermalCompressibility_pTxi(double,double,double*,void*);",
+       Library="TILMedia182ClaRa");
+    annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_isothermalCompressibility_pTxi);
+  end isothermalCompressibility_pTxi;
+
+  function der_isothermalCompressibility_pTxi
+    extends TILMedia.BaseClasses.PartialGasObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject gasPointer;
+    input Real der_p "Pressure";
+    input Real der_T "Temperature";
+    input Real[:] der_xi "Mass fraction";
+    output Real der_kappa "Isothermal compressibility";
+
+  external"C" der_kappa = TILMedia_GasObjectFunctions_der_isothermalCompressibility_pTxi(
+        p,
+        T,
+        xi,
+        der_p,
+        der_T,
+        der_xi,
+        gasPointer) annotation (
+      __iti_dllNoExport=true,
+      Include="double TILMedia_GasObjectFunctions_der_isothermalCompressibility_pTxi(double,double,double*,double,double,double*,void*);",
+       Library="TILMedia182ClaRa");
+
+  end der_isothermalCompressibility_pTxi;
 
   function speedOfSound_pTxi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
@@ -1511,7 +1683,7 @@ package GasObjectFunctions
       gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_speedOfSound_pTxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_speedOfSound_pTxi);
   end speedOfSound_pTxi;
 
@@ -1535,7 +1707,7 @@ package GasObjectFunctions
       gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_speedOfSound_pTxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end der_speedOfSound_pTxi;
 
   function specificEnthalpyOfPureGas_Tn
@@ -1551,7 +1723,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificEnthalpyOfPureGas_Tn(double,int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_specificEnthalpyOfPureGas_Tn);
   end specificEnthalpyOfPureGas_Tn;
@@ -1583,7 +1755,7 @@ package GasObjectFunctions
   external"C" delta_hv = TILMedia_GasObjectFunctions_specificEnthalpyOfVaporisation_T(T, gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificEnthalpyOfVaporisation_T(double,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_specificEnthalpyOfVaporisation_T);
   end specificEnthalpyOfVaporisation_T;
@@ -1602,7 +1774,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificEnthalpyOfVaporisation_T(double, double, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_specificEnthalpyOfVaporisation_T;
 
@@ -1615,7 +1787,7 @@ package GasObjectFunctions
   external"C" delta_hd = TILMedia_GasObjectFunctions_specificEnthalpyOfDesublimation_T(T, gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_specificEnthalpyOfDesublimation_T(double,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_specificEnthalpyOfDesublimation_T);
   end specificEnthalpyOfDesublimation_T;
@@ -1633,7 +1805,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_specificEnthalpyOfDesublimation_T(double, double, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end der_specificEnthalpyOfDesublimation_T;
 
   function saturationPartialPressure_T
@@ -1645,7 +1817,7 @@ package GasObjectFunctions
   external"C" p_s = TILMedia_GasObjectFunctions_saturationPartialPressure_T(T, gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_saturationPartialPressure_T(double,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_saturationPartialPressure_T);
   end saturationPartialPressure_T;
@@ -1663,7 +1835,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_saturationPartialPressure_T(double, double, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end der_saturationPartialPressure_T;
 
   function relativeHumidity_pThumRatioxidg
@@ -1683,7 +1855,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_MoistAir_phi_pThumRatioxidg(double, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(humRatio=TILMedia.Internals.GasObjectFunctions.humidityRatio_pTphixidg(
               p,
               T,
@@ -1717,7 +1889,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_MoistAir_der_phi_pThumRatioxidg(double, double, double, double*, double, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     //    annotation (inverse(humRatio=TILMedia.Internals.GasObjectFunctions.humRatio_pTphixidg(p,T,phi,xi_dryGas,gasPointer)));
   end der_relativeHumidity_pThumRatioxidg;
@@ -1739,7 +1911,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_MoistAir_humRatio_pTphixidg(double, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(phi=TILMedia.Internals.GasObjectFunctions.relativeHumidity_pThumRatioxidg(
               p,
               T,
@@ -1773,7 +1945,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_MoistAir_der_humRatio_pTphixidg(double, double, double, double*, double, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     //    annotation (inverse(phi=TILMedia.Internals.GasObjectFunctions.phi_pThumRatioxidg(p,T,humRatio,xi_dryGas,gasPointer)));
   end der_humidityRatio_pTphixidg;
@@ -1794,7 +1966,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_saturationHumidityRatio_pTxidg(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_saturationHumidityRatio_pTxidg);
   end saturationHumidityRatio_pTxidg;
@@ -1820,7 +1992,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_der_saturationHumidityRatio_pTxidg(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_saturationHumidityRatio_pTxidg;
 
@@ -1839,7 +2011,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_saturationMassFraction_pTxidg(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_saturationMassFraction_pTxidg);
   end saturationMassFraction_pTxidg;
@@ -1865,7 +2037,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Gas_der_saturationMassFraction_pTxidg(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_saturationMassFraction_pTxidg;
 
@@ -1885,7 +2057,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_saturationHumidityRatio_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_saturationHumidityRatio_pTxi);
   end saturationHumidityRatio_pTxi;
@@ -1911,7 +2083,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_saturationHumidityRatio_pTxi(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_saturationHumidityRatio_pTxi;
 
@@ -1931,7 +2103,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_saturationHumidityRatio_phxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_saturationHumidityRatio_phxi);
   end saturationHumidityRatio_phxi;
@@ -1957,7 +2129,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_saturationHumidityRatio_phxi(double, double, double*, double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_saturationHumidityRatio_phxi;
 
@@ -1976,7 +2148,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_gaseousMassFraction_pTxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_gaseousMassFraction_pTxi);
   end gaseousMassFraction_pTxi;
 
@@ -2001,53 +2173,9 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_gaseousMassFraction_pTxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_gaseousMassFraction_pTxi;
-
-  function isothermalCompressibility_pTxi
-    extends TILMedia.BaseClasses.PartialGasObjectFunction;
-    input SI.AbsolutePressure p "Pressure";
-    input SI.Temperature T "Temperature";
-    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
-    input TILMedia.Internals.TILMediaExternalObject gasPointer;
-    output SI.Compressibility kappa "Isothermal compressibility";
-
-  external"C" kappa = TILMedia_GasObjectFunctions_isothermalCompressibility_pTxi(
-        p,
-        T,
-        xi,
-        gasPointer) annotation (
-      __iti_dllNoExport=true,
-      Include="double TILMedia_GasObjectFunctions_isothermalCompressibility_pTxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
-    annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_isothermalCompressibility_pTxi);
-  end isothermalCompressibility_pTxi;
-
-  function der_isothermalCompressibility_pTxi
-    extends TILMedia.BaseClasses.PartialGasObjectFunction;
-    input SI.AbsolutePressure p "Pressure";
-    input SI.Temperature T "Temperature";
-    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
-    input TILMedia.Internals.TILMediaExternalObject gasPointer;
-    input Real der_p "Pressure";
-    input Real der_T "Temperature";
-    input Real[:] der_xi "Mass fraction";
-    output Real der_kappa "Isothermal compressibility";
-
-  external"C" der_kappa = TILMedia_GasObjectFunctions_der_isothermalCompressibility_pTxi(
-        p,
-        T,
-        xi,
-        der_p,
-        der_T,
-        der_xi,
-        gasPointer) annotation (
-      __iti_dllNoExport=true,
-      Include="double TILMedia_GasObjectFunctions_der_isothermalCompressibility_pTxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
-
-  end der_isothermalCompressibility_pTxi;
 
   function partialPressure_pTxin
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
@@ -2065,7 +2193,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_partialPressure_pTxin(double,double,double*,int, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(
         noDerivative=compNo,
@@ -2094,7 +2222,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_partialPressure_pTxin(double,double,double*,double,double,double*,int,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_partialPressure_pTxin;
 
@@ -2112,7 +2240,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_prandtlNumber_pTxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_prandtlNumber_pTxi);
   end prandtlNumber_pTxi;
@@ -2137,7 +2265,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_prandtlNumber_pTxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_prandtlNumber_pTxi;
 
@@ -2155,7 +2283,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_thermalConductivity_pTxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_thermalConductivity_pTxi);
   end thermalConductivity_pTxi;
@@ -2180,7 +2308,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_thermalConductivity_pTxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_thermalConductivity_pTxi;
 
@@ -2198,7 +2326,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_dynamicViscosity_pTxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_dynamicViscosity_pTxi);
   end dynamicViscosity_pTxi;
@@ -2223,7 +2351,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_dynamicViscosity_pTxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_dynamicViscosity_pTxi;
 
@@ -2241,7 +2369,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_relativeHumidity_phxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_relativeHumidity_phxi);
   end relativeHumidity_phxi;
@@ -2266,7 +2394,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_relativeHumidity_phxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_relativeHumidity_phxi;
 
@@ -2284,7 +2412,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_relativeHumidity_pTxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_relativeHumidity_pTxi);
   end relativeHumidity_pTxi;
@@ -2309,7 +2437,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_relativeHumidity_pTxi(double,double,double*,double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
   end der_relativeHumidity_pTxi;
 
@@ -2321,7 +2449,7 @@ package GasObjectFunctions
   external"C" humRatio = TILMedia_GasObjectFunctions_humidityRatio_xi(xi, gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_humidityRatio_xi(double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=gasPointer) = TILMedia.Internals.GasObjectFunctions.der_humidityRatio_xi);
   end humidityRatio_xi;
@@ -2338,7 +2466,7 @@ package GasObjectFunctions
         gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_der_humidityRatio_xi(double*,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end der_humidityRatio_xi;
 
   function fractionSolidWRTnonGaseousMass_phxi "Fraction of solid wrt total non-gaseous mass (solid+liquid)"
@@ -2355,6 +2483,6 @@ package GasObjectFunctions
       gasPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_GasObjectFunctions_fractionSolidWRTnonGaseousMass_phxi(double,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end fractionSolidWRTnonGaseousMass_phxi;
 end GasObjectFunctions;

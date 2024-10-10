@@ -35,28 +35,63 @@ class TILMediaExternalObject
 */
 #ifndef TILMEDIAEXTERNALOBJECTCONSTRUCTOR
 #define TILMEDIAEXTERNALOBJECTCONSTRUCTOR
+#include \"ModelicaUtilities.h\"
 #if defined(_JMI_GLOBAL_H) || defined(WSM_VERSION) || defined(DYMOLA_STATIC) || (defined(ITI_CRT_INCLUDE) && !defined(ITI_COMP_SIM)) || defined(OPENMODELICA_H_)
-void* TILMedia_createExternalObject_errorInterface(const char* objectType, const char* mixtureName, int flags, double* xi, int _nc, int condensingIndex, const char* instanceName, void* formatMessage, void* formatError, void* dymolaErrorLev);
-#if defined(DYMOLA_STATIC)
 #ifndef _WIN32
-#define __stdcall
+#define TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC
+#else
+#define TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC __stdcall
 #endif
-double __stdcall TILMedia_DymosimErrorLevWrapper_externalObject(const char* message, int level) {
-    return DymosimErrorLev(message, level);
+void* TILMedia_createExternalObject_errorInterface(
+    const char* objectType,
+    const char* mixtureName,
+    int flags,
+    double* xi,
+    int _nc,
+    int condensingIndex,
+    const char* instanceName,
+    int(TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC* formatMessage)(const char* _Format, ...),
+    int(TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC* formatError)(const char* _Format, ...),
+    int(TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC* customFunction)(const char*, int, void*),
+    void* messageUserData);
+#if defined(DYMOLA_STATIC)
+int TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC TILMedia_DymosimErrorLevWrapper_externalObject(const char* message, int level, void* messageUserData) {
+    return (int) DymosimErrorLev(message, level >= 5? 2 : 1);
 }
 #endif
 void* TILMedia_createExternalObject(const char* objectType, const char* mixtureName, int flags, double* xi, int _nc, int condensingIndex, const char* instanceName) {
 #if defined(DYMOLA_STATIC)
-    return TILMedia_createExternalObject_errorInterface(objectType, mixtureName, flags, xi, _nc, condensingIndex, instanceName, (void*)ModelicaFormatMessage, (void*)ModelicaFormatError, (void*)TILMedia_DymosimErrorLevWrapper_externalObject);
+    return TILMedia_createExternalObject_errorInterface(
+      objectType,
+      mixtureName,
+      flags,
+      xi,
+      _nc,
+      condensingIndex,
+      instanceName,
+      (int(TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC*)(const char* _Format, ...))ModelicaFormatMessage,
+      (int(TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC*)(const char* _Format, ...))ModelicaFormatError,
+      (int(TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC*)(const char*, int, void*))TILMedia_DymosimErrorLevWrapper_externalObject,
+      NULL);
 #else
-    return TILMedia_createExternalObject_errorInterface(objectType, mixtureName, flags, xi, _nc, condensingIndex, instanceName, (void*)ModelicaFormatMessage, (void*)ModelicaFormatError, 0);
+    return TILMedia_createExternalObject_errorInterface(objectType,
+      mixtureName,
+      flags,
+      xi,
+      _nc,
+      condensingIndex,
+      instanceName,
+      (int(TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC*)(const char* _Format, ...))ModelicaFormatMessage,
+      (int(TILMEDIAEXTERNALOBJECTCONSTRUCTOR_CC*)(const char* _Format, ...))ModelicaFormatError,
+      NULL,
+      NULL);
 #endif
 }
 #endif
 #else
 void* TILMedia_createExternalObject(const char* objectType, const char* mixtureName, int flags, double* xi, int _nc, int condensingIndex, const char* instanceName);
 #endif
-",    Library="TILMedia181ClaRa");
+",     Library="TILMedia182ClaRa");
   end constructor;
 
   function destructor "free memory"
@@ -64,6 +99,6 @@ void* TILMedia_createExternalObject(const char* objectType, const char* mixtureN
   external "C" TILMedia_destroyExternalObject(externalObject) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_destroyExternalObject(void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
   end destructor;
 end TILMediaExternalObject;

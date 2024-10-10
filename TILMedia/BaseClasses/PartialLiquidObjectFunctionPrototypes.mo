@@ -2,7 +2,6 @@
 package PartialLiquidObjectFunctionPrototypes
   "Package for calculation of liquid properties with a functional call, referencing existing external objects for highspeed evaluation"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   partial function specificEntropy_phxi
     extends TILMedia.BaseClasses.PartialLiquidObjectFunction;
     input SI.AbsolutePressure p "Pressure";
@@ -11,7 +10,6 @@ package PartialLiquidObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject liquidPointer;
     output SI.SpecificEntropy s "Specific entropy";
   end specificEntropy_phxi;
-
   partial function specificEntropy_pTxi
     extends TILMedia.BaseClasses.PartialLiquidObjectFunction;
     input SI.AbsolutePressure p "Pressure";
@@ -20,8 +18,6 @@ package PartialLiquidObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject liquidPointer;
     output SI.SpecificEntropy s "Specific entropy";
   end specificEntropy_pTxi;
-
-
   partial function density_Txi
     extends TILMedia.BaseClasses.PartialLiquidObjectFunction;
     input SI.Temperature T "Temperature";
@@ -71,7 +67,6 @@ package PartialLiquidObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject liquidPointer;
     output SI.DynamicViscosity eta "Dynamic viscosity";
   end dynamicViscosity_Txi;
-
   partial function density_hxi
     extends TILMedia.BaseClasses.PartialLiquidObjectFunction;
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -121,5 +116,4 @@ package PartialLiquidObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject liquidPointer;
     output SI.DynamicViscosity eta "Dynamic viscosity";
   end dynamicViscosity_hxi;
-
 end PartialLiquidObjectFunctionPrototypes;

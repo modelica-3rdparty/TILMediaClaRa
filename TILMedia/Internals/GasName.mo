@@ -8,6 +8,7 @@ annotation(choices(
     choice="TILMedia.DieselExhaustGas_1.2",
     choice="TILMedia.DryAir",
     choice="TILMedia.ExhaustGas_Lambda_1",
+    choice="TILMedia.Obsolete_DryAir",
     choice="TILMedia.SimpleDryAir",
     choice="TILMedia.SimpleWater",
     choice="TILMedia.SimpleWater2",

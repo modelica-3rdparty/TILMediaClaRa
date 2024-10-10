@@ -9,13 +9,6 @@ model Gas_ph
         gasType.nc,
         gasType.condensingIndex,
         getInstanceName()), M_i={TILMedia.GasObjectFunctions.molarMass_n(i - 1, gasPointer) for i in 1:gasType.nc});
-  //   Real dummy_d;
-  Real dummy_cp;
-  Real dummy_cv;
-  Real dummy_w;
-  //   Real dummy_drhodh_pxi;
-  //   Real dummy_drhodp_hxi;
-  //   Real dummy_drhodxi_ph[gasType.nc-1];
 protected
   final parameter Integer computeFlags=TILMedia.Internals.calcComputeFlags(
       computeTransportProperties,
@@ -106,28 +99,49 @@ equation
       h,
       xi,
       gasPointer);
-    (dummy_cp,dummy_cv,beta,dummy_w) = TILMedia.Internals.GasObjectFunctions.simpleCondensingProperties_phxi(
-      1,
-      h,
-      xi,
-      gasPointer);
     cp = TILMedia.Internals.GasObjectFunctions.specificIsobaricHeatCapacity_pTxi(
       1,
       T,
       xi,
       gasPointer);
+    cv = TILMedia.Internals.GasObjectFunctions.specificIsochoricHeatCapacity_phxi(
+      1,
+      h,
+      xi,
+      gasPointer);
+    beta = TILMedia.Internals.GasObjectFunctions.isobaricThermalExpansionCoefficient_phxi(
+      1,
+      h,
+      xi,
+      gasPointer);
+    w = TILMedia.Internals.GasObjectFunctions.speedOfSound_phxi(
+      1,
+      h,
+      xi,
+      gasPointer);
+
   else
     T = TILMedia.Internals.GasObjectFunctions.temperature_phxi(
       p,
       h,
       xi,
       gasPointer);
-    (dummy_cp,dummy_cv,beta,dummy_w) = TILMedia.Internals.GasObjectFunctions.simpleCondensingProperties_phxi(
+    cp = TILMedia.Internals.GasObjectFunctions.specificIsobaricHeatCapacity_phxi(
       p,
       h,
       xi,
       gasPointer);
-    cp = TILMedia.Internals.GasObjectFunctions.specificIsobaricHeatCapacity_phxi(
+    cv = TILMedia.Internals.GasObjectFunctions.specificIsochoricHeatCapacity_phxi(
+      p,
+      h,
+      xi,
+      gasPointer);
+    beta = TILMedia.Internals.GasObjectFunctions.isobaricThermalExpansionCoefficient_phxi(
+      p,
+      h,
+      xi,
+      gasPointer);
+    w = TILMedia.Internals.GasObjectFunctions.speedOfSound_phxi(
       p,
       h,
       xi,
@@ -139,16 +153,6 @@ equation
     xi,
     gasPointer);
   d = TILMedia.Internals.GasObjectFunctions.density_phxi(
-    p,
-    h,
-    xi,
-    gasPointer);
-  cv = TILMedia.Internals.GasObjectFunctions.specificIsochoricHeatCapacity_phxi(
-    p,
-    h,
-    xi,
-    gasPointer);
-  w = TILMedia.Internals.GasObjectFunctions.speedOfSound_phxi(
     p,
     h,
     xi,

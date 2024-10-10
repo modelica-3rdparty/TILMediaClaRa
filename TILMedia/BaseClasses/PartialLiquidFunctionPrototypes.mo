@@ -2,7 +2,6 @@
 package PartialLiquidFunctionPrototypes
   "Package for calculation of liquid properties with a functional call"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   partial function specificEntropy_phxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -15,7 +14,6 @@ package PartialLiquidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.SpecificEntropy s "Specific entropy";
   end specificEntropy_phxi;
-
   partial function specificEntropy_pTxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -28,8 +26,6 @@ package PartialLiquidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.SpecificEntropy s "Specific entropy";
   end specificEntropy_pTxi;
-
-
   partial function density_Txi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -107,7 +103,6 @@ package PartialLiquidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.DynamicViscosity eta "Dynamic viscosity";
   end dynamicViscosity_Txi;
-
   partial function density_hxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
@@ -185,5 +180,4 @@ package PartialLiquidFunctionPrototypes
       "Mass fractions of the first nc-1 components";
     output SI.DynamicViscosity eta "Dynamic viscosity";
   end dynamicViscosity_hxi;
-
 end PartialLiquidFunctionPrototypes;

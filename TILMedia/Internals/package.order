@@ -6,6 +6,7 @@ VLEFluidName
 SLEMediumName
 CriticalDataRecord
 PropertyRecord
+PropertyRecordExtended
 PropertyRecordND
 VLERecord
 VLERecordSimple
@@ -25,6 +26,7 @@ TILMediaExternalObject
 massFraction_mixingRatio
 getDoubleVector
 setDoubleVector
+BaseClasses
 GasObjectFunctions
 GasFunctions
 GasConfigurations
@@ -37,4 +39,7 @@ VLEFluidConfigurations
 SLEMedium
 SLEMediumFunctions
 NTUObjectFunctions
+InternalFunctions
 Units
+GasDiffusionCoefficients
+GetIDXfromCAS

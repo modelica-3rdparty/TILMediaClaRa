@@ -2,7 +2,6 @@
 package PartialGasFunctions
   "Package for calculation of gas vapor properties with a functional call"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   replaceable partial function density_phxi =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.density_phxi;
   replaceable partial function specificEntropy_phxi =
@@ -49,7 +48,6 @@ package PartialGasFunctions
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.wetBulbTemperature_phxi;
   replaceable partial function iceBulbTemperature_phxi =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.iceBulbTemperature_phxi;
-
   replaceable partial function density_psxi =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.density_psxi;
   replaceable partial function specificEnthalpy_psxi =
@@ -96,7 +94,6 @@ package PartialGasFunctions
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.wetBulbTemperature_psxi;
   replaceable partial function iceBulbTemperature_psxi =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.iceBulbTemperature_psxi;
-
   replaceable partial function density_pTxi =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.density_pTxi;
   replaceable partial function specificEnthalpy_pTxi =
@@ -143,8 +140,6 @@ package PartialGasFunctions
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.wetBulbTemperature_pTxi;
   replaceable partial function iceBulbTemperature_pTxi =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.iceBulbTemperature_pTxi;
-
-
   replaceable partial function saturationPartialPressure_T =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.saturationPartialPressure_T;
   replaceable partial function specificEnthalpyOfVaporisation_T =
@@ -155,18 +150,14 @@ package PartialGasFunctions
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.specificEnthalpyOfPureGas_Tn;
   replaceable partial function specificIsobaricHeatCapacityOfPureGas_Tn =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.specificIsobaricHeatCapacityOfPureGas_Tn;
-
-
   replaceable partial function averageMolarMass_xi =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.averageMolarMass_xi;
   replaceable partial function humidityRatio_xi =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.humidityRatio_xi;
-
   replaceable partial function molarMass_n =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.molarMass_n;
   replaceable partial function specificEnthalpyOfFormation_n =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.specificEnthalpyOfFormation_n;
   replaceable partial function freezingPoint =
       TILMedia.BaseClasses.PartialGasFunctionPrototypes.freezingPoint;
-
 end PartialGasFunctions;

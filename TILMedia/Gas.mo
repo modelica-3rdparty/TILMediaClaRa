@@ -60,7 +60,6 @@ model Gas "Gas vapor model for object and member function based evaluation"
       TILMedia.GasObjectFunctions.wetBulbTemperature_phxi,
   redeclare replaceable function T_iceBulb_phxi =
       TILMedia.GasObjectFunctions.iceBulbTemperature_phxi,
-
   redeclare replaceable function d_psxi =
       TILMedia.GasObjectFunctions.density_psxi,
   redeclare replaceable function h_psxi =
@@ -107,7 +106,6 @@ model Gas "Gas vapor model for object and member function based evaluation"
       TILMedia.GasObjectFunctions.wetBulbTemperature_psxi,
   redeclare replaceable function T_iceBulb_psxi =
       TILMedia.GasObjectFunctions.iceBulbTemperature_psxi,
-
   redeclare replaceable function d_pTxi =
       TILMedia.GasObjectFunctions.density_pTxi,
   redeclare replaceable function h_pTxi =
@@ -154,8 +152,6 @@ model Gas "Gas vapor model for object and member function based evaluation"
       TILMedia.GasObjectFunctions.wetBulbTemperature_pTxi,
   redeclare replaceable function T_iceBulb_pTxi =
       TILMedia.GasObjectFunctions.iceBulbTemperature_pTxi,
-
-
   redeclare replaceable function p_s_T =
       TILMedia.GasObjectFunctions.saturationPartialPressure_T,
   redeclare replaceable function delta_hv_T =
@@ -166,20 +162,16 @@ model Gas "Gas vapor model for object and member function based evaluation"
       TILMedia.GasObjectFunctions.specificEnthalpyOfPureGas_Tn,
   redeclare replaceable function cp_i_Tn =
       TILMedia.GasObjectFunctions.specificIsobaricHeatCapacityOfPureGas_Tn,
-
-
   redeclare replaceable function M_xi =
       TILMedia.GasObjectFunctions.averageMolarMass_xi,
   redeclare replaceable function humRatio_xi =
       TILMedia.GasObjectFunctions.humidityRatio_xi,
-
   redeclare replaceable function M_i_n =
       TILMedia.GasObjectFunctions.molarMass_n,
   redeclare replaceable function hF_i_n =
       TILMedia.GasObjectFunctions.specificEnthalpyOfFormation_n,
   redeclare replaceable function T_freeze =
       TILMedia.GasObjectFunctions.freezingPoint,
-
     redeclare replaceable function xi_s_pTxidg =
         TILMedia.GasObjectFunctions.saturationMassFraction_pTxidg (gasPointer=gasPointer));
   annotation (defaultComponentName="gas", Protection(access=Access.packageDuplicate));

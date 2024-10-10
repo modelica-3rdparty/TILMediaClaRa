@@ -13,204 +13,307 @@ class SubstanceNames "Substance Names"
 annotation(DocumentationClass=true,
      Documentation(info="<html>
 
-<h4>Gas Names TILMedia</h4>
-The following ideal Gases are usable in the given temperatur range.<br><br>
-T_min - Minimum usable temperature °C.<br>
-T_max - Maximum usable temperature °C.<br><br>
+<h4>Gas Names</h4>
+The following ideal Gases are usable in the given temperature range.<br><br>
 <table border=\"1\">
-    <tr><th>Substance name</th><th>T_min</th><th>T_max</th><th>Description</th></tr>
-    <tr><td>TILMedia.Ash </td><td>-173.1 </td><td>9726.9 </td><td> </td></tr>
-    <tr><td>TILMedia.DieselExhaustGas_1.5 </td><td>-20.0 </td><td>1050.0 </td><td> </td></tr>
-    <tr><td>TILMedia.DryAir </td><td>-60.0 </td><td>200.0 </td><td> </td></tr>
-    <tr><td>TILMedia.ExhaustGas_Lambda_1 </td><td>-20.0 </td><td>1050.0 </td><td>Intended for gasoline/petrol exhaust gas with lambda value equal one </td></tr>
-    <tr><td>TILMedia.SimpleDryAir </td><td>-272.1 </td><td>3726.8 </td><td>Constant/linear model (cp = 1003.7 J/kg) </td></tr>
-    <tr><td>TILMedia.SimpleWater </td><td>-73.1 </td><td>426.9 </td><td>Constant/linear model (cp = 1920 J/kg) </td></tr>
-    <tr><td>TILMedia.SimpleWater2 </td><td>-272.1 </td><td>3726.8 </td><td>Constant/linear model (cp = 1863 J/kg) </td></tr>
-    <tr><td>TILMediaXTR.Ammonia </td><td>-232.6 </td><td>2726.8 </td><td>Ammonia </td></tr>
-    <tr><td>TILMediaXTR.Argon </td><td>-258.1 </td><td>2726.8 </td><td>Argon </td></tr>
-    <tr><td>TILMediaXTR.Carbon_Dioxide </td><td>-132.1 </td><td>2726.8 </td><td>Carbon dioxide </td></tr>
-    <tr><td>TILMediaXTR.Carbon_Monoxide </td><td>-259.9 </td><td>2726.8 </td><td>Carbon monoxide </td></tr>
-    <tr><td>TILMediaXTR.DryAir </td><td>-259.9 </td><td>2726.8 </td><td>Dry air </td></tr>
-    <tr><td>TILMediaXTR.ExhaustGas </td><td> </td><td> </td><td> </td></tr>
-    <tr><td>TILMediaXTR.Hydrogen </td><td>-269.8 </td><td>2726.8 </td><td>Hydrogen </td></tr>
-    <tr><td>TILMediaXTR.Methane </td><td>-254.1 </td><td>2726.8 </td><td>Methane </td></tr>
-    <tr><td>TILMediaXTR.Nitrogen </td><td>-260.5 </td><td>2726.8 </td><td>Nitrogen </td></tr>
-    <tr><td>TILMediaXTR.Nitrous_Oxide </td><td>-242.2 </td><td>2726.8 </td><td>Nitrous oxide </td></tr>
-    <tr><td>TILMediaXTR.Oxygen </td><td>-257.7 </td><td>2726.8 </td><td>Oxygen </td></tr>
-    <tr><td>TILMediaXTR.Sulfur_Dioxide </td><td>-230.1 </td><td>2726.8 </td><td>Sulfur dioxide </td></tr>
-    <tr><td>TILMediaXTR.Water </td><td>-208.4 </td><td>2726.8 </td><td>Water </td></tr>
-    <tr><td>VDI4670.ARGON </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
-    <tr><td>VDI4670.CARBON_DIOXIDE </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
-    <tr><td>VDI4670.CARBON_MONOXIDE </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
-    <tr><td>VDI4670.DRYAIR </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
-    <tr><td>VDI4670.NEON </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
-    <tr><td>VDI4670.NITROGEN </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
-    <tr><td>VDI4670.OXYGEN </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
-    <tr><td>VDI4670.SULPHUR_DIOXIDE </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
-    <tr><td>VDI4670.WATER </td><td>-73.1 </td><td>2726.8 </td><td> </td></tr>
+    <tr><th>Substance name</th><th>Usable temperature range in °C</th><th>Description</th></tr>
+    <tr><td>TILMedia.Ash </td><td>[-173.1, 9726.8] </td><td> </td></tr>
+    <tr><td>TILMedia.DieselExhaustGas_1.5 </td><td>[-20, 1050] </td><td>Substance name must end with _lambdavalue e.g. _1.2 </td></tr>
+    <tr><td>TILMedia.DryAir </td><td>[-60, 200] </td><td> </td></tr>
+    <tr><td>TILMedia.ExhaustGas_Lambda_1 </td><td>[-20, 1050] </td><td>Intended for gasoline/petrol exhaust gas with lambda value equal one </td></tr>
+    <tr><td>TILMedia.Obsolete_DryAir </td><td>[-60, 200] </td><td>Obsolete variant of the TILMedia.DryAir model. The specific enthalpy equation was derived with single precision, the specific entropy equation is wrong. </td></tr>
+    <tr><td>TILMedia.SimpleDryAir </td><td>[-272.2, 3726.8] </td><td>Constant/linear model (cp = 1003.7 J/kg) </td></tr>
+    <tr><td>TILMedia.SimpleWater </td><td>[-73.1, 426.8] </td><td>Constant/linear model (cp = 1920 J/kg) </td></tr>
+    <tr><td>TILMedia.SimpleWater2 </td><td>[-272.2, 3726.8] </td><td>Constant/linear model (cp = 1863 J/kg) </td></tr>
+    <tr><td>TILMediaXTR.Ammonia </td><td>[-232.6, 2726.8] </td><td>Ammonia </td></tr>
+    <tr><td>TILMediaXTR.Argon </td><td>[-258.1, 2726.8] </td><td>Argon </td></tr>
+    <tr><td>TILMediaXTR.Carbon_Dioxide </td><td>[-132.1, 2726.8] </td><td>Carbon dioxide </td></tr>
+    <tr><td>TILMediaXTR.Carbon_Monoxide </td><td>[-259.9, 2726.8] </td><td>Carbon monoxide </td></tr>
+    <tr><td>TILMediaXTR.DryAir </td><td>[-259.9, 2726.8] </td><td>Dry air </td></tr>
+    <tr><td>TILMediaXTR.ExhaustGas </td><td> </td><td>Default configuration for diesel exhaust gas with lambda=1. For petrol exhaust gas use TILMediaXTR.ExhaustGas(m=15.63,lambda=1.1). </td></tr>
+    <tr><td>TILMediaXTR.Hydrogen </td><td>[-269.8, 2726.8] </td><td>Hydrogen </td></tr>
+    <tr><td>TILMediaXTR.Methane </td><td>[-254.1, 2726.8] </td><td>Methane </td></tr>
+    <tr><td>TILMediaXTR.Nitrogen </td><td>[-260.5, 2726.8] </td><td>Nitrogen </td></tr>
+    <tr><td>TILMediaXTR.Nitrous_Oxide </td><td>[-242.2, 2726.8] </td><td>Nitrous oxide </td></tr>
+    <tr><td>TILMediaXTR.Oxygen </td><td>[-257.7, 2726.8] </td><td>Oxygen </td></tr>
+    <tr><td>TILMediaXTR.Sulfur_Dioxide </td><td>[-230.1, 2726.8] </td><td>Sulfur dioxide </td></tr>
+    <tr><td>TILMediaXTR.Water </td><td>[-208.4, 2726.8] </td><td>Water </td></tr>
+    <tr><td>VDI4670.ARGON </td><td>[-73.1, 2726.8] </td><td> </td></tr>
+    <tr><td>VDI4670.CARBON_DIOXIDE </td><td>[-73.1, 2726.8] </td><td> </td></tr>
+    <tr><td>VDI4670.CARBON_MONOXIDE </td><td>[-73.1, 2726.8] </td><td> </td></tr>
+    <tr><td>VDI4670.DRYAIR </td><td>[-73.1, 2726.8] </td><td> </td></tr>
+    <tr><td>VDI4670.NEON </td><td>[-73.1, 2726.8] </td><td> </td></tr>
+    <tr><td>VDI4670.NITROGEN </td><td>[-73.1, 2726.8] </td><td> </td></tr>
+    <tr><td>VDI4670.OXYGEN </td><td>[-73.1, 2726.8] </td><td> </td></tr>
+    <tr><td>VDI4670.SULPHUR_DIOXIDE </td><td>[-73.1, 2726.8] </td><td> </td></tr>
+    <tr><td>VDI4670.WATER </td><td>[-73.1, 2726.8] </td><td> </td></tr>
 </table><br><br>
 
 <h4>Moist Air Names</h4>
 <table border=\"1\">
     <tr>
         <th>Substance name</th>
-        <th>Comment</th>
+        <th>Description</th>
     </tr>
     <tr>
         <td>TILMedia.MoistAir </td>
-        <td>Moist air: water-dry-air-mixture (water at position one) </td>
+        <td>Moist air: water-dry-air-mixture (water is the first component) </td>
     </tr>
     <tr>
         <td>VDI4670.MoistAir </td>
-        <td>Moist air: water-dry-air-mixture (water at position one) </td>
+        <td>Moist air: water-dry-air-mixture (water is the first component) </td>
     </tr>
     <tr>
         <td>TILMediaXTR.MoistAir </td>
-        <td>Moist air with extended temperature range: 64.7 - 3000 Kelvin. (Thermophysical properties may differ to models with smaller range.) </td>
+        <td>Moist air with extended temperature range: 64.7 - 3000 Kelvin. Thermophysical properties may differ to models with smaller range. </td>
     </tr>
     <tr>
         <td>VDIWA2006.Water|VDIWA2006.DryAir </td>
-        <td>This 'Simple Moist Air' is almost like 'Detailed Moist Air' defined as \"VDIWA2006.Water|VDIWA2006.Nitrogen|VDIWA2006.Oxygen\" with default mixing ratio = {0.001, 0.7, 0.3} </td>
+        <td>VDIWA2006.Water does not support freezing. </td>
     </tr>
 </table><br><br>
 
-<h4>Liquid Names TILMedia and IIR_SWF</h4>
-The following incompressible Liquids / secondary working fluids (SWF) are usually based on data sheets by manufacturer.<br>
-In the below table are all available Liquid names listed plus information about the valid/usable range and accuracy.<br><br>
-T_data_min - Minimum temperature based on data sheet by manufacturer in °C.<br>
-T_data_max - Maximum temperature based on data sheet by manufacturer in °C.<br>
-T_min - Minimum usable temperature °C.<br>
-T_max - Maximum usable temperature °C.<br><br>
+<h4>Liquid Names</h4>
+The following incompressible Liquids / secondary working fluids (SWF) are usually based on data sheets or software programms by manufacturer or publications.<br>
+In the below table the available Liquid names are listed plus information about the valid/usable temperature range and accuracy.<br><br>
 <table border=\"1\">
-    <tr><th>Substance name</th><th>T_data_min</th><th>T_data_max</th><th>T_min</th><th>T_max</th><th>Description</th></tr>
-    <tr><td>TILMedia.AddinolXW15 </td><td>-20.0 </td><td>300.0 </td><td>-33.1 </td><td>326.9 </td><td>Addinol heat transfer oil XW 15 </td></tr>
-    <tr><td>TILMedia.Baysilone_KT_10 </td><td>-60.0 </td><td>240.0 </td><td>-60.4 </td><td>240.4 </td><td>Baysilone KT 10, Low-viscosity silicone heat transfer fluid. Produced by Bayer. (R²_cp=0.9999724, R²_rho=0.9999708, R²_eta=0.9999565, R²_lambda=0.9997356) </td></tr>
-    <tr><td>TILMedia.Baysilone_KT_20 </td><td>-60.0 </td><td>240.0 </td><td>-64.2 </td><td>240.4 </td><td>Baysilone KT 20, Low-viscosity silicone heat transfer fluid. Produced by Bayer. (R²_cp=0.9999833, R²_rho=0.9999857, R²_eta=0.9999922, R²_lambda=0.9998325) </td></tr>
-    <tr><td>TILMedia.Baysilone_KT_3 </td><td>-60.0 </td><td>240.0 </td><td>-60.4 </td><td>240.4 </td><td>Baysilone KT 3, Low-viscosity silicone heat transfer fluid. Produced by Bayer. (R²_cp=0.9970532, R²_rho=0.9999504, R²_eta=0.9999942, R²_lambda=0.9998028) </td></tr>
-    <tr><td>TILMedia.Baysilone_KT_5 </td><td>-60.0 </td><td>240.0 </td><td>-61.0 </td><td>240.4 </td><td>Baysilone KT 5, Low-viscosity silicone heat transfer fluid. Produced by Bayer. (R²_cp=0.9999645, R²_rho=0.9999700, R²_eta=0.9999698, R²_lambda=0.9998604) </td></tr>
-    <tr><td>TILMedia.Dowtherm_A </td><td>15.6 </td><td>415.6 </td><td>13.1 </td><td>428.1 </td><td>Dowtherm A, heat transfer fluid. Produced by Dow. (R²_cp=0.9998969, R²_rho=0.9999998, R²_eta=0.9999959, R²_lambda=0.9999986) </td></tr>
-    <tr><td>TILMedia.Dynalene_600 </td><td>70.0 </td><td>287.8 </td><td>68.0 </td><td>297.8 </td><td>Dynalene 600, high temperature silicone heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999787, R²_rho=0.9999796, R²_eta=0.9999950, R²_lambda=0.9999852) </td></tr>
-    <tr><td>TILMedia.Dynalene_FC-Bio </td><td>-34.4 </td><td>115.6 </td><td>-36.4 </td><td>125.6 </td><td>Dynalene FC-Bio, low electrical conductivity, water-based fuel cell coolant with nano particles. Produced by Dynalene. (R²_cp=0.9995178, R²_rho=0.9999993, R²_eta=0.9999999, R²_lambda=0.9969481) </td></tr>
-    <tr><td>TILMedia.Dynalene_FC-EG </td><td>-28.9 </td><td>115.6 </td><td>-30.9 </td><td>125.6 </td><td>Dynalene FC-EG, low electrical conductivity, water-based fuel cell coolant with nano particles. Produced by Dynalene. (R²_cp=0.9987529, R²_rho=0.9999947, R²_eta=0.9999975, R²_lambda=0.9988012) </td></tr>
-    <tr><td>TILMedia.Dynalene_HC-FG10 </td><td>-10.0 </td><td>218.3 </td><td>-12.0 </td><td>228.3 </td><td>Dynalene HC-FG10, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999619, R²_rho=0.9997986, R²_eta=0.9999310, R²_lambda=0.9999625) </td></tr>
-    <tr><td>TILMedia.Dynalene_HC-FG20 </td><td>-20.0 </td><td>218.3 </td><td>-22.5 </td><td>230.8 </td><td>Dynalene HC-FG20, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999556, R²_rho=0.9998634, R²_eta=0.9999424, R²_lambda=0.9999669) </td></tr>
-    <tr><td>TILMedia.Dynalene_HC-FG30 </td><td>-30.0 </td><td>218.3 </td><td>-32.0 </td><td>228.3 </td><td>Dynalene HC-FG30, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999551, R²_rho=0.9998802, R²_eta=0.9999487, R²_lambda=0.9999674) </td></tr>
-    <tr><td>TILMedia.Dynalene_HC-FG40 </td><td>-40.0 </td><td>218.3 </td><td>-42.0 </td><td>228.3 </td><td>Dynalene HC-FG40, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999875, R²_rho=0.9999031, R²_eta=0.9999736, R²_lambda=0.9999633) </td></tr>
-    <tr><td>TILMedia.Dynalene_HC-FG50 </td><td>-50.0 </td><td>218.3 </td><td>-52.0 </td><td>228.3 </td><td>Dynalene HC-FG50, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999417, R²_rho=0.9999068, R²_eta=0.9999625, R²_lambda=0.9997939) </td></tr>
-    <tr><td>TILMedia.Dynalene_HF-LO </td><td>-73.3 </td><td>176.7 </td><td>-75.3 </td><td>186.7 </td><td>Dynalene HF-LO, high flash, non-toxic, low temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999849, R²_rho=0.9999391, R²_eta=0.9999988, R²_lambda=0.9999959) </td></tr>
-    <tr><td>TILMedia.Dynalene_HT </td><td>20.0 </td><td>350.0 </td><td>18.0 </td><td>360.0 </td><td>Dynalene HT, high temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999910, R²_rho=0.9999572, R²_eta=0.9999981, R²_lambda=0.9999861) </td></tr>
-    <tr><td>TILMedia.Dynalene_LO-170 </td><td>-40.0 </td><td>193.3 </td><td>-42.0 </td><td>203.3 </td><td>Dynalene LO-170, non-toxic, low odor, low temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999796, R²_rho=0.9998397, R²_eta=0.9999872, R²_lambda=0.9999961) </td></tr>
-    <tr><td>TILMedia.Dynalene_LO-230 </td><td>0.0 </td><td>204.4 </td><td>-2.0 </td><td>214.4 </td><td>Dynalene LO-230, high flash, non-toxic, low temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999914, R²_rho=0.9998942, R²_eta=0.9998954, R²_lambda=0.9999869) </td></tr>
-    <tr><td>TILMedia.Dynalene_MT </td><td>0.0 </td><td>325.0 </td><td>-2.0 </td><td>335.0 </td><td>Dynalene MT, high temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999732, R²_rho=0.9999997, R²_eta=0.9997275, R²_lambda=0.9999671) </td></tr>
-    <tr><td>TILMedia.Dynalene_MV </td><td>-112.2 </td><td>162.8 </td><td>-114.2 </td><td>172.8 </td><td>Dynalene MV, ultra-low temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999836, R²_rho=0.9999557, R²_eta=1.0000000, R²_lambda=0.9994927) </td></tr>
-    <tr><td>TILMedia.Dynalene_SF </td><td>0.0 </td><td>315.6 </td><td>-2.5 </td><td>328.1 </td><td>Dynalene SF, high temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999876, R²_rho=0.9999480, R²_eta=0.9999870, R²_lambda=0.9999699) </td></tr>
-    <tr><td>TILMedia.Dynalene_Solar_Glycol-XT </td><td>-23.3 </td><td>104.4 </td><td>-25.3 </td><td>114.4 </td><td>Dynalene Solar Glycol-XT, BioGlycol heat transfer fluid. Produced by Dynalene. (R²_cp=0.9971698, R²_rho=0.9999974, R²_eta=0.9999959, R²_lambda=0.9979960) </td></tr>
-    <tr><td>TILMedia.Fragoltherm_FG-35 </td><td>-10.0 </td><td>340.0 </td><td>-12.5 </td><td>352.5 </td><td>Fragoltherm FG-35, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999295, R²_rho=0.9999869, R²_eta=0.9999313, R²_lambda=0.9993092) </td></tr>
-    <tr><td>TILMedia.Fragoltherm_FG-8 </td><td>-45.0 </td><td>280.0 </td><td>-48.3 </td><td>296.7 </td><td>Fragoltherm FG-8, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999993, R²_rho=0.9999697, R²_eta=1.0000000, R²_lambda=0.9994924) </td></tr>
-    <tr><td>TILMedia.Fragoltherm_Q-7 </td><td>-45.0 </td><td>280.0 </td><td>-48.3 </td><td>296.7 </td><td>Fragoltherm Q-7, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999993, R²_rho=0.9999697, R²_eta=1.0000000, R²_lambda=0.9994924) </td></tr>
-    <tr><td>TILMedia.Fragoltherm_S-250 </td><td>5.0 </td><td>270.0 </td><td>3.0 </td><td>280.0 </td><td>Fragoltherm S-250, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999888, R²_rho=0.9999800, R²_eta=1.0000000, R²_lambda=0.9943906) </td></tr>
-    <tr><td>TILMedia.Fragoltherm_X-TT </td><td>-110.0 </td><td>230.0 </td><td>-112.0 </td><td>240.0 </td><td>Fragoltherm X-TT, heat transfer fluid. Produced by Fragol. (R²_cp=1.0000000, R²_rho=0.9999999, R²_eta=0.9999961, R²_lambda=0.9999037) </td></tr>
-    <tr><td>TILMedia.Fragol_Purity_FG-HTF </td><td>-10.0 </td><td>340.0 </td><td>-12.0 </td><td>350.0 </td><td>Fragol Purity FG-HTF, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999324, R²_rho=0.9999802, R²_eta=0.9999986, R²_lambda=0.9975104) </td></tr>
-    <tr><td>TILMedia.Freezium_-60C </td><td>-55.0 </td><td>-10.0 </td><td>-57.0 </td><td>0.0 </td><td>Freezium -60C, heat transfer fluid. Produced by Eastman. (R²_cp=0.9963447, R²_rho=1.0000000, R²_eta=0.9999909, R²_lambda=0.9696930) </td></tr>
-    <tr><td>TILMedia.Marlotherm_LH </td><td>-30.0 </td><td>360.0 </td><td>-32.0 </td><td>370.0 </td><td>Marlotherm LH, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999376, R²_rho=0.9999826, R²_eta=0.9999879, R²_lambda=0.9995025) </td></tr>
-    <tr><td>TILMedia.Marlotherm_SH </td><td>0.0 </td><td>360.0 </td><td>-2.0 </td><td>370.0 </td><td>Marlotherm SH, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999482, R²_rho=0.9999860, R²_eta=0.9999998, R²_lambda=0.9999965) </td></tr>
-    <tr><td>TILMedia.Marlotherm_XC </td><td>-90.0 </td><td>300.0 </td><td>-92.5 </td><td>312.5 </td><td>Marlotherm XC, heat transfer fluid. Produced by Eastman. (R²_cp=0.9998873, R²_rho=0.9999962, R²_eta=0.9999982, R²_lambda=0.9997738) </td></tr>
-    <tr><td>TILMedia.Novec7500 </td><td>-70.0 </td><td>130.0 </td><td>-70.0 </td><td>130.0 </td><td>The 3M Novec 7500 High-Tech Engineered Fluid </td></tr>
-    <tr><td>TILMedia.Obsolete_Therminol59 </td><td>-50.0 </td><td>320.0 </td><td>-73.1 </td><td>476.9 </td><td>Therminol 59 by Fragol </td></tr>
-    <tr><td>TILMedia.Obsolete_Therminol66 </td><td>0.0 </td><td>380.0 </td><td>-13.1 </td><td>476.9 </td><td>Therminol 66 by Fragol </td></tr>
-    <tr><td>TILMedia.Obsolete_Therminol72 </td><td>-10.0 </td><td>380.0 </td><td>-73.1 </td><td>476.9 </td><td>Therminol 72 by Fragol </td></tr>
-    <tr><td>TILMedia.Obsolete_TherminolD12 </td><td>-85.0 </td><td>260.0 </td><td>-123.1 </td><td>476.9 </td><td>Therminol D12 by Fragol </td></tr>
-    <tr><td>TILMedia.Oil_15W40 </td><td>-20.0 </td><td>160.0 </td><td>-123.1 </td><td>326.9 </td><td>Oil 15W40 </td></tr>
-    <tr><td>TILMedia.Oil_Aral0W30 </td><td>-20.0 </td><td>160.0 </td><td>-73.1 </td><td>276.9 </td><td>Oil Aral 0W30 </td></tr>
-    <tr><td>TILMedia.SHC_XMP320 </td><td>0.0 </td><td>200.0 </td><td>-73.1 </td><td>476.9 </td><td>Mobilgear SHC XMP 320 </td></tr>
-    <tr><td>TILMedia.SHC_XMP320_B </td><td>0.0 </td><td>150.0 </td><td>-73.1 </td><td>476.9 </td><td>Mobilgear SHC XMP 320 </td></tr>
-    <tr><td>TILMedia.Therminol_54 </td><td>-28.0 </td><td>310.0 </td><td>-30.5 </td><td>322.5 </td><td>Therminol 54, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999415, R²_rho=0.9999808, R²_eta=0.9999435, R²_lambda=0.9994501) </td></tr>
-    <tr><td>TILMedia.Therminol_55 </td><td>-28.0 </td><td>320.0 </td><td>-30.5 </td><td>332.5 </td><td>Therminol 55, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999461, R²_rho=0.9999823, R²_eta=0.9999435, R²_lambda=0.9999904) </td></tr>
-    <tr><td>TILMedia.Therminol_59 </td><td>-49.0 </td><td>330.0 </td><td>-51.0 </td><td>340.0 </td><td>Therminol 59, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999349, R²_rho=0.9999811, R²_eta=0.9999949, R²_lambda=0.9999942) </td></tr>
-    <tr><td>TILMedia.Therminol_62 </td><td>-23.0 </td><td>340.0 </td><td>-25.0 </td><td>350.0 </td><td>Therminol 62, heat transfer fluid. Produced by Eastman. (R²_cp=0.9998650, R²_rho=0.9999882, R²_eta=0.9999962, R²_lambda=0.9999857) </td></tr>
-    <tr><td>TILMedia.Therminol_66 </td><td>-3.0 </td><td>370.0 </td><td>-5.0 </td><td>380.0 </td><td>Therminol 66, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999431, R²_rho=0.9999808, R²_eta=0.9999967, R²_lambda=0.9999621) </td></tr>
-    <tr><td>TILMedia.Therminol_68 </td><td>-20.0 </td><td>360.0 </td><td>-22.0 </td><td>370.0 </td><td>Therminol 68, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999994, R²_rho=0.9999738, R²_eta=0.9999999, R²_lambda=0.9990540) </td></tr>
-    <tr><td>TILMedia.Therminol_72 </td><td>-14.0 </td><td>380.0 </td><td>-2.5 </td><td>392.5 </td><td>Therminol 72, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999992, R²_rho=0.9999920, R²_eta=0.9999801, R²_lambda=0.9996138) </td></tr>
-    <tr><td>TILMedia.Therminol_75 </td><td>71.0 </td><td>385.0 </td><td>69.0 </td><td>395.0 </td><td>Therminol 75, heat transfer fluid. Produced by Eastman. (R²_cp=0.9998922, R²_rho=0.9995534, R²_eta=0.9999983, R²_lambda=0.9999842) </td></tr>
-    <tr><td>TILMedia.Therminol_ADX-10 </td><td>-56.0 </td><td>290.0 </td><td>-58.5 </td><td>302.5 </td><td>Therminol ADX-10, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999351, R²_rho=0.9999864, R²_eta=0.9999915, R²_lambda=0.9999962) </td></tr>
-    <tr><td>TILMedia.Therminol_D-12 </td><td>-94.0 </td><td>250.0 </td><td>-96.5 </td><td>262.5 </td><td>Therminol D-12, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999339, R²_rho=0.9999656, R²_eta=1.0000000, R²_lambda=0.9999975) </td></tr>
-    <tr><td>TILMedia.Therminol_LT </td><td>-73.0 </td><td>315.0 </td><td>-75.0 </td><td>325.0 </td><td>Therminol LT, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999110, R²_rho=0.9999860, R²_eta=0.9999525, R²_lambda=0.9999979) </td></tr>
-    <tr><td>TILMedia.Therminol_SP </td><td>-28.0 </td><td>320.0 </td><td>-30.5 </td><td>332.5 </td><td>Therminol SP, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999461, R²_rho=0.9999823, R²_eta=0.9999435, R²_lambda=0.9999904) </td></tr>
-    <tr><td>TILMedia.Therminol_VLT </td><td>-135.0 </td><td>180.0 </td><td>-137.0 </td><td>190.0 </td><td>Therminol VLT, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999335, R²_rho=0.9999817, R²_eta=0.9999999, R²_lambda=0.9999968) </td></tr>
-    <tr><td>TILMedia.Therminol_VP-1 </td><td>12.0 </td><td>420.0 </td><td>10.0 </td><td>430.0 </td><td>Therminol VP-1, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999153, R²_rho=0.9999877, R²_eta=0.9999991, R²_lambda=0.9999980) </td></tr>
-    <tr><td>TILMedia.Therminol_XP </td><td>-20.0 </td><td>330.0 </td><td>-22.0 </td><td>340.0 </td><td>Therminol XP, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999581, R²_rho=0.9999822, R²_eta=1.0000000, R²_lambda=0.9999918) </td></tr>
-    <tr><td>TILMedia.Tyfocor30 </td><td>-15.0 </td><td>100.0 </td><td>-43.1 </td><td>156.9 </td><td>Tyfocor 30 %vol by Tyforop Chemie </td></tr>
-    <tr><td>TILMedia.Tyfocor45 </td><td>-30.0 </td><td>100.0 </td><td>-43.1 </td><td>156.9 </td><td>Tyfocor 45 %vol by Tyforop Chemie </td></tr>
-    <tr><td>TILMedia.TyfocorL33 </td><td>-15.0 </td><td>100.0 </td><td>-43.1 </td><td>156.9 </td><td>Tyfocor 33 %vol by Tyforop Chemie </td></tr>
-    <tr><td>TILMedia.Water </td><td>0.0 </td><td>185.0 </td><td>-23.1 </td><td>276.9 </td><td>Water </td></tr>
-    <tr><td>TILMedia.ZitrecM10 </td><td>-10.0 </td><td>100.0 </td><td>-23.1 </td><td>126.9 </td><td>Zitrec M-10 by Fragol </td></tr>
-    <tr><td>TILMedia.ZitrecM20 </td><td>-20.0 </td><td>100.0 </td><td>-33.1 </td><td>126.9 </td><td>Zitrec M-20 by Fragol </td></tr>
-    <tr><td>TILMediaXTR.Ammonia </td><td>-77.6 </td><td>91.3 </td><td>-232.6 </td><td>131.7 </td><td>Ammonia </td></tr>
-    <tr><td>TILMediaXTR.Argon </td><td>-189.3 </td><td>-139.2 </td><td>-258.1 </td><td>-122.3 </td><td>Argon </td></tr>
-    <tr><td>TILMediaXTR.Carbon_Dioxide </td><td>-56.5 </td><td>-0.6 </td><td>-242.7 </td><td>30.9 </td><td>Carbon dioxide </td></tr>
-    <tr><td>TILMediaXTR.Carbon_Monoxide </td><td>-204.5 </td><td>-153.6 </td><td>-259.9 </td><td>-140.3 </td><td>Carbon monoxide </td></tr>
-    <tr><td>TILMediaXTR.DryAir </td><td>-213.4 </td><td>-154.7 </td><td>-259.9 </td><td>-140.4 </td><td>Dry air </td></tr>
-    <tr><td>TILMediaXTR.Hydrogen </td><td>-259.2 </td><td>-243.4 </td><td>-269.8 </td><td>-240.1 </td><td>Hydrogen </td></tr>
-    <tr><td>TILMediaXTR.Methane </td><td>-182.5 </td><td>-91.2 </td><td>-254.1 </td><td>-88.1 </td><td>Methane </td></tr>
-    <tr><td>TILMediaXTR.Nitrogen </td><td>-209.7 </td><td>-160.5 </td><td>-260.5 </td><td>-147.0 </td><td>Nitrogen </td></tr>
-    <tr><td>TILMediaXTR.Nitrous_Oxide </td><td>-90.8 </td><td>4.7 </td><td>-242.2 </td><td>36.4 </td><td>Nitrous oxide </td></tr>
-    <tr><td>TILMediaXTR.Oxygen </td><td>-218.1 </td><td>-136.2 </td><td>-257.7 </td><td>-118.6 </td><td>Oxygen </td></tr>
-    <tr><td>TILMediaXTR.Sulfur_Dioxide </td><td>-75.4 </td><td>114.3 </td><td>-230.1 </td><td>157.2 </td><td>Sulfur dioxide </td></tr>
-    <tr><td>TILMediaXTR.Water </td><td>1.0 </td><td>304.3 </td><td>-208.4 </td><td>373.9 </td><td>Water </td></tr>
-    <tr><td>IIR_SWF.3M_Novec_HFE7100 </td><td> </td><td> </td><td>-80.0 </td><td>100.0 </td><td>Hydrofluoroether - HFE-7100 3M Novec </td></tr>
-    <tr><td>IIR_SWF.Baysilone_KT3 </td><td> </td><td> </td><td>-80.0 </td><td>100.0 </td><td>Polydimethylsiloxan 1 - Baysilone KT3 </td></tr>
-    <tr><td>IIR_SWF.Dowtherm_J </td><td> </td><td> </td><td>-80.0 </td><td>100.0 </td><td>Diethylbenzene mixture - Dowtherm J </td></tr>
-    <tr><td>IIR_SWF.Dynalene_MV </td><td> </td><td> </td><td>-80.0 </td><td>100.0 </td><td>Hydrocarbon blend - Dynalene MV </td></tr>
-    <tr><td>IIR_SWF.d_Limonene </td><td> </td><td> </td><td>-80.0 </td><td>100.0 </td><td>Citrus oil terpene - d-Limonene </td></tr>
-    <tr><td>IIR_SWF.Gilotherm_D12 </td><td> </td><td> </td><td>-80.0 </td><td>100.0 </td><td>Hydrocarbon mixture - Gilotherm D12 </td></tr>
-    <tr><td>IIR_SWF.Marlotherm_X </td><td> </td><td> </td><td>-80.0 </td><td>100.0 </td><td>Synthetic alkyl benzene - Marlotherm X </td></tr>
-    <tr><td>IIR_SWF.Syltherm_XLT </td><td> </td><td> </td><td>-80.0 </td><td>100.0 </td><td>Polydimethylsiloxan 2 - Syltherm XLT </td></tr>
+    <tr><th>Substance name</th><th>Temperature range of the original data in °C</th><th>Usable temperature range in °C</th><th>Description</th></tr>
+    <tr><td>TILMedia.AddinolXW15 </td><td>[-20, 300] </td><td>[-33.1, 326.8] </td><td>Addinol heat transfer oil XW 15 </td></tr>
+    <tr><td>TILMedia.Antifrogen_Sol_HT </td><td>[-23, 200] </td><td>[-33, 200.4] </td><td>Antifrogen Sol HT, Antifrogen® SOL HT is a physiologically harmless, yellowish, clear liquid based on an aqueous solution of higher boiling glycols, which is used as a heat transfer medium in solar heating systems, also those exposed to high thermal loads. Produced by Clariant. (R²_cp=1.0000000, R²_rho=1.0000000, R²_eta=1.0000000, R²_lambda=0.9999405) </td></tr>
+    <tr><td>TILMedia.Baysilone_KT_10 </td><td>[-60, 240] </td><td>[-60.4, 240.4] </td><td>Baysilone KT 10, Low-viscosity silicone heat transfer fluid. Produced by Bayer. (R²_cp=0.9999724, R²_rho=0.9999708, R²_eta=0.9999565, R²_lambda=0.9997356) </td></tr>
+    <tr><td>TILMedia.Baysilone_KT_20 </td><td>[-60, 240] </td><td>[-64.2, 240.4] </td><td>Baysilone KT 20, Low-viscosity silicone heat transfer fluid. Produced by Bayer. (R²_cp=0.9999833, R²_rho=0.9999857, R²_eta=0.9999922, R²_lambda=0.9998325) </td></tr>
+    <tr><td>TILMedia.Baysilone_KT_3 </td><td>[-60, 240] </td><td>[-60.4, 240.4] </td><td>Baysilone KT 3, Low-viscosity silicone heat transfer fluid. Produced by Bayer. (R²_cp=0.9970532, R²_rho=0.9999504, R²_eta=0.9999942, R²_lambda=0.9998028) </td></tr>
+    <tr><td>TILMedia.Baysilone_KT_5 </td><td>[-60, 240] </td><td>[-61, 240.4] </td><td>Baysilone KT 5, Low-viscosity silicone heat transfer fluid. Produced by Bayer. (R²_cp=0.9999645, R²_rho=0.9999700, R²_eta=0.9999698, R²_lambda=0.9998604) </td></tr>
+    <tr><td>TILMedia.Dowtherm_A </td><td>[15.6, 415.6] </td><td>[13.1, 428.1] </td><td>Dowtherm A, heat transfer fluid. Produced by Dow. (R²_cp=0.9998969, R²_rho=0.9999998, R²_eta=0.9999959, R²_lambda=0.9999986) </td></tr>
+    <tr><td>TILMedia.Dynalene_600 </td><td>[70, 287.8] </td><td>[68, 297.8] </td><td>Dynalene 600, high temperature silicone heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999787, R²_rho=0.9999796, R²_eta=0.9999950, R²_lambda=0.9999852) </td></tr>
+    <tr><td>TILMedia.Dynalene_FC-Bio </td><td>[-34.4, 115.6] </td><td>[-36.4, 125.6] </td><td>Dynalene FC-Bio, low electrical conductivity, water-based fuel cell coolant with nano particles. Produced by Dynalene. (R²_cp=0.9995178, R²_rho=0.9999993, R²_eta=0.9999999, R²_lambda=0.9969481) </td></tr>
+    <tr><td>TILMedia.Dynalene_FC-EG </td><td>[-28.9, 115.6] </td><td>[-30.9, 125.6] </td><td>Dynalene FC-EG, low electrical conductivity, water-based fuel cell coolant with nano particles. Produced by Dynalene. (R²_cp=0.9987529, R²_rho=0.9999947, R²_eta=0.9999975, R²_lambda=0.9988012) </td></tr>
+    <tr><td>TILMedia.Dynalene_HC-FG10 </td><td>[-10, 218.3] </td><td>[-12, 228.3] </td><td>Dynalene HC-FG10, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999619, R²_rho=0.9997986, R²_eta=0.9999310, R²_lambda=0.9999625) </td></tr>
+    <tr><td>TILMedia.Dynalene_HC-FG20 </td><td>[-20, 218.3] </td><td>[-22.5, 230.8] </td><td>Dynalene HC-FG20, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999556, R²_rho=0.9998634, R²_eta=0.9999424, R²_lambda=0.9999669) </td></tr>
+    <tr><td>TILMedia.Dynalene_HC-FG30 </td><td>[-30, 218.3] </td><td>[-32, 228.3] </td><td>Dynalene HC-FG30, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999551, R²_rho=0.9998802, R²_eta=0.9999487, R²_lambda=0.9999674) </td></tr>
+    <tr><td>TILMedia.Dynalene_HC-FG40 </td><td>[-40, 218.3] </td><td>[-42, 228.3] </td><td>Dynalene HC-FG40, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999875, R²_rho=0.9999031, R²_eta=0.9999736, R²_lambda=0.9999633) </td></tr>
+    <tr><td>TILMedia.Dynalene_HC-FG50 </td><td>[-50, 218.3] </td><td>[-52, 228.3] </td><td>Dynalene HC-FG50, low temperature, high-performance heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999417, R²_rho=0.9999068, R²_eta=0.9999625, R²_lambda=0.9997939) </td></tr>
+    <tr><td>TILMedia.Dynalene_HF-LO </td><td>[-73.3, 176.7] </td><td>[-75.3, 186.7] </td><td>Dynalene HF-LO, high flash, non-toxic, low temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999849, R²_rho=0.9999391, R²_eta=0.9999988, R²_lambda=0.9999959) </td></tr>
+    <tr><td>TILMedia.Dynalene_HT </td><td>[20, 350] </td><td>[18, 360] </td><td>Dynalene HT, high temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999910, R²_rho=0.9999572, R²_eta=0.9999981, R²_lambda=0.9999861) </td></tr>
+    <tr><td>TILMedia.Dynalene_LO-170 </td><td>[-40, 193.3] </td><td>[-42, 203.3] </td><td>Dynalene LO-170, non-toxic, low odor, low temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999796, R²_rho=0.9998397, R²_eta=0.9999872, R²_lambda=0.9999961) </td></tr>
+    <tr><td>TILMedia.Dynalene_LO-230 </td><td>[0, 204.4] </td><td>[-2, 214.4] </td><td>Dynalene LO-230, high flash, non-toxic, low temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999914, R²_rho=0.9998942, R²_eta=0.9998954, R²_lambda=0.9999869) </td></tr>
+    <tr><td>TILMedia.Dynalene_MT </td><td>[0, 325] </td><td>[-2, 335] </td><td>Dynalene MT, high temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999732, R²_rho=0.9999997, R²_eta=0.9997275, R²_lambda=0.9999671) </td></tr>
+    <tr><td>TILMedia.Dynalene_MV </td><td>[-112.2, 162.8] </td><td>[-114.2, 172.8] </td><td>Dynalene MV, ultra-low temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999836, R²_rho=0.9999557, R²_eta=1.0000000, R²_lambda=0.9994927) </td></tr>
+    <tr><td>TILMedia.Dynalene_SF </td><td>[0, 315.6] </td><td>[-2.5, 328.1] </td><td>Dynalene SF, high temperature heat transfer fluid. Produced by Dynalene. (R²_cp=0.9999876, R²_rho=0.9999480, R²_eta=0.9999870, R²_lambda=0.9999699) </td></tr>
+    <tr><td>TILMedia.Dynalene_Solar_Glycol-XT </td><td>[-23.3, 104.4] </td><td>[-25.3, 114.4] </td><td>Dynalene Solar Glycol-XT, BioGlycol heat transfer fluid. Produced by Dynalene. (R²_cp=0.9971698, R²_rho=0.9999974, R²_eta=0.9999959, R²_lambda=0.9979960) </td></tr>
+    <tr><td>TILMedia.Fragoltherm_FG-35 </td><td>[-10, 340] </td><td>[-12.5, 352.5] </td><td>Fragoltherm FG-35, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999295, R²_rho=0.9999869, R²_eta=0.9999313, R²_lambda=0.9993092) </td></tr>
+    <tr><td>TILMedia.Fragoltherm_FG-8 </td><td>[-45, 280] </td><td>[-48.3, 296.7] </td><td>Fragoltherm FG-8, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999993, R²_rho=0.9999697, R²_eta=1.0000000, R²_lambda=0.9994924) </td></tr>
+    <tr><td>TILMedia.Fragoltherm_Q-7 </td><td>[-45, 280] </td><td>[-48.3, 296.7] </td><td>Fragoltherm Q-7, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999993, R²_rho=0.9999697, R²_eta=1.0000000, R²_lambda=0.9994924) </td></tr>
+    <tr><td>TILMedia.Fragoltherm_S-250 </td><td>[5, 270] </td><td>[3, 280] </td><td>Fragoltherm S-250, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999888, R²_rho=0.9999800, R²_eta=1.0000000, R²_lambda=0.9943906) </td></tr>
+    <tr><td>TILMedia.Fragoltherm_X-TT </td><td>[-110, 230] </td><td>[-112, 240] </td><td>Fragoltherm X-TT, heat transfer fluid. Produced by Fragol. (R²_cp=1.0000000, R²_rho=0.9999999, R²_eta=0.9999961, R²_lambda=0.9999037) </td></tr>
+    <tr><td>TILMedia.Fragol_Purity_FG-HTF </td><td>[-10, 340] </td><td>[-12, 350] </td><td>Fragol Purity FG-HTF, heat transfer fluid. Produced by Fragol. (R²_cp=0.9999324, R²_rho=0.9999802, R²_eta=0.9999986, R²_lambda=0.9975104) </td></tr>
+    <tr><td>TILMedia.Freezium_-60C </td><td>[-55, -10] </td><td>[-57, 0] </td><td>Freezium -60C, heat transfer fluid. Produced by Eastman. (R²_cp=0.9963447, R²_rho=1.0000000, R²_eta=0.9999909, R²_lambda=0.9696930) </td></tr>
+    <tr><td>TILMedia.Marlotherm_LH </td><td>[-30, 360] </td><td>[-32, 370] </td><td>Marlotherm LH, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999376, R²_rho=0.9999826, R²_eta=0.9999879, R²_lambda=0.9995025) </td></tr>
+    <tr><td>TILMedia.Marlotherm_SH </td><td>[0, 360] </td><td>[-2, 370] </td><td>Marlotherm SH, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999482, R²_rho=0.9999860, R²_eta=0.9999998, R²_lambda=0.9999965) </td></tr>
+    <tr><td>TILMedia.Marlotherm_XC </td><td>[-90, 300] </td><td>[-92.5, 312.5] </td><td>Marlotherm XC, heat transfer fluid. Produced by Eastman. (R²_cp=0.9998873, R²_rho=0.9999962, R²_eta=0.9999982, R²_lambda=0.9997738) </td></tr>
+    <tr><td>TILMedia.Novec7500 </td><td>[-70, 130] </td><td>[-70, 130] </td><td>The 3M Novec 7500 High-Tech Engineered Fluid </td></tr>
+    <tr><td>TILMedia.Obsolete_Therminol59 </td><td>[-50, 320] </td><td>[-73.1, 476.8] </td><td>Therminol 59 by Fragol </td></tr>
+    <tr><td>TILMedia.Obsolete_Therminol66 </td><td>[0, 380] </td><td>[-13.1, 476.8] </td><td>Therminol 66 by Fragol </td></tr>
+    <tr><td>TILMedia.Obsolete_Therminol72 </td><td>[-10, 380] </td><td>[-73.1, 476.8] </td><td>Therminol 72 by Fragol </td></tr>
+    <tr><td>TILMedia.Obsolete_TherminolD12 </td><td>[-85, 260] </td><td>[-123.1, 476.8] </td><td>Therminol D12 by Fragol </td></tr>
+    <tr><td>TILMedia.Oil_15W40 </td><td>[-20, 160] </td><td>[-123.1, 326.8] </td><td>Oil 15W40 </td></tr>
+    <tr><td>TILMedia.Oil_Aral0W30 </td><td>[-20, 160] </td><td>[-73.1, 276.8] </td><td>Oil Aral 0W30 </td></tr>
+    <tr><td>TILMedia.SHC_XMP320 </td><td>[0, 200] </td><td>[-73.1, 476.8] </td><td>Mobilgear SHC XMP 320 </td></tr>
+    <tr><td>TILMedia.SHC_XMP320_B </td><td>[0, 150] </td><td>[-73.1, 476.8] </td><td>Mobilgear SHC XMP 320 </td></tr>
+    <tr><td>TILMedia.Therminol_54 </td><td>[-28, 310] </td><td>[-30.5, 322.5] </td><td>Therminol 54, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999415, R²_rho=0.9999808, R²_eta=0.9999435, R²_lambda=0.9994501) </td></tr>
+    <tr><td>TILMedia.Therminol_55 </td><td>[-28, 320] </td><td>[-30.5, 332.5] </td><td>Therminol 55, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999461, R²_rho=0.9999823, R²_eta=0.9999435, R²_lambda=0.9999904) </td></tr>
+    <tr><td>TILMedia.Therminol_59 </td><td>[-49, 330] </td><td>[-51, 340] </td><td>Therminol 59, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999349, R²_rho=0.9999811, R²_eta=0.9999949, R²_lambda=0.9999942) </td></tr>
+    <tr><td>TILMedia.Therminol_62 </td><td>[-23, 340] </td><td>[-25, 350] </td><td>Therminol 62, heat transfer fluid. Produced by Eastman. (R²_cp=0.9998650, R²_rho=0.9999882, R²_eta=0.9999962, R²_lambda=0.9999857) </td></tr>
+    <tr><td>TILMedia.Therminol_66 </td><td>[-3, 370] </td><td>[-5, 380] </td><td>Therminol 66, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999431, R²_rho=0.9999808, R²_eta=0.9999967, R²_lambda=0.9999621) </td></tr>
+    <tr><td>TILMedia.Therminol_68 </td><td>[-20, 360] </td><td>[-22, 370] </td><td>Therminol 68, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999994, R²_rho=0.9999738, R²_eta=0.9999999, R²_lambda=0.9990540) </td></tr>
+    <tr><td>TILMedia.Therminol_72 </td><td>[-14, 380] </td><td>[-2.5, 392.5] </td><td>Therminol 72, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999992, R²_rho=0.9999920, R²_eta=0.9999801, R²_lambda=0.9996138) </td></tr>
+    <tr><td>TILMedia.Therminol_75 </td><td>[71, 385] </td><td>[69, 395] </td><td>Therminol 75, heat transfer fluid. Produced by Eastman. (R²_cp=0.9998922, R²_rho=0.9995534, R²_eta=0.9999983, R²_lambda=0.9999842) </td></tr>
+    <tr><td>TILMedia.Therminol_ADX-10 </td><td>[-56, 290] </td><td>[-58.5, 302.5] </td><td>Therminol ADX-10, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999351, R²_rho=0.9999864, R²_eta=0.9999915, R²_lambda=0.9999962) </td></tr>
+    <tr><td>TILMedia.Therminol_D-12 </td><td>[-94, 250] </td><td>[-96.5, 262.5] </td><td>Therminol D-12, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999339, R²_rho=0.9999656, R²_eta=1.0000000, R²_lambda=0.9999975) </td></tr>
+    <tr><td>TILMedia.Therminol_LT </td><td>[-73, 315] </td><td>[-75, 325] </td><td>Therminol LT, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999110, R²_rho=0.9999860, R²_eta=0.9999525, R²_lambda=0.9999979) </td></tr>
+    <tr><td>TILMedia.Therminol_SP </td><td>[-28, 320] </td><td>[-30.5, 332.5] </td><td>Therminol SP, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999461, R²_rho=0.9999823, R²_eta=0.9999435, R²_lambda=0.9999904) </td></tr>
+    <tr><td>TILMedia.Therminol_VLT </td><td>[-135, 180] </td><td>[-137, 190] </td><td>Therminol VLT, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999335, R²_rho=0.9999817, R²_eta=0.9999999, R²_lambda=0.9999968) </td></tr>
+    <tr><td>TILMedia.Therminol_VP-1 </td><td>[12, 420] </td><td>[10, 430] </td><td>Therminol VP-1, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999153, R²_rho=0.9999877, R²_eta=0.9999991, R²_lambda=0.9999980) </td></tr>
+    <tr><td>TILMedia.Therminol_XP </td><td>[-20, 330] </td><td>[-22, 340] </td><td>Therminol XP, heat transfer fluid. Produced by Eastman. (R²_cp=0.9999581, R²_rho=0.9999822, R²_eta=1.0000000, R²_lambda=0.9999918) </td></tr>
+    <tr><td>TILMedia.Tyfocor30 </td><td>[-15, 100] </td><td>[-43.1, 156.9] </td><td>Tyfocor 30 %vol by Tyforop Chemie </td></tr>
+    <tr><td>TILMedia.Tyfocor45 </td><td>[-30, 100] </td><td>[-43.1, 156.9] </td><td>Tyfocor 45 %vol by Tyforop Chemie </td></tr>
+    <tr><td>TILMedia.TyfocorL33 </td><td>[-15, 100] </td><td>[-43.1, 156.9] </td><td>Tyfocor 33 %vol by Tyforop Chemie </td></tr>
+    <tr><td>TILMedia.Tyfocor_LS </td><td>[-20, 120] </td><td>[-20.4, 131.9] </td><td>Tyfocor LS, TYFOCOR LS is a liquid based on an aqueous solution of physiologically unobjectionable propylene glycol with a faint odour. The fluid was developed especially for use in solar thermal systems with high thermal loads (vacuum tube collectors). Produced by Tyforop Chemie GmbH. (R²_cp=0.9998790, R²_rho=0.9998353, R²_eta=0.9998728, R²_lambda=0.9999006) </td></tr>
+    <tr><td>TILMedia.Water </td><td>[0, 185] </td><td>[-23.1, 276.8] </td><td>Water </td></tr>
+    <tr><td>TILMedia.ZitrecM10 </td><td>[-10, 100] </td><td>[-23.1, 126.9] </td><td>Zitrec M-10 by Fragol </td></tr>
+    <tr><td>TILMedia.ZitrecM20 </td><td>[-20, 100] </td><td>[-33.1, 126.9] </td><td>Zitrec M-20 by Fragol </td></tr>
+    <tr><td>TILMediaXTR.Ammonia </td><td>[-77.6, 91.3] </td><td>[-232.6, 131.7] </td><td>Ammonia </td></tr>
+    <tr><td>TILMediaXTR.Argon </td><td>[-189.3, -139.2] </td><td>[-258.1, -122.3] </td><td>Argon </td></tr>
+    <tr><td>TILMediaXTR.Carbon_Dioxide </td><td>[-56.5, -0.6] </td><td>[-242.7, 30.9] </td><td>Carbon dioxide </td></tr>
+    <tr><td>TILMediaXTR.Carbon_Monoxide </td><td>[-204.5, -153.6] </td><td>[-259.9, -140.3] </td><td>Carbon monoxide </td></tr>
+    <tr><td>TILMediaXTR.DryAir </td><td>[-213.4, -154.7] </td><td>[-259.9, -140.4] </td><td>Dry air </td></tr>
+    <tr><td>TILMediaXTR.Hydrogen </td><td>[-259.2, -243.4] </td><td>[-269.8, -240.2] </td><td>Hydrogen </td></tr>
+    <tr><td>TILMediaXTR.Methane </td><td>[-182.5, -91.2] </td><td>[-254.1, -88.1] </td><td>Methane </td></tr>
+    <tr><td>TILMediaXTR.Nitrogen </td><td>[-209.7, -160.5] </td><td>[-260.5, -147] </td><td>Nitrogen </td></tr>
+    <tr><td>TILMediaXTR.Nitrous_Oxide </td><td>[-90.8, 4.7] </td><td>[-242.2, 36.4] </td><td>Nitrous oxide </td></tr>
+    <tr><td>TILMediaXTR.Oxygen </td><td>[-218.2, -136.2] </td><td>[-257.7, -118.6] </td><td>Oxygen </td></tr>
+    <tr><td>TILMediaXTR.Sulfur_Dioxide </td><td>[-75.4, 114.3] </td><td>[-230.1, 157.2] </td><td>Sulfur dioxide </td></tr>
+    <tr><td>TILMediaXTR.Water </td><td>[1, 304.3] </td><td>[-208.4, 373.9] </td><td>Water </td></tr>
+    <tr><td>IIR_SWF.3M_Novec_HFE7100 </td><td> </td><td>[-80, 100] </td><td>Hydrofluoroether - HFE-7100 3M Novec </td></tr>
+    <tr><td>IIR_SWF.Baysilone_KT3 </td><td> </td><td>[-80, 100] </td><td>Polydimethylsiloxan 1 - Baysilone KT3 </td></tr>
+    <tr><td>IIR_SWF.Dowtherm_J </td><td> </td><td>[-80, 100] </td><td>Diethylbenzene mixture - Dowtherm J </td></tr>
+    <tr><td>IIR_SWF.Dynalene_MV </td><td> </td><td>[-80, 100] </td><td>Hydrocarbon blend - Dynalene MV </td></tr>
+    <tr><td>IIR_SWF.d_Limonene </td><td> </td><td>[-80, 100] </td><td>Citrus oil terpene - d-Limonene </td></tr>
+    <tr><td>IIR_SWF.Gilotherm_D12 </td><td> </td><td>[-80, 100] </td><td>Hydrocarbon mixture - Gilotherm D12 </td></tr>
+    <tr><td>IIR_SWF.Marlotherm_X </td><td> </td><td>[-80, 100] </td><td>Synthetic alkyl benzene - Marlotherm X </td></tr>
+    <tr><td>IIR_SWF.Syltherm_XLT </td><td> </td><td>[-80, 100] </td><td>Polydimethylsiloxan 2 - Syltherm XLT </td></tr>
+    <tr><td>BranansRulesOfThumb.CALFLO_AF </td><td> </td><td>[-99.9, 708.3] </td><td>99.9% pure base oils, crystal-clear, free of aromatic compounds with additives. </td></tr>
+    <tr><td>BranansRulesOfThumb.CALFLO_HTF </td><td> </td><td>[-109.7, 691.1] </td><td>99.9% pure base oils, crystal-clear, free of aromatic compounds with additives. </td></tr>
+    <tr><td>BranansRulesOfThumb.CALFLO_LT </td><td> </td><td>[-121.6, 629.6] </td><td>Synthetic poly-alpha-olefins. </td></tr>
+    <tr><td>BranansRulesOfThumb.Chemtherm_550 </td><td> </td><td>[-85, 665] </td><td>Premium oil more thermally stable than mineral oils. </td></tr>
+    <tr><td>BranansRulesOfThumb.Chemtherm_650 </td><td> </td><td>[-123.1, 493.1] </td><td>Premium high temperature oil resists oxidation. </td></tr>
+    <tr><td>BranansRulesOfThumb.Chemtherm_700 </td><td> </td><td>[-104.6, 641.9] </td><td>Premium high temperature single compound formulation. </td></tr>
+    <tr><td>BranansRulesOfThumb.Diphyl </td><td> </td><td>[-123.1, 445.4] </td><td>High-temperature HTF based on diphenyl oxide/diphenyl eutectic for liq and vap phase. </td></tr>
+    <tr><td>BranansRulesOfThumb.Diphyl_DT </td><td> </td><td>[-112.7, 472.7] </td><td>Isomeric ditolyl ethers with broad spectrum of applications in liq phase. </td></tr>
+    <tr><td>BranansRulesOfThumb.Diphyl_KT </td><td> </td><td>[-123.1, 498.9] </td><td>Synthetic mixture of isomeric bynzyl toluenes with high thermal stability. </td></tr>
+    <tr><td>BranansRulesOfThumb.Diphyl_THT </td><td> </td><td>[-63.1, 620] </td><td>Partially hydrogenated terphenyls for pressureless high temperature applications. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_A </td><td> </td><td>[-123.1, 443.7] </td><td>Biphenyl and diphenyl oxide eutectic mixture – liquid phase properties. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_G </td><td> </td><td>[-123.1, 557] </td><td>Di- and tri-aryl compounds mixture. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_J </td><td> </td><td>[-123.1, 313.2] </td><td>Mixture of isomers of an alkylated aromatic. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_MX </td><td> </td><td>[-123.1, 594.7] </td><td>Mixture of alkylated aromatics. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_Q </td><td> </td><td>[-123.1, 416.9] </td><td>Mixture of diphenylethane and alkylated aromatics. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_RP </td><td> </td><td>[-123.1, 516.6] </td><td>Synthetic diaryl alkyl liquid. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_T </td><td> </td><td>[-123.1, 314.9] </td><td>Mixture of C14–C30 alkyl benzenes. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_450 </td><td> </td><td>[-121.1, 645.1] </td><td>Refined oil, non-aromatic. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_600 </td><td> </td><td>[-103.2, 642.4] </td><td>Refined and hydrotreated paraffinic oils, non-toxic and non-reportable. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_630 </td><td> </td><td>[-111.7, 646.4] </td><td>Refined and hydrotreated paraffinic oils, non-toxic and non-reportable. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_FG </td><td> </td><td>[-111.7, 646.4] </td><td>Refined paraffinic oils with additives, food grade. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_G </td><td> </td><td>[-104, 567.4] </td><td>Polyalkylene glycol based fluid with additives. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_Lite </td><td> </td><td>[-103.2, 642.4] </td><td>Same as Duratherm 600, but with fewer additives. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_LT </td><td> </td><td>[-120, 604.4] </td><td>Refined oil, non-aromatic. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_S </td><td> </td><td>[-123.1, 338.1] </td><td>Refined oil, non-aromatic especially resistant to oxidation. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_XLT_120 </td><td> </td><td>[-123.1, 680] </td><td>Refined silocone oil, for cryogenic applications, food &amp;amp;amp; pharma. </td></tr>
+    <tr><td>BranansRulesOfThumb.DURATHERM_XLT_50 </td><td> </td><td>[-123.1, 440] </td><td>Refined silocone oil, for cryogenic applications, food &amp;amp;amp; pharma. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_600 </td><td> </td><td>[-123.1, 442.8] </td><td>Silicone-based product with enhanced resistance to oxidation. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_HC_10 </td><td> </td><td>[-123.1, 726.8] </td><td>Aqueous-based, engineered for low temperature applications. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_HC_20 </td><td> </td><td>[-123.1, 726.8] </td><td>Aqueous-based, engineered for low temperature applications. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_HC_30 </td><td> </td><td>[-114.3, 726.8] </td><td>Aqueous-based, engineered for low temperature applications. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_HC_40 </td><td> </td><td>[-123.1, 726.8] </td><td>Aqueous-based, engineered for low temperature applications. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_HC_50 </td><td> </td><td>[-123.1, 726.8] </td><td>Aqueous-based, engineered for low temperature applications. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_HF </td><td> </td><td>[-123.1, 313.8] </td><td>Biodegradable aliphatic hydrocarbon blend, food grade. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_HF_LO </td><td> </td><td>[-123.1, 282.5] </td><td>Aliphatic hydrocarbon blend, non-toxic, odorless. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_HT </td><td> </td><td>[-123.1, 504.2] </td><td>Synthetic organic hydrocarbon. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_LO_170 </td><td> </td><td>[-123.1, 292.5] </td><td>Aliphatic hydrocarbon blend. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_LO_230 </td><td> </td><td>[-123.1, 377.5] </td><td>Aliphatic hydrocarbon blend. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_MV </td><td> </td><td>[-123.1, 290.3] </td><td>Biodegradable hydrocarbon blend. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_SF </td><td> </td><td>[-123.1, 661.3] </td><td>Synthetic alkylated aromatics. </td></tr>
+    <tr><td>BranansRulesOfThumb.Marlotherm_FP </td><td> </td><td>[-123.1, 655.9] </td><td>Isoparaffinic chemical structure, clear liquid, bland odor. </td></tr>
+    <tr><td>BranansRulesOfThumb.Marlotherm_LH </td><td> </td><td>[-123.1, 581.6] </td><td>Synthetic, organic, heat transfer medium. </td></tr>
+    <tr><td>BranansRulesOfThumb.Marlotherm_N </td><td> </td><td>[-123.1, 662.6] </td><td>Synthetic, organic, heat transfer medium, ideal 150 to 300 deg C range. </td></tr>
+    <tr><td>BranansRulesOfThumb.Marlotherm_SH </td><td> </td><td>[-123.1, 508] </td><td>Synthetic, organic, heat transfer medium. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_503 </td><td> </td><td>[-123.1, 616.4] </td><td>Paraffinic hydrocarbon. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_IG_1 </td><td> </td><td>[-97.7, 700] </td><td>White mineral oil. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_IG_4 </td><td> </td><td>[-109.5, 617.9] </td><td>White mineral oil. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_OG_1 </td><td> </td><td>[-99.2, 700] </td><td>Hydrocracked mineral oil with oxidation inhibitor/stabilizer. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_PG_1 </td><td> </td><td>[-105.1, 670] </td><td>White mineral oil, food grade. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_ULT_170 </td><td> </td><td>[-123.1, 345] </td><td>Hydrocarbon blend. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_WB14 </td><td> </td><td>[-123.1, 726.8] </td><td>Water based, no flash point, for low temperature performance. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_WB_22 </td><td> </td><td>[-80.9, 726.8] </td><td>Water based, no flash point, for low temperature performance. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_WB_40 </td><td> </td><td>[-105.4, 726.8] </td><td>Water based, no flash point, for low temperature performance. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_WB_5 </td><td> </td><td>[-80.5, 726.8] </td><td>Water based, no flash point, for low temperature performance. </td></tr>
+    <tr><td>BranansRulesOfThumb.MultiTherm_WB_58 </td><td> </td><td>[-123.1, 726.8] </td><td>Water based, no flash point, for low temperature performance. </td></tr>
+    <tr><td>BranansRulesOfThumb.Paratherm_CR </td><td> </td><td>[-123.1, 420.7] </td><td>Synthetic hydrocarbon blend. </td></tr>
+    <tr><td>BranansRulesOfThumb.Paratherm_GLT </td><td> </td><td>[-123.1, 470.6] </td><td>Alkylated aromatic for closed loop liquid phase heating. </td></tr>
+    <tr><td>BranansRulesOfThumb.Paratherm_HE </td><td> </td><td>[-116, 670] </td><td>Hydrotreated heavy paraffinic distillate – mineral oil. </td></tr>
+    <tr><td>BranansRulesOfThumb.Paratherm_HR </td><td> </td><td>[-123.1, 610] </td><td>Alkylated aromatic, for closed loop heating. </td></tr>
+    <tr><td>BranansRulesOfThumb.Paratherm_LR </td><td> </td><td>[-123.1, 527] </td><td>Paraffinic hydrocarbon, for closed loop heating and cooling. </td></tr>
+    <tr><td>BranansRulesOfThumb.Paratherm_MG </td><td> </td><td>[-123.1, 675] </td><td>Linear alkene, food grade. </td></tr>
+    <tr><td>BranansRulesOfThumb.Paratherm_MR </td><td> </td><td>[-108.4, 552.1] </td><td>Linear alkene, fully saturated. </td></tr>
+    <tr><td>BranansRulesOfThumb.Paratherm_NF </td><td> </td><td>[-123.1, 530] </td><td>Hydrotreated mineral oil, food grade. </td></tr>
+    <tr><td>BranansRulesOfThumb.PURITY_FG </td><td> </td><td>[-109.5, 638.3] </td><td>Pure base oil, food grade, with additives. </td></tr>
+    <tr><td>BranansRulesOfThumb.SYLTHERM_800 </td><td> </td><td>[-123.1, 369.3] </td><td>Silicone fluid – dimethyl polysiloxane. </td></tr>
+    <tr><td>BranansRulesOfThumb.SYLTHERM_HF </td><td> </td><td>[-123.1, 225.8] </td><td>Silicone fluid – dimethyl polysiloxane. </td></tr>
+    <tr><td>BranansRulesOfThumb.SYLTHERM_XLT </td><td> </td><td>[-123.1, 243.3] </td><td>Silicone fluid – dimethyl polysiloxane. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_55 </td><td> </td><td>[-111.4, 561.7] </td><td>Alkyl aromatic derivatives. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_59 </td><td> </td><td>[-123.1, 606.5] </td><td>Mixture of diphenyl alkanes. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_62 </td><td> </td><td>[-123.1, 625] </td><td>Mixture of di- and tri-isopropyl biphenyl. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_66 </td><td> </td><td>[-83.3, 600] </td><td>Hydrogenated terphenyl and polyphenyls. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_72 </td><td> </td><td>[-123.1, 584.8] </td><td>Mixture of diphenyl ether, terphenyl, biphenyl, and phenanthrene. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_75 </td><td> </td><td>[-123.1, 692.4] </td><td>Mixture of terphenyl, quaterphenyl, and phenanthrene. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_D_12 </td><td> </td><td>[-123.1, 332] </td><td>Hydrotreated heavy naphtha (petroleum). </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_LT </td><td> </td><td>[-123.1, 321.1] </td><td>Diethyl benzene. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_VLT </td><td> </td><td>[-123.1, 251.8] </td><td>Mixture of methyl cyclohexane and trimethyl pentane. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_VP_1 </td><td> </td><td>[-123.1, 463.1] </td><td>Mixture of diphenyl ether and biphenyl. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_VP_3 </td><td> </td><td>[-123.1, 448.4] </td><td>Mixture of cyclohexylbenzene and bicyclohexyl. </td></tr>
+    <tr><td>BranansRulesOfThumb.Therminol_XP </td><td> </td><td>[-109.1, 590] </td><td>White mineral oil. </td></tr>
+    <tr><td>BranansRulesOfThumb.Water </td><td> </td><td>[-123.1, 726.8] </td><td>City water. </td></tr>
+    <tr><td>BranansRulesOfThumb.XCELTHERM_445FP </td><td> </td><td>[-101, 670] </td><td>Hydroprocessed naphthenic mineral oil; high flash point. </td></tr>
+    <tr><td>BranansRulesOfThumb.XCELTHERM_500 </td><td> </td><td>[-123.1, 657.2] </td><td>Hydrogenated polyalpha olefin. </td></tr>
+    <tr><td>BranansRulesOfThumb.XCELTHERM_600 </td><td> </td><td>[-123.1, 690] </td><td>Hydroprocessed paraffinic white mineral oil. </td></tr>
+    <tr><td>BranansRulesOfThumb.XCELTHERM_HT </td><td> </td><td>[-101.4, 595] </td><td>Synthetic alkyl aromatic. </td></tr>
+    <tr><td>BranansRulesOfThumb.XCELTHERM_LV1 </td><td> </td><td>[-123.1, 463.5] </td><td>Diphenyl ethane and diphenyl oxide mixture. </td></tr>
+    <tr><td>BranansRulesOfThumb.XCELTHERM_MK1 </td><td> </td><td>[-123.1, 449.7] </td><td>Diphenyl oxide and diphenyl. </td></tr>
+    <tr><td>BranansRulesOfThumb.XCELTHERM_XT </td><td> </td><td>[-123.1, 444.2] </td><td>Synthetic alkyl aromatic. </td></tr>
+    <tr><td>Baack2020.Antifrogen_N_40_degr </td><td>[-20, 100] </td><td>[-40, 120] </td><td> </td></tr>
+    <tr><td>Baack2020.Antifrogen_Sol_HT </td><td>[-20, 100] </td><td>[-40, 120] </td><td> </td></tr>
+    <tr><td>Baack2020.Antifrogen_Sol_HT_degr </td><td>[-20, 100] </td><td>[-40, 120] </td><td> </td></tr>
+    <tr><td>Baack2020.Tyfocor_LS </td><td>[-20, 100] </td><td>[-40, 120] </td><td> </td></tr>
+    <tr><td>Baack2020.Tyfocor_LS_degr </td><td>[-20, 100] </td><td>[-40, 120] </td><td> </td></tr>
+    <tr><td>Baack2020.Tyfocor_L_40_degr </td><td>[-20, 100] </td><td>[-40, 120] </td><td> </td></tr>
 </table><br><br>
 
-<h4>Liquid Mixtures Names TILMedia</h4>
+<h4>Liquid Mixtures Names</h4>
 For Liquid mixture the mass or volume fraction can be set via underline behind the medium name.<br>
-E.g. Glysantin_33 (or 33wt) corresponds 33 weight/mass % glycol and Glysantin_44vol corresponds 44 volume %.<br>
-The Liquid mixture names plus permitted inputs (weight or volume %) and valid range are given in the below table.<br>
-If no min/max-values are listed for xi (weight/mass) or vol (volume), this input is not supported.<br>
-Internal conversion between weight and volume fraction are based on manufacturer data at one temperature (20 °C).<br>
-Minimum &amp; maximum temperatures are listed equivalent to pure Liquids (see table description before).<br><br>
-xi_min - Minimum mass (weight) fraction.<br>
-xi_max - Maximum mass (weight) fraction.<br>
-vol_min - Minimum volume fraction.<br>
-vol_max - Maximum volume fraction.<br><br>
+E.g. Glysantin_33 (or 33wt) corresponds 33 weight/mass % glycol (0.33 kg/kg). Glysantin_44vol corresponds 44 volume % (0.44 m³/m³).<br>
+The Liquid mixture names plus permitted inputs (weight kg/kg or volume m³/m³) and valid range are given in the below table.<br>
+If no composition range values are listed for kg/kg (weight/mass) or m³/m³ (volume), this input is not supported.<br>
+Internal conversion between weight and volume fraction are based on manufacturer data at one temperature (usually: 20 °C).<br><br>
 <table border=\"1\">
-    <tr><th>Substance name</th><th>T_data_min</th><th>T_data_max</th><th>T_min</th><th>T_max</th><th>xi_min</th><th>xi_max</th><th>vol_min</th><th>vol_max</th><th>Description</th></tr>
-    <tr><td>TILMedia.Dynalene_Calcium_Chloride </td><td>-40.0 </td><td>37.8 </td><td>-41.0 </td><td>39.0 </td><td>0.15 </td><td>0.32 </td><td> </td><td> </td><td>Dynalene Calcium Chloride, calcium chloride-based heat transfer fluid. </td></tr>
-    <tr><td>TILMedia.Dynalene_EG </td><td>-34.4 </td><td>104.4 </td><td>-34.9 </td><td>104.8 </td><td>0.22 </td><td>0.628 </td><td>0.2 </td><td>0.6 </td><td>Dynalene EG, ethylene glycol/water-based coolant. </td></tr>
-    <tr><td>TILMedia.Dynalene_EG-V1 </td><td>-34.4 </td><td>104.4 </td><td>-34.9 </td><td>104.8 </td><td>0.208 </td><td>0.612 </td><td>0.2 </td><td>0.6 </td><td>Dynalene EG-V1, ethylene glycol/water-based coolant. </td></tr>
-    <tr><td>TILMedia.Dynalene_LC-EG </td><td>-34.4 </td><td>104.4 </td><td>-34.9 </td><td>104.8 </td><td>0.22 </td><td>0.628 </td><td>0.2 </td><td>0.6 </td><td>Dynalene LC-EG, low electrical conductivity, ethylene glycol/water-based coolant. </td></tr>
-    <tr><td>TILMedia.Dynalene_LC-PG </td><td>-28.9 </td><td>104.4 </td><td>-29.3 </td><td>104.8 </td><td>0.208 </td><td>0.612 </td><td>0.2 </td><td>0.6 </td><td>Dynalene LC-PG, low electrical conductivity, propylene glycol/water-based coolant. </td></tr>
-    <tr><td>TILMedia.Dynalene_PG </td><td>-34.4 </td><td>104.4 </td><td>-34.9 </td><td>104.8 </td><td>0.208 </td><td>0.612 </td><td>0.2 </td><td>0.6 </td><td>Dynalene PG, propylene glycol/water-based coolant. </td></tr>
-    <tr><td>TILMedia.Dynalene_PG-V1 </td><td>-28.9 </td><td>104.4 </td><td>-29.3 </td><td>104.8 </td><td>0.208 </td><td>0.612 </td><td>0.2 </td><td>0.6 </td><td>Dynalene PG-V1, propylene glycol/water-based coolant. </td></tr>
-    <tr><td>TILMedia.Dynalene_TEG </td><td>0.0 </td><td>200.0 </td><td>-10.0 </td><td>201.6 </td><td>0.22 </td><td>0.628 </td><td>0.2 </td><td>0.6 </td><td>Dynalene TEG, triethylene glycol coolant. </td></tr>
-    <tr><td>TILMedia.Glysantin </td><td>-46.0 </td><td>120.0 </td><td>-56.0 </td><td>131.9 </td><td>0.0 </td><td>0.812 </td><td>0.0 </td><td>0.8 </td><td>Glysantin, ethylene glycol/water-based coolant. </td></tr>
-    <tr><td>TILMedia.Obsolete_Glysantin </td><td>-40.0 </td><td>120.0 </td><td>-40.0 </td><td>120.0 </td><td>0.3 </td><td>0.6 </td><td>0.279 </td><td>0.579 </td><td>BASF Glysantin G 48 </td></tr>
-    <tr><td>TILMedia.PropyleneGlycol </td><td> </td><td> </td><td>-50.0 </td><td>100.0 </td><td>0.3 </td><td>0.6 </td><td>0.288 </td><td>0.577 </td><td>Propylene glycol </td></tr>
-    <tr><td>IIR_SWF.Ammonia-Water </td><td> </td><td> </td><td>-100.0 </td><td>30.0 </td><td>0.0 </td><td>0.3 </td><td> </td><td> </td><td>Ammonia (NH3) - aq </td></tr>
-    <tr><td>IIR_SWF.CalciumChloride-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.3 </td><td> </td><td> </td><td>Calcium Chloride (CaCl2) - aq </td></tr>
-    <tr><td>IIR_SWF.EthylAlcohol-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.6 </td><td> </td><td> </td><td>Ethyl Alcohol (Ethanol) - aq </td></tr>
-    <tr><td>IIR_SWF.EthyleneGlycol-Water </td><td> </td><td> </td><td>-100.0 </td><td>100.0 </td><td>0.0 </td><td>0.6 </td><td> </td><td> </td><td>Ethylene Glycol - aq </td></tr>
-    <tr><td>IIR_SWF.Glycerol-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.6 </td><td> </td><td> </td><td>Glycerol - aq </td></tr>
-    <tr><td>IIR_SWF.LithiumChloride-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.24 </td><td> </td><td> </td><td>Lithium Chloride (LiCl) - aq </td></tr>
-    <tr><td>IIR_SWF.MagnesiumChloride-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.3 </td><td> </td><td> </td><td>Magnesium Chloride (MgCl2) - aq </td></tr>
-    <tr><td>IIR_SWF.MethylAlcohol-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.6 </td><td> </td><td> </td><td>Methyl Alcohol (Methanol) - aq </td></tr>
-    <tr><td>IIR_SWF.PotassiumAcetate-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.45 </td><td> </td><td> </td><td>Potassium Acetate (CH3CO2K) - aq </td></tr>
-    <tr><td>IIR_SWF.PotassiumCarbonate-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.4 </td><td> </td><td> </td><td>Potassium Carbonate (K2CO3) - aq </td></tr>
-    <tr><td>IIR_SWF.PotassiumFormate-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.48 </td><td> </td><td> </td><td>Potassium Formate (CHKO2) - aq </td></tr>
-    <tr><td>IIR_SWF.PropyleneGlycol-Water </td><td> </td><td> </td><td>-100.0 </td><td>100.0 </td><td>0.0 </td><td>0.6 </td><td> </td><td> </td><td>Propylene Glycol - aq </td></tr>
-    <tr><td>IIR_SWF.SodiumChloride-Water </td><td> </td><td> </td><td>-100.0 </td><td>40.0 </td><td>0.0 </td><td>0.23 </td><td> </td><td> </td><td>Sodium Chloride (NaCl) - aq </td></tr>
+    <tr><th>Substance name</th><th>Temperature range of the original data in °C</th><th>Usable temperature range in °C</th><th>Composition range in kg/kg</th><th>Composition range in m³/m³</th><th>Description</th></tr>
+    <tr><td>TILMedia.Antifrogen_GEO </td><td>[-21, 40] </td><td>[-22.8, 55.8] </td><td> </td><td>[0.25, 0.4] </td><td>Antifrogen GEO, Antifrogen GEO is the specific solution to the requirements of heat transfer fluids in shallow geothermal energy. </td></tr>
+    <tr><td>TILMedia.Antifrogen_KF </td><td>[-54, 30] </td><td>[-59.6, 41.9] </td><td> </td><td>[0.5, 1] </td><td>Antifrogen KF, Antifrogen KF is a non-toxic clear liquid, based on an aqueous formate solution which is used as a low-temperature brine down to -50 °C in industrial and food refrigeration systems. </td></tr>
+    <tr><td>TILMedia.Antifrogen_N </td><td>[-53, 150] </td><td>[-55.4, 178.1] </td><td> </td><td>[0.2, 0.6] </td><td>Antifrogen N, Antifrogen® N is a liquid, tinted pale yellow, for use as a heat transfer medium in closed hot water heating systems, heat pumps and as cooling brine in industrial refrigeration equipment. </td></tr>
+    <tr><td>TILMedia.Dynalene_Calcium_Chloride </td><td>[-40, 37.8] </td><td>[-41, 39] </td><td>[0.15, 0.32] </td><td> </td><td>Dynalene Calcium Chloride, calcium chloride-based heat transfer fluid. </td></tr>
+    <tr><td>TILMedia.Dynalene_EG </td><td>[-34.4, 104.4] </td><td>[-34.9, 104.8] </td><td>[0.22, 0.628] </td><td>[0.2, 0.6] </td><td>Dynalene EG, ethylene glycol/water-based coolant. </td></tr>
+    <tr><td>TILMedia.Dynalene_EG-V1 </td><td>[-34.4, 104.4] </td><td>[-34.9, 104.8] </td><td>[0.208, 0.612] </td><td>[0.2, 0.6] </td><td>Dynalene EG-V1, ethylene glycol/water-based coolant. </td></tr>
+    <tr><td>TILMedia.Dynalene_LC-Bio </td><td>[-23.3, 104.4] </td><td>[-23.8, 104.8] </td><td> </td><td>[0.2, 0.6] </td><td>Dynalene LC-Bio, low electrical conductivity, corn-derived BioGlycol/water-based coolant. </td></tr>
+    <tr><td>TILMedia.Dynalene_LC-EG </td><td>[-34.4, 104.4] </td><td>[-34.9, 104.8] </td><td>[0.22, 0.628] </td><td>[0.2, 0.6] </td><td>Dynalene LC-EG, low electrical conductivity, ethylene glycol/water-based coolant. </td></tr>
+    <tr><td>TILMedia.Dynalene_LC-PG </td><td>[-28.9, 104.4] </td><td>[-29.3, 104.8] </td><td>[0.208, 0.612] </td><td>[0.2, 0.6] </td><td>Dynalene LC-PG, low electrical conductivity, propylene glycol/water-based coolant. </td></tr>
+    <tr><td>TILMedia.Dynalene_PG </td><td>[-34.4, 104.4] </td><td>[-34.9, 104.8] </td><td>[0.208, 0.612] </td><td>[0.2, 0.6] </td><td>Dynalene PG, propylene glycol/water-based coolant. </td></tr>
+    <tr><td>TILMedia.Dynalene_PG-V1 </td><td>[-28.9, 104.4] </td><td>[-29.3, 104.8] </td><td>[0.208, 0.612] </td><td>[0.2, 0.6] </td><td>Dynalene PG-V1, propylene glycol/water-based coolant. </td></tr>
+    <tr><td>TILMedia.Dynalene_TEG </td><td>[0, 200] </td><td>[-10, 201.6] </td><td>[0.22, 0.628] </td><td>[0.2, 0.6] </td><td>Dynalene TEG, triethylene glycol coolant. </td></tr>
+    <tr><td>TILMedia.Glysantin </td><td>[-46, 120] </td><td>[-56, 131.9] </td><td>[0, 0.81169] </td><td>[0, 0.8] </td><td>Glysantin, ethylene glycol/water-based coolant. </td></tr>
+    <tr><td>TILMedia.Obsolete_Glysantin </td><td>[-40, 120] </td><td>[-40, 120] </td><td>[0.3, 0.6] </td><td>[0.27877, 0.57909] </td><td>BASF Glysantin G 48 </td></tr>
+    <tr><td>TILMedia.PropyleneGlycol </td><td> </td><td>[-50, 100] </td><td>[0.3, 0.6] </td><td>[0.28836, 0.57672] </td><td>Propylene glycol </td></tr>
+    <tr><td>TILMedia.Tyfocor </td><td>[-40, 120] </td><td>[-40.4, 122.8] </td><td> </td><td>[0.2, 0.57] </td><td>Tyfocor, TYFOCOR is a clear, colourless, and virtually odourless liquid based on ethylene glycol. The product is used as antifreeze/corrosion protection fluid and heat transfer medium for heating, air conditioning and cooling circuits, as well as brine for heat pump systems. </td></tr>
+    <tr><td>TILMedia.Tyfocor_L </td><td>[-40, 120] </td><td>[-40.4, 135.8] </td><td> </td><td>[0.25, 0.6] </td><td>Tyfocor L, TYFOCOR L is a virtually odourless, hygroscopic liquid. It is based on toxicologically unobjectionable propylene glycol. TYFOCOR L thus can be used as a coolant or heat transfer fluid in food processing and water purification applications. </td></tr>
+    <tr><td>TILMedia.Tyfoxit </td><td>[-55, 40] </td><td>[-55.4, 90] </td><td> </td><td>[0.6, 0.96] </td><td>Tyfoxit, A potassium acetate based, high-performance secondary coolant applicable for all indirect refrigeration systems. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWCAL_10DOWTHERM_10 </td><td> </td><td>[-123.1, 726.8] </td><td> </td><td>[0.3, 0.5] </td><td>DOWCAL™ 10/DOWTHERM™ 10, Ethylene glycol with inhibitor package. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWCAL_20DOWFROST_20 </td><td> </td><td>[-78.5, 702.4] </td><td> </td><td>[0.3, 0.5] </td><td>DOWCAL™ 20/DOWFROST™ 20, Propylene glycol with inhibitor package. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWCAL_NDOWFROST </td><td> </td><td>[-91, 726.8] </td><td> </td><td>[0.3, 0.5] </td><td>DOWCAL™ N/DOWFROST™, Propylene glycol with inhibitor package, food grade. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWFROST </td><td> </td><td>[-104.1, 726.8] </td><td> </td><td>[0.3, 0.5] </td><td>DOWFROST™, Propylene glycol with inhibitor package. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWFROST_HD </td><td> </td><td>[-104.1, 726.8] </td><td> </td><td>[0.3, 0.5] </td><td>DOWFROST™ HD, Propylene glycol with inhibitor package, dyed bright yellow. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_4000 </td><td> </td><td>[-123.1, 726.8] </td><td> </td><td>[0.3, 0.5] </td><td>DOWTHERM™ 4000, Ethylene glycol with inhibitors, dyed fluorescent orange. </td></tr>
+    <tr><td>BranansRulesOfThumb.DOWTHERM_SR_1 </td><td> </td><td>[-123.1, 726.8] </td><td> </td><td>[0.3, 0.5] </td><td>DOWTHERM™ SR-1, Ethylene glycol with inhibitors, dyed fluorescent pink. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_EG </td><td> </td><td>[-123.1, 726.8] </td><td> </td><td>[0.2, 0.6] </td><td>Dynalene® EG, Inhibited ethylene glycol. </td></tr>
+    <tr><td>BranansRulesOfThumb.Dynalene_PG </td><td> </td><td>[-123.1, 726.8] </td><td> </td><td>[0.2, 0.8] </td><td>Dynalene® PG, Propylene glycol with corrosion inhibitors. </td></tr>
+    <tr><td>Baack2020.Antifrogen_N </td><td>[-20, 100] </td><td>[-40, 120] </td><td> </td><td>[0.2, 0.4] </td><td>Antifrogen N, The density was measured with an expanded measurement uncertainty of 0.05 kg/m³ (k=2). The specific heat capacity with an extended measurement uncertainty of 1.5 % (k=2). The kinematic viscosity with a measurement uncertainty of 1 % (k=2). The thermal conductivity is based on manufacturer data sheets and not by Baack. The mixture was prepared with a volumetric flask with a relative expected uncertainty of 0.1 % (k=2) regarding volume fraction between concentrate and water. Some density and viscosity measurements could only be carried out at maximum temperatures of 90 °C to 95 °C due to the \"open\" design of the measuring devices. Some mixtures were studied at temperatures above -20 °C as they already began to freeze at lower temperatures. </td></tr>
+    <tr><td>Baack2020.Tyfocor_L </td><td>[-20, 100] </td><td>[-40, 120] </td><td> </td><td>[0.25, 0.4] </td><td>Tyfocor L, The density was measured with an expanded measurement uncertainty of 0.05 kg/m³ (k=2). The specific heat capacity with an extended measurement uncertainty of 1.5 % (k=2). The kinematic viscosity with a measurement uncertainty of 1 % (k=2). The thermal conductivity is based on manufacturer data sheets and not by Baack. The mixture was prepared with a volumetric flask with a relative expected uncertainty of 0.1 % (k=2) regarding volume fraction between concentrate and water. Some density and viscosity measurements could only be carried out at maximum temperatures of 90 °C to 95 °C due to the \"open\" design of the measuring devices. Some mixtures were studied at temperatures above -20 °C as they already began to freeze at lower temperatures. </td></tr>
+    <tr><td>IIR_SWF.Ammonia-Water </td><td> </td><td>[-100, 30] </td><td>[0, 0.3] </td><td> </td><td>Ammonia (NH3) - aq </td></tr>
+    <tr><td>IIR_SWF.CalciumChloride-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.3] </td><td> </td><td>Calcium Chloride (CaCl2) - aq </td></tr>
+    <tr><td>IIR_SWF.EthylAlcohol-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.6] </td><td> </td><td>Ethyl Alcohol (Ethanol) - aq </td></tr>
+    <tr><td>IIR_SWF.EthyleneGlycol-Water </td><td> </td><td>[-100, 100] </td><td>[0, 0.6] </td><td> </td><td>Ethylene Glycol - aq </td></tr>
+    <tr><td>IIR_SWF.Glycerol-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.6] </td><td> </td><td>Glycerol - aq </td></tr>
+    <tr><td>IIR_SWF.LithiumChloride-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.24] </td><td> </td><td>Lithium Chloride (LiCl) - aq </td></tr>
+    <tr><td>IIR_SWF.MagnesiumChloride-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.3] </td><td> </td><td>Magnesium Chloride (MgCl2) - aq </td></tr>
+    <tr><td>IIR_SWF.MethylAlcohol-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.6] </td><td> </td><td>Methyl Alcohol (Methanol) - aq </td></tr>
+    <tr><td>IIR_SWF.PotassiumAcetate-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.45] </td><td> </td><td>Potassium Acetate (CH3CO2K) - aq </td></tr>
+    <tr><td>IIR_SWF.PotassiumCarbonate-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.4] </td><td> </td><td>Potassium Carbonate (K2CO3) - aq </td></tr>
+    <tr><td>IIR_SWF.PotassiumFormate-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.48] </td><td> </td><td>Potassium Formate (CHKO2) - aq </td></tr>
+    <tr><td>IIR_SWF.PropyleneGlycol-Water </td><td> </td><td>[-100, 100] </td><td>[0, 0.6] </td><td> </td><td>Propylene Glycol - aq </td></tr>
+    <tr><td>IIR_SWF.SodiumChloride-Water </td><td> </td><td>[-100, 40] </td><td>[0, 0.23] </td><td> </td><td>Sodium Chloride (NaCl) - aq </td></tr>
 </table><br><br>
 
 <h4>VLEFluid Names TILMedia</h4>
 <table border=\"1\">
     <tr>
         <th>Substance name</th>
-        <th>Comment</th>
+        <th>Description</th>
     </tr>
     <tr>
         <td>TILMedia.1-BUTENE </td>
@@ -533,10 +636,6 @@ vol_max - Maximum volume fraction.<br><br>
         <td>CAS number 7440-63-3, xenon, EOS models: {FEQ} </td>
     </tr>
     <tr>
-        <td>- </td>
-        <td> </td>
-    </tr>
-    <tr>
         <td>TILMediaRT.CO2 </td>
         <td> </td>
     </tr>
@@ -562,481 +661,10 @@ vol_max - Maximum volume fraction.<br><br>
     </tr>
 </table><br><br>
 
-<h4>VLEFluid Names REFPROP</h4>
-<table border=\"1\">
-    <tr>
-        <th>Substance name</th>
-        <th>Substance name</th>
-        <th>Substance name</th>
-    </tr>
-    <tr>
-        <td>Refprop.13BUTADIENE.FLD </td>
-        <td>Refprop.1BUTENE.FLD </td>
-        <td>Refprop.1BUTYNE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.1PENTENE.FLD </td>
-        <td>Refprop.22DIMETHYLBUTANE.FLD </td>
-        <td>Refprop.23DIMETHYLBUTANE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.3METHYLPENTANE.FLD </td>
-        <td>Refprop.ACETONE.FLD </td>
-        <td>Refprop.ACETYLENE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.AIR.MIX </td>
-        <td>Refprop.AIR.PPF </td>
-        <td>Refprop.AMARILLO.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.AMMONIA.FLD </td>
-        <td>Refprop.ARGON.FLD </td>
-        <td>Refprop.BENZENE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.BUTANE.FLD </td>
-        <td>Refprop.C11.FLD </td>
-        <td>Refprop.C12.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.C16.FLD </td>
-        <td>Refprop.C1CC6.FLD </td>
-        <td>Refprop.C22.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.C2BUTENE.FLD </td>
-        <td>Refprop.C3CC6.FLD </td>
-        <td>Refprop.C4F10.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.C5F12.FLD </td>
-        <td>Refprop.C6F14.FLD </td>
-        <td>Refprop.CF3I.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.CHLORINE.FLD </td>
-        <td>Refprop.CHLOROBENZENE.FLD </td>
-        <td>Refprop.CO.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.CO2.FLD </td>
-        <td>Refprop.CO2_ACL.FLD </td>
-        <td>Refprop.COS.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.CYCLOBUTENE.FLD </td>
-        <td>Refprop.CYCLOHEX.FLD </td>
-        <td>Refprop.CYCLOPEN.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.CYCLOPRO.FLD </td>
-        <td>Refprop.D2.FLD </td>
-        <td>Refprop.D2O.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.D4.FLD </td>
-        <td>Refprop.D5.FLD </td>
-        <td>Refprop.D6.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.DEA.FLD </td>
-        <td>Refprop.DECANE.FLD </td>
-        <td>Refprop.DEE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.DMC.FLD </td>
-        <td>Refprop.DME.FLD </td>
-        <td>Refprop.EBENZENE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.EGLYCOL.FLD </td>
-        <td>Refprop.EKOFISK.MIX </td>
-        <td>Refprop.ETHANE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.ETHANOL.FLD </td>
-        <td>Refprop.ETHYLENE.FLD </td>
-        <td>Refprop.ETHYLENEOXIDE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.FLUORINE.FLD </td>
-        <td>Refprop.GLFCOAST.MIX </td>
-        <td>Refprop.H2S.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.HCL.FLD </td>
-        <td>Refprop.HELIUM.FLD </td>
-        <td>Refprop.HEPTANE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.HEXANE.FLD </td>
-        <td>Refprop.HFE-7100.FLD </td>
-        <td>Refprop.HFE-7200.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.HFE-7300.FLD </td>
-        <td>Refprop.HFE-7500.FLD </td>
-        <td>Refprop.HIGHCO2.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.HIGHN2.MIX </td>
-        <td>Refprop.HYDROGEN.FLD </td>
-        <td>Refprop.IBUTENE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.IHEXANE.FLD </td>
-        <td>Refprop.IOCTANE.FLD </td>
-        <td>Refprop.IPENTANE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.ISOBUTAN.FLD </td>
-        <td>Refprop.KRYPTON.FLD </td>
-        <td>Refprop.MD2M.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.MD3M.FLD </td>
-        <td>Refprop.MD4M.FLD </td>
-        <td>Refprop.MDM.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.MEA.FLD </td>
-        <td>Refprop.METHANE.FLD </td>
-        <td>Refprop.METHANOL.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.MLINOLEA.FLD </td>
-        <td>Refprop.MLINOLEN.FLD </td>
-        <td>Refprop.MM.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.MOLEATE.FLD </td>
-        <td>Refprop.MPALMITA.FLD </td>
-        <td>Refprop.MSTEARAT.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.MXYLENE.FLD </td>
-        <td>Refprop.N2O.FLD </td>
-        <td>Refprop.NEON.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.NEOPENTN.FLD </td>
-        <td>Refprop.NF3.FLD </td>
-        <td>Refprop.NGSAMPLE.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.NITROGEN.FLD </td>
-        <td>Refprop.NONANE.FLD </td>
-        <td>Refprop.NOVEC649.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.NOVEC7000.FLD </td>
-        <td>Refprop.NOVEC774.FLD </td>
-        <td>Refprop.OCTANE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.ORTHOHYD.FLD </td>
-        <td>Refprop.OXYGEN.FLD </td>
-        <td>Refprop.OXYLENE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.PARAHYD.FLD </td>
-        <td>Refprop.PENTANE.FLD </td>
-        <td>Refprop.PROPADIENE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.PROPANE.FLD </td>
-        <td>Refprop.PROPYLEN.FLD </td>
-        <td>Refprop.PROPYLENEOXIDE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.PROPYNE.FLD </td>
-        <td>Refprop.PXYLENE.FLD </td>
-        <td>Refprop.R11.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R1123.FLD </td>
-        <td>Refprop.R113.FLD </td>
-        <td>Refprop.R114.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R115.FLD </td>
-        <td>Refprop.R116.FLD </td>
-        <td>Refprop.R12.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R1216.FLD </td>
-        <td>Refprop.R1224YDZ.FLD </td>
-        <td>Refprop.R123.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R1233ZDE.FLD </td>
-        <td>Refprop.R1234YF.FLD </td>
-        <td>Refprop.R1234ZEE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R1234ZEZ.FLD </td>
-        <td>Refprop.R124.FLD </td>
-        <td>Refprop.R1243ZF.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R125.FLD </td>
-        <td>Refprop.R13.FLD </td>
-        <td>Refprop.R1336MZZZ.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R134A.FLD </td>
-        <td>Refprop.R14.FLD </td>
-        <td>Refprop.R141B.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R142B.FLD </td>
-        <td>Refprop.R143A.FLD </td>
-        <td>Refprop.R150.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R152A.FLD </td>
-        <td>Refprop.R161.FLD </td>
-        <td>Refprop.R21.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R218.FLD </td>
-        <td>Refprop.R22.FLD </td>
-        <td>Refprop.R227EA.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R23.FLD </td>
-        <td>Refprop.R236EA.FLD </td>
-        <td>Refprop.R236FA.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R245CA.FLD </td>
-        <td>Refprop.R245FA.FLD </td>
-        <td>Refprop.R32.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.R365MFC.FLD </td>
-        <td>Refprop.R40.FLD </td>
-        <td>Refprop.R401A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R401B.MIX </td>
-        <td>Refprop.R401C.MIX </td>
-        <td>Refprop.R402A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R402B.MIX </td>
-        <td>Refprop.R403A.MIX </td>
-        <td>Refprop.R403B.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R404A.MIX </td>
-        <td>Refprop.R404A.PPF </td>
-        <td>Refprop.R405A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R406A.MIX </td>
-        <td>Refprop.R407A.MIX </td>
-        <td>Refprop.R407B.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R407C.MIX </td>
-        <td>Refprop.R407C.PPF </td>
-        <td>Refprop.R407D.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R407E.MIX </td>
-        <td>Refprop.R407F.MIX </td>
-        <td>Refprop.R407G.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R407H.MIX </td>
-        <td>Refprop.R408A.MIX </td>
-        <td>Refprop.R409A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R409B.MIX </td>
-        <td>Refprop.R41.FLD </td>
-        <td>Refprop.R410A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R410A.PPF </td>
-        <td>Refprop.R410B.MIX </td>
-        <td>Refprop.R411A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R411B.MIX </td>
-        <td>Refprop.R412A.MIX </td>
-        <td>Refprop.R413A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R414A.MIX </td>
-        <td>Refprop.R414B.MIX </td>
-        <td>Refprop.R415A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R415B.MIX </td>
-        <td>Refprop.R416A.MIX </td>
-        <td>Refprop.R417A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R417B.MIX </td>
-        <td>Refprop.R417C.MIX </td>
-        <td>Refprop.R418A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R419A.MIX </td>
-        <td>Refprop.R419B.MIX </td>
-        <td>Refprop.R420A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R421A.MIX </td>
-        <td>Refprop.R421B.MIX </td>
-        <td>Refprop.R422A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R422B.MIX </td>
-        <td>Refprop.R422C.MIX </td>
-        <td>Refprop.R422D.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R422E.MIX </td>
-        <td>Refprop.R423A.MIX </td>
-        <td>Refprop.R424A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R425A.MIX </td>
-        <td>Refprop.R426A.MIX </td>
-        <td>Refprop.R427A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R428A.MIX </td>
-        <td>Refprop.R429A.MIX </td>
-        <td>Refprop.R430A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R431A.MIX </td>
-        <td>Refprop.R432A.MIX </td>
-        <td>Refprop.R433A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R433B.MIX </td>
-        <td>Refprop.R433C.MIX </td>
-        <td>Refprop.R434A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R435A.MIX </td>
-        <td>Refprop.R436A.MIX </td>
-        <td>Refprop.R436B.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R437A.MIX </td>
-        <td>Refprop.R438A.MIX </td>
-        <td>Refprop.R439A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R440A.MIX </td>
-        <td>Refprop.R441A.MIX </td>
-        <td>Refprop.R442A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R443A.MIX </td>
-        <td>Refprop.R444A.MIX </td>
-        <td>Refprop.R444B.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R445A.MIX </td>
-        <td>Refprop.R446A.MIX </td>
-        <td>Refprop.R447A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R447B.MIX </td>
-        <td>Refprop.R448A.MIX </td>
-        <td>Refprop.R449A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R449B.MIX </td>
-        <td>Refprop.R449C.MIX </td>
-        <td>Refprop.R450A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R451A.MIX </td>
-        <td>Refprop.R451B.MIX </td>
-        <td>Refprop.R452A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R452B.MIX </td>
-        <td>Refprop.R452C.MIX </td>
-        <td>Refprop.R453A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R454A.MIX </td>
-        <td>Refprop.R454B.MIX </td>
-        <td>Refprop.R454C.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R455A.MIX </td>
-        <td>Refprop.R456A.MIX </td>
-        <td>Refprop.R457A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R458A.MIX </td>
-        <td>Refprop.R459A.MIX </td>
-        <td>Refprop.R459B.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R460A.MIX </td>
-        <td>Refprop.R460B.MIX </td>
-        <td>Refprop.R500.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R501.MIX </td>
-        <td>Refprop.R502.MIX </td>
-        <td>Refprop.R503.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R504.MIX </td>
-        <td>Refprop.R507A.MIX </td>
-        <td>Refprop.R507A.PPF </td>
-    </tr>
-    <tr>
-        <td>Refprop.R508A.MIX </td>
-        <td>Refprop.R508B.MIX </td>
-        <td>Refprop.R509A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R510A.MIX </td>
-        <td>Refprop.R511A.MIX </td>
-        <td>Refprop.R512A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.R513A.MIX </td>
-        <td>Refprop.R513B.MIX </td>
-        <td>Refprop.R515A.MIX </td>
-    </tr>
-    <tr>
-        <td>Refprop.RC318.FLD </td>
-        <td>Refprop.RE143A.FLD </td>
-        <td>Refprop.RE245CB2.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.RE245FA2.FLD </td>
-        <td>Refprop.RE347MCC.FLD </td>
-        <td>Refprop.SF6.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.SO2.FLD </td>
-        <td>Refprop.T2BUTENE.FLD </td>
-        <td>Refprop.TOLUENE.FLD </td>
-    </tr>
-    <tr>
-        <td>Refprop.VINYLCHLORIDE.FLD </td>
-        <td>Refprop.WATER.FLD </td>
-        <td>Refprop.XENON.FLD </td>
-    </tr>
-</table><br><br>
-
-<h4>Gas, Liquid and VLEFluid Names (VDIWA2006)</h4>
+<h4>VLEFluid Names Refrop and CoolProp</h4>
+Property models from external libraries as Refprop and CoolProp are in the separate Modelica-library TILMedia3_AddOn_ExternalData.
+<br>
+<h4>Gas, Liquid and VLEFluid Names VDIWA2006</h4>
 <table border=\"1\">
     <tr>
         <th>Substance name</th>
@@ -1592,220 +1220,6 @@ vol_max - Maximum volume fraction.<br><br>
     </tr>
     <tr>
         <td>VDIWA2006.Xenon </td>
-    </tr>
-</table><br><br>
-
-<h4>VLEFluid (CoolProp)</h4>
-<table border=\"1\">
-    <tr>
-        <th>Substance name</th>
-        <th>Substance name</th>
-        <th>Substance name</th>
-    </tr>
-    <tr>
-        <td>CoolProp.1-Butene </td>
-        <td>CoolProp.Acetone </td>
-        <td>CoolProp.Air </td>
-    </tr>
-    <tr>
-        <td>CoolProp.Ammonia </td>
-        <td>CoolProp.Argon </td>
-        <td>CoolProp.Benzene </td>
-    </tr>
-    <tr>
-        <td>CoolProp.CarbonDioxide </td>
-        <td>CoolProp.CarbonMonoxide </td>
-        <td>CoolProp.CarbonylSulfide </td>
-    </tr>
-    <tr>
-        <td>CoolProp.cis-2-Butene </td>
-        <td>CoolProp.CycloHexane </td>
-        <td>CoolProp.Cyclopentane </td>
-    </tr>
-    <tr>
-        <td>CoolProp.CycloPropane </td>
-        <td>CoolProp.D4 </td>
-        <td>CoolProp.D5 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.D6 </td>
-        <td>CoolProp.Deuterium </td>
-        <td>CoolProp.Dichloroethane </td>
-    </tr>
-    <tr>
-        <td>CoolProp.DiethylEther </td>
-        <td>CoolProp.DimethylCarbonate </td>
-        <td>CoolProp.DimethylEther </td>
-    </tr>
-    <tr>
-        <td>CoolProp.Ethane </td>
-        <td>CoolProp.Ethanol </td>
-        <td>CoolProp.EthylBenzene </td>
-    </tr>
-    <tr>
-        <td>CoolProp.Ethylene </td>
-        <td>CoolProp.EthyleneOxide </td>
-        <td>CoolProp.Fluorine </td>
-    </tr>
-    <tr>
-        <td>CoolProp.HeavyWater </td>
-        <td>CoolProp.Helium </td>
-        <td>CoolProp.HFE143m </td>
-    </tr>
-    <tr>
-        <td>CoolProp.Hydrogen </td>
-        <td>CoolProp.HydrogenChloride </td>
-        <td>CoolProp.HydrogenSulfide </td>
-    </tr>
-    <tr>
-        <td>CoolProp.IsoButane </td>
-        <td>CoolProp.IsoButene </td>
-        <td>CoolProp.Isohexane </td>
-    </tr>
-    <tr>
-        <td>CoolProp.Isopentane </td>
-        <td>CoolProp.Krypton </td>
-        <td>CoolProp.m-Xylene </td>
-    </tr>
-    <tr>
-        <td>CoolProp.MD2M </td>
-        <td>CoolProp.MD3M </td>
-        <td>CoolProp.MD4M </td>
-    </tr>
-    <tr>
-        <td>CoolProp.MDM </td>
-        <td>CoolProp.Methane </td>
-        <td>CoolProp.Methanol </td>
-    </tr>
-    <tr>
-        <td>CoolProp.MethylLinoleate </td>
-        <td>CoolProp.MethylLinolenate </td>
-        <td>CoolProp.MethylOleate </td>
-    </tr>
-    <tr>
-        <td>CoolProp.MethylPalmitate </td>
-        <td>CoolProp.MethylStearate </td>
-        <td>CoolProp.MM </td>
-    </tr>
-    <tr>
-        <td>CoolProp.n-Butane </td>
-        <td>CoolProp.n-Decane </td>
-        <td>CoolProp.n-Dodecane </td>
-    </tr>
-    <tr>
-        <td>CoolProp.n-Heptane </td>
-        <td>CoolProp.n-Hexane </td>
-        <td>CoolProp.n-Nonane </td>
-    </tr>
-    <tr>
-        <td>CoolProp.n-Octane </td>
-        <td>CoolProp.n-Pentane </td>
-        <td>CoolProp.n-Propane </td>
-    </tr>
-    <tr>
-        <td>CoolProp.n-Undecane </td>
-        <td>CoolProp.Neon </td>
-        <td>CoolProp.Neopentane </td>
-    </tr>
-    <tr>
-        <td>CoolProp.Nitrogen </td>
-        <td>CoolProp.NitrousOxide </td>
-        <td>CoolProp.Novec649 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.o-Xylene </td>
-        <td>CoolProp.OrthoDeuterium </td>
-        <td>CoolProp.OrthoHydrogen </td>
-    </tr>
-    <tr>
-        <td>CoolProp.Oxygen </td>
-        <td>CoolProp.p-Xylene </td>
-        <td>CoolProp.ParaDeuterium </td>
-    </tr>
-    <tr>
-        <td>CoolProp.ParaHydrogen </td>
-        <td>CoolProp.Propylene </td>
-        <td>CoolProp.Propyne </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R11 </td>
-        <td>CoolProp.R113 </td>
-        <td>CoolProp.R114 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R115 </td>
-        <td>CoolProp.R116 </td>
-        <td>CoolProp.R12 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R123 </td>
-        <td>CoolProp.R1233zd(E) </td>
-        <td>CoolProp.R1234yf </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R1234ze(E) </td>
-        <td>CoolProp.R1234ze(Z) </td>
-        <td>CoolProp.R124 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R1243zf </td>
-        <td>CoolProp.R125 </td>
-        <td>CoolProp.R13 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R134a </td>
-        <td>CoolProp.R13I1 </td>
-        <td>CoolProp.R14 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R141b </td>
-        <td>CoolProp.R142b </td>
-        <td>CoolProp.R143a </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R152A </td>
-        <td>CoolProp.R161 </td>
-        <td>CoolProp.R21 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R218 </td>
-        <td>CoolProp.R22 </td>
-        <td>CoolProp.R227EA </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R23 </td>
-        <td>CoolProp.R236EA </td>
-        <td>CoolProp.R236FA </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R245ca </td>
-        <td>CoolProp.R245fa </td>
-        <td>CoolProp.R32 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R365MFC </td>
-        <td>CoolProp.R40 </td>
-        <td>CoolProp.R404A </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R407C </td>
-        <td>CoolProp.R41 </td>
-        <td>CoolProp.R410A </td>
-    </tr>
-    <tr>
-        <td>CoolProp.R507A </td>
-        <td>CoolProp.RC318 </td>
-        <td>CoolProp.SES36 </td>
-    </tr>
-    <tr>
-        <td>CoolProp.SulfurDioxide </td>
-        <td>CoolProp.SulfurHexafluoride </td>
-        <td>CoolProp.Toluene </td>
-    </tr>
-    <tr>
-        <td>CoolProp.trans-2-Butene </td>
-        <td>CoolProp.Water </td>
-        <td>CoolProp.Xenon </td>
     </tr>
 </table><br><br>
 

@@ -16,11 +16,8 @@ model Liquid "Incompressible liquid model for object and member function based e
         getInstanceName()),
   redeclare replaceable function s_phxi =
       TILMedia.LiquidObjectFunctions.specificEntropy_phxi,
-
   redeclare replaceable function s_pTxi =
       TILMedia.LiquidObjectFunctions.specificEntropy_pTxi,
-
-
   redeclare replaceable function d_Txi =
       TILMedia.LiquidObjectFunctions.density_Txi,
   redeclare replaceable function h_Txi =
@@ -35,7 +32,6 @@ model Liquid "Incompressible liquid model for object and member function based e
       TILMedia.LiquidObjectFunctions.thermalConductivity_Txi,
   redeclare replaceable function eta_Txi =
       TILMedia.LiquidObjectFunctions.dynamicViscosity_Txi,
-
   redeclare replaceable function d_hxi =
       TILMedia.LiquidObjectFunctions.density_hxi,
   redeclare replaceable function T_hxi =

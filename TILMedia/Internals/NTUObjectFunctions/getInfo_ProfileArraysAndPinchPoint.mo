@@ -72,6 +72,6 @@ external"C" TILMedia_NTU_getInfo_ProfileArraysAndPinchPoint(
     double*,
     double*, double*,
     double*);",
-    Library="TILMedia181ClaRa");
+     Library="TILMedia182ClaRa");
 
 end getInfo_ProfileArraysAndPinchPoint;

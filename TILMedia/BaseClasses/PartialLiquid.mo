@@ -11,20 +11,16 @@ partial model PartialLiquid "Incompressible liquid model for object and member f
     "=true, if transport properties are calculated"
     annotation (Dialog(tab="Advanced"));
 
-
   replaceable partial function s_phxi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctions.specificEntropy_phxi
     constrainedby
       TILMedia.BaseClasses.PartialLiquidObjectFunctions.specificEntropy_phxi(
         xi=liquidType.xi_default, liquidPointer=liquidPointer);
-
   replaceable partial function s_pTxi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctions.specificEntropy_pTxi
     constrainedby
       TILMedia.BaseClasses.PartialLiquidObjectFunctions.specificEntropy_pTxi(
         xi=liquidType.xi_default, liquidPointer=liquidPointer);
-
-
   replaceable partial function d_Txi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctions.density_Txi
     constrainedby
@@ -60,7 +56,6 @@ partial model PartialLiquid "Incompressible liquid model for object and member f
     constrainedby
       TILMedia.BaseClasses.PartialLiquidObjectFunctions.dynamicViscosity_Txi(
         xi=liquidType.xi_default, liquidPointer=liquidPointer);
-
   replaceable partial function d_hxi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctions.density_hxi
     constrainedby
@@ -96,10 +91,6 @@ partial model PartialLiquid "Incompressible liquid model for object and member f
     constrainedby
       TILMedia.BaseClasses.PartialLiquidObjectFunctions.dynamicViscosity_hxi(
         xi=liquidType.xi_default, liquidPointer=liquidPointer);
-
-
-
-
   annotation (
     defaultComponentName="liquid",
     Icon(graphics={Text(

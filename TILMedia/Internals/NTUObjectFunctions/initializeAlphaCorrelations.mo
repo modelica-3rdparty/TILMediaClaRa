@@ -33,6 +33,6 @@ external"C" outputFlag = TILMedia_NTU_initializeAlphaCorrelations(
     const int, const int, const double*,
     const int, const int, const double*,
     void*);",
-    Library="TILMedia181ClaRa");
+     Library="TILMedia182ClaRa");
 
 end initializeAlphaCorrelations;

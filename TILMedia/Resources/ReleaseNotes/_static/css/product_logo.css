@@ -1,0 +1,11 @@
+/* define width of product logo in top left corner. Only applied in conf.py if there is a squared product logo */
+.wy-side-nav-search .wy-dropdown > a img.logo,
+.wy-side-nav-search > a.icon img.logo {
+  width: 10em;
+  height: 10em;
+  padding: 1em;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0px 4px 4px 0px darkslategrey;
+  filter: none;
+}

@@ -10,7 +10,7 @@ package LiquidObjectFunctions
   external"C" mm = TILMedia_Liquid_molarMass_xi(liquidPointer, xi) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Liquid_molarMass_xi(double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (Impure=false);
   end molarMass_xi;
 
@@ -31,7 +31,7 @@ package LiquidObjectFunctions
         beta) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Liquid_properties_Txi(double, double*, void*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_properties_Txi,
         Impure=false);
   end properties_Txi;
@@ -57,7 +57,7 @@ package LiquidObjectFunctions
         der_beta) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Liquid_der_properties_Txi(double, double*, void*, double, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false);
   end der_properties_Txi;
@@ -79,7 +79,7 @@ package LiquidObjectFunctions
         beta) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Liquid_properties_hxi(double, double*, void*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_properties_hxi,
         Impure=false);
   end properties_hxi;
@@ -105,7 +105,7 @@ package LiquidObjectFunctions
         der_beta) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Liquid_der_properties_hxi(double, double*, void*, double, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false);
   end der_properties_hxi;
@@ -129,7 +129,7 @@ package LiquidObjectFunctions
         sigma) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Liquid_transportProperties_Txi(double, double*, void*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_transportPropertyRecord_Txi,
         Impure=false);
@@ -158,7 +158,7 @@ package LiquidObjectFunctions
         sigma) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_Liquid_der_transportProperties_Txi(double, double*, void*, double, double*, double*, double*, double*, double*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false);
   end der_transportPropertyRecord_Txi;
@@ -177,7 +177,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_Liquid_specificEntropy_pTxi(double, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
 
     annotation (Impure=false);
   end specificEntropy_pTxi;
@@ -195,7 +195,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_density_Txi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_density_Txi);
   end density_Txi;
 
@@ -215,8 +215,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_density_Txi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_density_Txi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
   end der_density_Txi;
 
   function specificEnthalpy_Txi
@@ -231,7 +231,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_specificEnthalpy_Txi(double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(T=TILMedia.Internals.LiquidObjectFunctions.temperature_hxi(
               h,
               xi,
@@ -253,8 +253,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_specificEnthalpy_Txi(double, double*, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_specificEnthalpy_Txi(double, double const*, double, double*, void*);",
+       Library="TILMedia182ClaRa");
 
   end der_specificEnthalpy_Txi;
 
@@ -271,7 +271,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_specificIsobaricHeatCapacity_Txi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_specificIsobaricHeatCapacity_Txi);
   end specificIsobaricHeatCapacity_Txi;
 
@@ -291,8 +291,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_specificIsobaricHeatCapacity_Txi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_specificIsobaricHeatCapacity_Txi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
 
   end der_specificIsobaricHeatCapacity_Txi;
 
@@ -309,7 +309,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_isobaricThermalExpansionCoefficient_Txi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_isobaricThermalExpansionCoefficient_Txi);
   end isobaricThermalExpansionCoefficient_Txi;
 
@@ -329,8 +329,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_isobaricThermalExpansionCoefficient_Txi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_isobaricThermalExpansionCoefficient_Txi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
 
   end der_isobaricThermalExpansionCoefficient_Txi;
 
@@ -347,7 +347,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_prandtlNumber_Txi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_prandtlNumber_Txi);
   end prandtlNumber_Txi;
 
@@ -367,8 +367,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_prandtlNumber_Txi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_prandtlNumber_Txi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
   end der_prandtlNumber_Txi;
 
   function thermalConductivity_Txi
@@ -384,7 +384,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_thermalConductivity_Txi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_thermalConductivity_Txi);
   end thermalConductivity_Txi;
 
@@ -404,8 +404,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_thermalConductivity_Txi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_thermalConductivity_Txi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
 
   end der_thermalConductivity_Txi;
 
@@ -422,7 +422,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_dynamicViscosity_Txi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_dynamicViscosity_Txi);
   end dynamicViscosity_Txi;
 
@@ -442,8 +442,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_dynamicViscosity_Txi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_dynamicViscosity_Txi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
   end der_dynamicViscosity_Txi;
 
   function density_hxi
@@ -459,7 +459,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_density_hxi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_density_hxi);
   end density_hxi;
 
@@ -479,8 +479,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_density_hxi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_density_hxi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
   end der_density_hxi;
 
   function temperature_hxi
@@ -495,7 +495,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_temperature_hxi(double, double*, void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (inverse(h=TILMedia.Internals.LiquidObjectFunctions.specificEnthalpy_Txi(
               T,
               xi,
@@ -517,8 +517,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_temperature_hxi(double, double*, double, double*, void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_temperature_hxi(double, double const*, double, double*, void*);",
+       Library="TILMedia182ClaRa");
   end der_temperature_hxi;
 
   function specificIsobaricHeatCapacity_hxi
@@ -534,7 +534,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_specificIsobaricHeatCapacity_hxi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_specificIsobaricHeatCapacity_hxi);
   end specificIsobaricHeatCapacity_hxi;
 
@@ -554,8 +554,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_specificIsobaricHeatCapacity_hxi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_specificIsobaricHeatCapacity_hxi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
 
   end der_specificIsobaricHeatCapacity_hxi;
 
@@ -572,7 +572,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_isobaricThermalExpansionCoefficient_hxi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_isobaricThermalExpansionCoefficient_hxi);
   end isobaricThermalExpansionCoefficient_hxi;
 
@@ -592,8 +592,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_isobaricThermalExpansionCoefficient_hxi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_isobaricThermalExpansionCoefficient_hxi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
 
   end der_isobaricThermalExpansionCoefficient_hxi;
 
@@ -610,7 +610,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_prandtlNumber_hxi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_prandtlNumber_hxi);
   end prandtlNumber_hxi;
 
@@ -630,8 +630,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_prandtlNumber_hxi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_prandtlNumber_hxi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
   end der_prandtlNumber_hxi;
 
   function thermalConductivity_hxi
@@ -647,7 +647,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_thermalConductivity_hxi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_thermalConductivity_hxi);
   end thermalConductivity_hxi;
 
@@ -667,8 +667,8 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_thermalConductivity_hxi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_thermalConductivity_hxi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
 
   end der_thermalConductivity_hxi;
 
@@ -685,7 +685,7 @@ package LiquidObjectFunctions
         liquidPointer) annotation (
       __iti_dllNoExport=true,
       Include="double TILMedia_LiquidObjectFunctions_dynamicViscosity_hxi(double,double*,void*);",
-      Library="TILMedia181ClaRa");
+       Library="TILMedia182ClaRa");
     annotation (derivative(noDerivative=liquidPointer) = TILMedia.Internals.LiquidObjectFunctions.der_dynamicViscosity_hxi);
   end dynamicViscosity_hxi;
 
@@ -705,7 +705,7 @@ package LiquidObjectFunctions
         der_xi,
         liquidPointer) annotation (
       __iti_dllNoExport=true,
-      Include="double TILMedia_LiquidObjectFunctions_der_dynamicViscosity_hxi(double,double*,double,double*,void*);",
-      Library="TILMedia181ClaRa");
+      Include="double TILMedia_LiquidObjectFunctions_der_dynamicViscosity_hxi(double,double const*,double,double*,void*);",
+       Library="TILMedia182ClaRa");
   end der_dynamicViscosity_hxi;
 end LiquidObjectFunctions;

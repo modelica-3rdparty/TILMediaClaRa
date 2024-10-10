@@ -2,7 +2,6 @@
 package GasFunctions
   "Package for calculation of gas vapor properties with a functional call"
   extends TILMedia.BaseClasses.PartialGasFunctions;
-
 redeclare replaceable function extends density_phxi
 algorithm
   d := TILMedia.Internals.GasFunctions.density_phxi(p,h,xi,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
@@ -118,7 +117,6 @@ algorithm
   T_iceBulb := TILMedia.Internals.GasFunctions.iceBulbTemperature_phxi(p,h,xi,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
   annotation(Inline=false, LateInline=true);
 end iceBulbTemperature_phxi;
-
 redeclare replaceable function extends density_psxi
 algorithm
   d := TILMedia.Internals.GasFunctions.density_psxi(p,s,xi,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
@@ -234,7 +232,6 @@ algorithm
   T_iceBulb := TILMedia.Internals.GasFunctions.iceBulbTemperature_psxi(p,s,xi,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
   annotation(Inline=false, LateInline=true);
 end iceBulbTemperature_psxi;
-
 redeclare replaceable function extends density_pTxi
 algorithm
   d := TILMedia.Internals.GasFunctions.density_pTxi(p,T,xi,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
@@ -350,8 +347,6 @@ algorithm
   T_iceBulb := TILMedia.Internals.GasFunctions.iceBulbTemperature_pTxi(p,T,xi,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
   annotation(Inline=false, LateInline=true);
 end iceBulbTemperature_pTxi;
-
-
 redeclare replaceable function extends saturationPartialPressure_T
 algorithm
   p_s := TILMedia.Internals.GasFunctions.saturationPartialPressure_T(T,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
@@ -377,8 +372,6 @@ algorithm
   cp_i := TILMedia.Internals.GasFunctions.specificIsobaricHeatCapacityOfPureGas_Tn(T,compNo, gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
   annotation(Inline=false, LateInline=true);
 end specificIsobaricHeatCapacityOfPureGas_Tn;
-
-
 redeclare replaceable function extends averageMolarMass_xi
 algorithm
   M := TILMedia.Internals.GasFunctions.averageMolarMass_xi(xi,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
@@ -389,7 +382,6 @@ algorithm
   humRatio := TILMedia.Internals.GasFunctions.humidityRatio_xi(xi,gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
   annotation(Inline=false, LateInline=true);
 end humidityRatio_xi;
-
 redeclare replaceable function extends molarMass_n
 algorithm
   M_i := TILMedia.Internals.GasFunctions.molarMass_n(compNo, gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
@@ -405,5 +397,4 @@ algorithm
   T_freeze := TILMedia.Internals.GasFunctions.freezingPoint(gasType.concatGasName, gasType.nc+TILMedia.Internals.redirectModelicaFormatMessage(), gasType.condensingIndex);
   annotation(Inline=false, LateInline=true);
 end freezingPoint;
-
 end GasFunctions;

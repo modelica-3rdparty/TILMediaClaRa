@@ -2,7 +2,6 @@
 package PartialGasObjectFunctionPrototypes
   "Package for calculation of gas vapor properties with a functional call, referencing existing external objects for highspeed evaluation"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   partial function density_phxi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
     input SI.AbsolutePressure p "Pressure";
@@ -107,7 +106,7 @@ package PartialGasObjectFunctionPrototypes
     input SI.SpecificEnthalpy h "Specific enthalpy";
     input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
-    output SI.MassFraction xi_gas "Mass fraction of gasoues condensing component";
+    output SI.MassFraction xi_gas "Mass fraction of gaseous condensing component";
   end gaseousMassFraction_phxi;
   partial function relativeHumidity_phxi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
@@ -189,7 +188,6 @@ package PartialGasObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
     output SI.Temperature T_iceBulb "Ice bulb temperature";
   end iceBulbTemperature_phxi;
-
   partial function density_psxi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
     input SI.AbsolutePressure p "Pressure";
@@ -294,7 +292,7 @@ package PartialGasObjectFunctionPrototypes
     input SI.SpecificEntropy s "Specific entropy";
     input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
-    output SI.MassFraction xi_gas "Mass fraction of gasoues condensing component";
+    output SI.MassFraction xi_gas "Mass fraction of gaseous condensing component";
   end gaseousMassFraction_psxi;
   partial function relativeHumidity_psxi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
@@ -376,7 +374,6 @@ package PartialGasObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
     output SI.Temperature T_iceBulb "Ice bulb temperature";
   end iceBulbTemperature_psxi;
-
   partial function density_pTxi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
     input SI.AbsolutePressure p "Pressure";
@@ -481,7 +478,7 @@ package PartialGasObjectFunctionPrototypes
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
-    output SI.MassFraction xi_gas "Mass fraction of gasoues condensing component";
+    output SI.MassFraction xi_gas "Mass fraction of gaseous condensing component";
   end gaseousMassFraction_pTxi;
   partial function relativeHumidity_pTxi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
@@ -563,8 +560,6 @@ package PartialGasObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
     output SI.Temperature T_iceBulb "Ice bulb temperature";
   end iceBulbTemperature_pTxi;
-
-
   partial function saturationPartialPressure_T
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
     input SI.Temperature T "Temperature";
@@ -597,8 +592,6 @@ package PartialGasObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
     output SI.SpecificHeatCapacity cp_i "Specific isobaric heat capacity of theoretical pure component";
   end specificIsobaricHeatCapacityOfPureGas_Tn;
-
-
   partial function averageMolarMass_xi
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
     input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
@@ -611,7 +604,6 @@ package PartialGasObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
     output Real humRatio "Content of condensing component aka humidity ratio";
   end humidityRatio_xi;
-
   partial function molarMass_n
     extends TILMedia.BaseClasses.PartialGasObjectFunction;
     input Integer compNo "Component ID";
@@ -629,7 +621,6 @@ package PartialGasObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject gasPointer;
     output SI.Temperature T_freeze "Freezing point of condensing component";
   end freezingPoint;
-
 
  replaceable partial function saturationMassFraction_pTxidg
   extends TILMedia.BaseClasses.PartialGasObjectFunction;

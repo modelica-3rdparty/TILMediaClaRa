@@ -20,34 +20,55 @@ class TableObject
 */
 #ifndef TILMEDIATABLEALLOCATOR
 #define TILMEDIATABLEALLOCATOR
+#include \"ModelicaUtilities.h\"
 #if defined(_JMI_GLOBAL_H) || defined(WSM_VERSION) || defined(DYMOLA_STATIC) || (defined(ITI_CRT_INCLUDE) && !defined(ITI_COMP_SIM)) || defined(OPENMODELICA_H_)
-void* TILMedia_allocateTable_errorInterface(const char* table, const char* parameters, void* formatMessage, void* formatError, void* dymolaErrorLev);
-#if defined(DYMOLA_STATIC)
 #ifndef _WIN32
-#define __stdcall
+#define TILMEDIATABLEALLOCATOR_CC
+#else
+#define TILMEDIATABLEALLOCATOR_CC __stdcall
 #endif
-double __stdcall TILMedia_DymosimErrorLevWrapper_tableObject(const char* message, int level){
-  return DymosimErrorLev(message, level);
+void* TILMedia_allocateTable_errorInterface(
+    const char* table,
+    const char* parameters,
+    int(TILMEDIATABLEALLOCATOR_CC* formatMessage)(const char* _Format, ...),
+    int(TILMEDIATABLEALLOCATOR_CC* formatError)(const char* _Format, ...),
+    int(TILMEDIATABLEALLOCATOR_CC* customFunction)(const char*, int, void*),
+    void* messageUserData);
+#if defined(DYMOLA_STATIC)
+int TILMEDIATABLEALLOCATOR_CC TILMedia_DymosimErrorLevWrapper_tableObject(const char* message, int level, void* messageUserData) {
+  return (int) DymosimErrorLev(message, level >= 5? 2 : 1);
 };
 #endif
 void* TILMedia_allocateTable(const char* table, const char* parameters){
 #if defined(DYMOLA_STATIC)
-    return TILMedia_allocateTable_errorInterface(table, parameters, (void*)ModelicaFormatMessage, (void*)ModelicaFormatError, (void*)TILMedia_DymosimErrorLevWrapper_tableObject);
+    return TILMedia_allocateTable_errorInterface(
+      table,
+      parameters,
+      (int(TILMEDIATABLEALLOCATOR_CC*)(const char* _Format, ...)) ModelicaFormatMessage,
+      (int(TILMEDIATABLEALLOCATOR_CC*)(const char* _Format, ...)) ModelicaFormatError,
+      (int(TILMEDIATABLEALLOCATOR_CC*)(const char*, int, void*)) TILMedia_DymosimErrorLevWrapper_tableObject,
+      NULL);
 #else
-    return TILMedia_allocateTable_errorInterface(table, parameters,(void*)ModelicaFormatMessage, (void*)ModelicaFormatError, 0);
+    return TILMedia_allocateTable_errorInterface(
+      table,
+      parameters,
+      &ModelicaFormatMessage,
+      &ModelicaFormatError,
+      NULL,
+      NULL);
 #endif
 }
 #endif
 #else
 void* TILMedia_allocateTable(const char* table, const char* parameters);
 #endif
-",    Library="TILMedia181ClaRa");
+",     Library="TILMedia182ClaRa");
    end constructor;
 
    function destructor "free memory"
     input TableObject pointer;
     external "C" TILMedia_freeTable(pointer)
-              annotation(__iti_dllNoExport = true,Include="void TILMedia_freeTable(void*);",Library="TILMedia181ClaRa");
+              annotation(__iti_dllNoExport = true,Include="void TILMedia_freeTable(void*);", Library="TILMedia182ClaRa");
    end destructor;
 
   annotation(Protection(access=Access.documentation));

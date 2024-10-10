@@ -2,7 +2,6 @@
 package PartialVLEFluidFunctions
   "Package for calculation of VLEFluid properties with a functional call"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   replaceable partial function specificEnthalpy_dTxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.specificEnthalpy_dTxi;
   replaceable partial function pressure_dTxi =
@@ -71,7 +70,6 @@ package PartialVLEFluidFunctions
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.liquidIsothermalCompressibility_dTxi;
   replaceable partial function vapourIsothermalCompressibility_dTxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.vapourIsothermalCompressibility_dTxi;
-
   replaceable partial function density_phxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.density_phxi;
   replaceable partial function specificEntropy_phxi =
@@ -140,7 +138,6 @@ package PartialVLEFluidFunctions
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.liquidIsothermalCompressibility_phxi;
   replaceable partial function vapourIsothermalCompressibility_phxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.vapourIsothermalCompressibility_phxi;
-
   replaceable partial function density_psxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.density_psxi;
   replaceable partial function specificEnthalpy_psxi =
@@ -209,7 +206,6 @@ package PartialVLEFluidFunctions
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.liquidIsothermalCompressibility_psxi;
   replaceable partial function vapourIsothermalCompressibility_psxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.vapourIsothermalCompressibility_psxi;
-
   replaceable partial function density_pTxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.density_pTxi;
   replaceable partial function specificEnthalpy_pTxi =
@@ -278,8 +274,6 @@ package PartialVLEFluidFunctions
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.liquidIsothermalCompressibility_pTxi;
   replaceable partial function vapourIsothermalCompressibility_pTxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.vapourIsothermalCompressibility_pTxi;
-
-
   replaceable partial function dewDensity_Txi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.dewDensity_Txi;
   replaceable partial function bubbleDensity_Txi =
@@ -312,7 +306,6 @@ package PartialVLEFluidFunctions
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.dewIsothermalCompressibility_Txi;
   replaceable partial function bubbleIsothermalCompressibility_Txi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.bubbleIsothermalCompressibility_Txi;
-
   replaceable partial function dewDensity_pxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.dewDensity_pxi;
   replaceable partial function bubbleDensity_pxi =
@@ -345,9 +338,6 @@ package PartialVLEFluidFunctions
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.dewIsothermalCompressibility_pxi;
   replaceable partial function bubbleIsothermalCompressibility_pxi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.bubbleIsothermalCompressibility_pxi;
-
-
-
   replaceable partial function averageMolarMass_xi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.averageMolarMass_xi;
   replaceable partial function criticalDensity_xi =
@@ -380,8 +370,6 @@ package PartialVLEFluidFunctions
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.cricondenbarPressure_xi;
   replaceable partial function cricondenthermPressure_xi =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.cricondenthermPressure_xi;
-
   replaceable partial function molarMass_n =
       TILMedia.BaseClasses.PartialVLEFluidFunctionPrototypes.molarMass_n;
-
 end PartialVLEFluidFunctions;

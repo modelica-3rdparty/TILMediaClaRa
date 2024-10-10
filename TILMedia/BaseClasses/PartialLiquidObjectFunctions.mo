@@ -2,14 +2,10 @@
 package PartialLiquidObjectFunctions
   "Package for calculation of liquid properties with a functional call, referencing existing external objects for highspeed evaluation"
   extends TILMedia.Internals.ClassTypes.ModelPackage;
-
   replaceable partial function specificEntropy_phxi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctionPrototypes.specificEntropy_phxi;
-
   replaceable partial function specificEntropy_pTxi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctionPrototypes.specificEntropy_pTxi;
-
-
   replaceable partial function density_Txi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctionPrototypes.density_Txi;
   replaceable partial function specificEnthalpy_Txi =
@@ -24,7 +20,6 @@ package PartialLiquidObjectFunctions
       TILMedia.BaseClasses.PartialLiquidObjectFunctionPrototypes.thermalConductivity_Txi;
   replaceable partial function dynamicViscosity_Txi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctionPrototypes.dynamicViscosity_Txi;
-
   replaceable partial function density_hxi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctionPrototypes.density_hxi;
   replaceable partial function temperature_hxi =
@@ -39,5 +34,4 @@ package PartialLiquidObjectFunctions
       TILMedia.BaseClasses.PartialLiquidObjectFunctionPrototypes.thermalConductivity_hxi;
   replaceable partial function dynamicViscosity_hxi =
       TILMedia.BaseClasses.PartialLiquidObjectFunctionPrototypes.dynamicViscosity_hxi;
-
 end PartialLiquidObjectFunctions;

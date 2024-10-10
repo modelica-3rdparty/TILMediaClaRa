@@ -1,16 +1,12 @@
-within TILMedia.SolidTypes;
+﻿within TILMedia.SolidTypes;
 model TILMedia_St35_8 "TILMedia.St35.8"
   extends TILMedia.SolidTypes.BaseSolid(
     final d = 7850.0,
     final cp_nominal = 430.0,
-    final lambda_nominal = 57.0,
-    final nu_nominal=-1,
-    final E_nominal=-1,
-    final G_nominal=-1,
-    final beta_nominal=-1);
-
+    final lambda_nominal = 57.0);
 
   function specificHeatCapacity
+    extends TILMedia.BaseClasses.PartialSolidFunction;
   input Real T;
   output Real cp;
   protected
@@ -35,10 +31,11 @@ model TILMedia_St35_8 "TILMedia.St35.8"
       fi:=(T-293.15)/100;
       cp:=(cpBar[li+1] - cpBar[li])*((T-TBar[li])/(TBar[li+1]-TBar[li]))  + cpBar[li];
     end if;
-    annotation (Documentation(info="<html>see VDI-W&auml;rmeatlas pp. Dea 5</html>"));
+    annotation (Documentation(info="<html><p>see VDI-Wärmeatlas pp. Dea 5</p></html>"));
   end specificHeatCapacity;
 
   function thermalConductivity
+    extends TILMedia.BaseClasses.PartialSolidFunction;
   input Real T;
   output Real lambda;
   protected
@@ -64,15 +61,10 @@ model TILMedia_St35_8 "TILMedia.St35.8"
       lambda:=(lambdaBar[li+1] - lambdaBar[li])*((T-TBar[li])/(TBar[li+1]-TBar[li]))  + lambdaBar[li];
     end if;
     annotation (Documentation(info="<html>
-<p>see VDI-W&auml;rmeatlas pp. Dea 5</p>
+<p>see VDI-Wärmeatlas pp. Dea 5</p>
 </html>"));
   end thermalConductivity;
 equation
-  //d=density(T, d_nominal);
   cp=specificHeatCapacity(T);
   lambda=thermalConductivity(T);
-  nu = nu_nominal;
-  E = E_nominal;
-  G=G_nominal;
-  beta = beta_nominal;
 end TILMedia_St35_8;
