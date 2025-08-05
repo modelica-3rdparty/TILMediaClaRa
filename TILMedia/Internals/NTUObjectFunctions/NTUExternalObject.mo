@@ -118,7 +118,7 @@ void* TILMedia_NTU_createExternalObject(
         const int calculationInputType,
         const char* instanceName);
 #endif
-",     Library="TILMedia182ClaRa");
+",    Library="TILMedia190ClaRa");
   end constructor;
 
   function destructor "free memory"
@@ -126,6 +126,6 @@ void* TILMedia_NTU_createExternalObject(
   external"C" TILMedia_NTU_destroyExternalObject(ntuPointer) annotation (
       __iti_dllNoExport=true,
       Include="void TILMedia_NTU_destroyExternalObject(void*);",
-       Library="TILMedia182ClaRa");
+      Library="TILMedia190ClaRa");
   end destructor;
 end NTUExternalObject;

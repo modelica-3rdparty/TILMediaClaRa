@@ -20,7 +20,7 @@ There are different options to calculate thermo-physical properties:
 <ul>
   <li> <b>object-oriented</b> [recommended] - An external object is created and all properties are calculated at once (e.g. <a href=\"modelica://TILMedia.Testers.TestGas\">TestGas</a>, <a href=\"modelica://TILMedia.Testers.TestLiquid\">TestLiquid</a>, <a href=\"modelica://TILMedia.Testers.TestVLEFluid\">TestVLEFluid</a>). </li>
   <li> <b>function based</b> [for single evaluations only] - Only one property is calculated. Useful for parameter expressions such as start values. For efficient calculation of time-varying variable use objects or object functions.</li>
-  <li> <b>objects with functions</b> [for conditional/additional properties] - The classes without inputs (<a href=\"modelica://TILMedia.Gas\">Gas</a>, <a href=\"modelica://TILMedia.Liquid\">Liquid</a> and <a href=\"modelica://TILMedia.VLEFluid\">VLEFluid</a>) can be used to calculate conditional or additional properties efficiently.</li>
+  <li> <b>objects with functions</b> [for conditional/additional properties] - The classes without inputs (<a href=\"modelica://TILMedia.Gas.Gas\">Gas</a>, <a href=\"modelica://TILMedia.Liquid\">Liquid</a> and <a href=\"modelica://TILMedia.VLEFluid.VLEFluid\">VLEFluid</a>) can be used to calculate conditional or additional properties efficiently.</li>
   <li> <b>object functions</b> [for additional properties] - Using the pointer to an existing external object additional properties can be computed efficiently.</li>
 </ul>
 <br>

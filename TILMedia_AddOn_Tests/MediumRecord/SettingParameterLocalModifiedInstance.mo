@@ -2,9 +2,9 @@
 model SettingParameterLocalModifiedInstance
   extends TILMedia.Internals.ClassTypes.ExampleModel;
 
-  TILMedia.GasTypes.BaseGas gasType=GasTypes.FlueGasTILMedia();
+  TILMedia.Gas.Types.BaseGas gasType=GasTypes.FlueGasTILMedia();
 
-  TILMedia.Gas_pT gas(
+  TILMedia.Gas.Gas_pT gas(
     gasType=gasType,
     p=100000,
     T=25 + time*10) annotation (Placement(transformation(extent={{-20,60},{0,80}})));

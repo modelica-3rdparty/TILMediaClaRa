@@ -372,4 +372,36 @@ package PartialVLEFluidObjectFunctions
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.cricondenthermPressure_xi;
   replaceable partial function molarMass_n =
       TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.molarMass_n;
+  replaceable partial function der_specificEnthalpy_dTxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_specificEnthalpy_dTxi;
+  replaceable partial function der_pressure_dTxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_pressure_dTxi;
+  replaceable partial function der_specificEntropy_dTxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_specificEntropy_dTxi;
+  replaceable partial function der_density_phxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_density_phxi;
+  replaceable partial function der_specificEntropy_phxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_specificEntropy_phxi;
+  replaceable partial function der_temperature_phxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_temperature_phxi;
+  replaceable partial function der_density_psxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_density_psxi;
+  replaceable partial function der_specificEnthalpy_psxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_specificEnthalpy_psxi;
+  replaceable partial function der_temperature_psxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_temperature_psxi;
+  replaceable partial function der_density_pTxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_density_pTxi;
+  replaceable partial function der_specificEnthalpy_pTxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_specificEnthalpy_pTxi;
+  replaceable partial function der_specificEntropy_pTxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_specificEntropy_pTxi;
+  replaceable partial function der_dewPressure_Txi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_dewPressure_Txi;
+  replaceable partial function der_bubblePressure_Txi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_bubblePressure_Txi;
+  replaceable partial function der_dewTemperature_pxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_dewTemperature_pxi;
+  replaceable partial function der_bubbleTemperature_pxi =
+      TILMedia.BaseClasses.PartialVLEFluidObjectFunctionPrototypes.der_bubbleTemperature_pxi;
 end PartialVLEFluidObjectFunctions;

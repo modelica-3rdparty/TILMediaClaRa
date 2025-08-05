@@ -8,6 +8,7 @@ record PropertyRecord "Property record"
   SI.Temperature T=0 "Temperature";
   SI.MassFraction q=0 "Steam mass fraction (quality)";
   SI.SpecificHeatCapacity cp=0 "Specific isobaric heat capacity cp";
+  SI.LinearExpansionCoefficient beta=0 "Isobaric expansion coefficient";
 
   TILMedia.Internals.CriticalDataRecord crit=
            TILMedia.Internals.CriticalDataRecord(d=0.0,T=0.0,p=0.0,h=0.0,s=0.0)

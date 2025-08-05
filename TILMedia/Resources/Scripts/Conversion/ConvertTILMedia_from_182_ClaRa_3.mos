@@ -1,0 +1,11 @@
+
+// clear
+convertClear();
+
+//-----------------------------------------------
+// Fourth part of the conversion from TILMedia ClaRa 1.8.2 to 1.9.0
+
+convertClass("TILMedia.Internals.VLEFluidObjectFunctions","TILMedia.Internals.VLEFluid.AdditionalObjectFunctions");
+
+// End fourth part of the conversion from TILMedia ClaRa 1.8.2 to 1.9.0
+//-----------------------------------------------

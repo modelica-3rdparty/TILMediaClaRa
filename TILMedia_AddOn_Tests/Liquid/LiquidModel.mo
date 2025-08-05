@@ -1,7 +1,7 @@
 ﻿within TILMedia_AddOn_Tests.Liquid;
 model LiquidModel
   extends TILMedia.Internals.ClassTypes.ExampleModel;
-  TILMedia.Liquid liquid(redeclare TILMedia.LiquidTypes.TILMedia_Water liquidType)
+  TILMedia.Liquid.Liquid liquid(redeclare TILMedia.Liquid.Types.TILMedia_Water liquidType)
     annotation (Placement(transformation(extent={{-10,-12},{10,8}})));
   parameter Real hStart_a=liquid.h_Txi(295.15);
   parameter Real hStart_b=liquid.h_Txi(298.15, zeros(0));

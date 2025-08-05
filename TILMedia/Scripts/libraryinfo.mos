@@ -4,10 +4,9 @@ LibraryInfoMenuSeparator(
 
 LibraryInfoMenuCommand(
   category = "libraries",
-  subCategory = {"TIL Suite 2024.1", "Libraries for thermal components and systems"},
   text = "TILMedia",
   reference = "TILMedia",
-  version = "1.8.2 ClaRa",
+  version = "1.9.0 ClaRa",
   isModel = true,
   description = "Medium properties for gases, liquids, VLEFluids, SLEMediums and solids",
   ModelicaVersion = "4.0.0",

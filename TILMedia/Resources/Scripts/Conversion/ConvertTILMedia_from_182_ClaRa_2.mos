@@ -1,0 +1,19 @@
+
+// clear
+convertClear();
+
+//-----------------------------------------------
+// Third part of the conversion from TILMedia ClaRa 1.8.2 to 1.9.0
+
+convertClass("TILMedia.Internals.GasObjectFunctions","TILMedia.Gas.ObjectFunctions");
+convertClass("TILMedia.Internals.GasConfigurations.AnalyticDerivatives","TILMedia.Gas");
+
+convertClass("TILMedia.Internals.LiquidObjectFunctions","TILMedia.Liquid.ObjectFunctions");
+convertClass("TILMedia.Internals.LiquidConfigurations.AnalyticDerivatives","TILMedia.Liquid");
+
+convertClass("TILMedia.Internals.VLEFluidObjectFunctions.PureComponentDerivatives","TILMedia.Internals.VLEFluid.AdditionalObjectFunctionsWithDerivatives");
+convertClass("TILMedia.Internals.VLEFluidConfigurations.PureComponentVLEFluid.SplineInterpolation","TILMedia.VLEFluid.SplineDerivatives");
+convertClass("TILMedia.Internals.VLEFluidConfigurations.FullyMixtureCompatible","TILMedia.VLEFluid.MixtureCompatible");
+
+// End third part of the conversion from TILMedia ClaRa 1.8.2 to 1.9.0
+//-----------------------------------------------

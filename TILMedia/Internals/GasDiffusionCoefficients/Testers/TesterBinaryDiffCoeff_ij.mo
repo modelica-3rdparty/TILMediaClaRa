@@ -4,7 +4,7 @@ model TesterBinaryDiffCoeff_ij
   parameter Integer i=2;
   parameter Integer j=3;
 
-  parameter TILMedia.GasTypes.BaseGas gasType= TILMedia.GasTypes.BaseGas(
+  parameter TILMedia.Gas.Types.BaseGas gasType=TILMedia.Gas.Types.BaseGas(
       fixedMixingRatio=false,
       nc_propertyCalculation=4,
       gasNames={"TILMediaXTR.Water","TILMediaXTR.Oxygen","TILMediaXTR.Hydrogen","TILMediaXTR.Nitrogen"},
@@ -12,7 +12,7 @@ model TesterBinaryDiffCoeff_ij
       mixingRatio_propertyCalculation={0.00579111,0.230146,0,0.764063})
     annotation (Placement(transformation(extent={{70,70},{90,90}})));
 
-  TILMedia.Gas_pT gas(
+  TILMedia.Gas.Gas_pT gas(
     gasType=gasType,
     p=100000,
     T=ramp.y)
@@ -26,6 +26,9 @@ model TesterBinaryDiffCoeff_ij
     duration=100,
     offset=273.15) annotation (Placement(transformation(extent={{-10,-52},{10,-32}})));
 
+  parameter TILMedia.Internals.GetIDXfromCAS.ListOfSubstances listOfSubstances;
+  parameter Integer idxVector[:]=TILMedia.Internals.GetIDXfromCAS.getGasIDXVector(gasType,listOfSubstances);
+
 equation
   D_ij_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     gas.p,
@@ -33,7 +36,8 @@ equation
     i,
     j,
     TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gas.gasPointer,
+    idxVector);
 
   D_ij_Fuller = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     gas.p,
@@ -41,7 +45,8 @@ equation
     i,
     j,
     TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gas.gasPointer,
+    idxVector);
 
   annotation (experiment(StopTime=100, __Dymola_Algorithm="Dassl"));
 end TesterBinaryDiffCoeff_ij;

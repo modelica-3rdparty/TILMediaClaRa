@@ -1,6 +1,7 @@
 ﻿within TILMedia_AddOn_Tests.VLEFluidTypes;
 record TILMedia_Water "TILMedia.Water"
-  extends TILMedia.VLEFluidTypes.BaseVLEFluid(
+  extends TILMedia.VLEFluid.Types.BaseVLEFluid
+                                             (
     final fixedMixingRatio=true,
     final nc_propertyCalculation=1,
     final vleFluidNames={"TILMedia.Water"},

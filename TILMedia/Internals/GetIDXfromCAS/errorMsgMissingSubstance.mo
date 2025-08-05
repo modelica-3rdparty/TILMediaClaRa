@@ -1,7 +1,7 @@
 ﻿within TILMedia.Internals.GetIDXfromCAS;
 function errorMsgMissingSubstance
   input String substanceName;
-  input TILMedia.GasTypes.BaseGas gasType;
+  input TILMedia.Gas.Types.BaseGas gasType;
   input String modelName;
 
   output String msg;

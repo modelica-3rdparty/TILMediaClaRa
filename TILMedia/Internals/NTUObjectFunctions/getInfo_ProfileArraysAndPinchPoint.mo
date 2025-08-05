@@ -1,5 +1,5 @@
 ﻿within TILMedia.Internals.NTUObjectFunctions;
-function getInfo_ProfileArraysAndPinchPoint
+pure function getInfo_ProfileArraysAndPinchPoint
   extends NTUObjectFunctions.baseInputsOfNTU;
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -72,6 +72,6 @@ external"C" TILMedia_NTU_getInfo_ProfileArraysAndPinchPoint(
     double*,
     double*, double*,
     double*);",
-     Library="TILMedia182ClaRa");
+    Library="TILMedia190ClaRa");
 
 end getInfo_ProfileArraysAndPinchPoint;

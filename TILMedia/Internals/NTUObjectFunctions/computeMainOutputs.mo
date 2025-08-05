@@ -1,5 +1,5 @@
 ﻿within TILMedia.Internals.NTUObjectFunctions;
-function computeMainOutputs
+pure function computeMainOutputs
   extends NTUObjectFunctions.baseInputsOfNTU;
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -115,6 +115,6 @@ external"C" TILMedia_NTU_computeMainOutputs(
     const int, double*, double*,
     double*, double*, double*,
     double*);",
-     Library="TILMedia182ClaRa");
+    Library="TILMedia190ClaRa");
 
 end computeMainOutputs;

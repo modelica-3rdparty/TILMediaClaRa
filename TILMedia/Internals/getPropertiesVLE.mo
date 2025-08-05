@@ -6,6 +6,7 @@ function getPropertiesVLE
   input Real s;
   input Real T;
   input Real cp;
+  input Real beta;
   input Real q;
   input Real d_crit;
   input Real h_crit;
@@ -41,6 +42,7 @@ algorithm
     s=s,
     T=T,
     cp=cp,
+    beta=beta,
     q=q,
     VLE=TILMedia.Internals.VLERecordSimple(
       d_l=d_l,

@@ -1,5 +1,5 @@
 ﻿within TILMedia.Internals.NTUObjectFunctions;
-function initializePressureDropCorrelations
+impure function initializePressureDropCorrelations
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
   //// Inputs ///////////////////////////////////////////////////////////////////////////////////
@@ -33,6 +33,6 @@ external"C" outputFlag = TILMedia_NTU_initializePressureDropCorrelations(
     const int, const int, const double*,
     const int, const int, const double*,
     void*);",
-     Library="TILMedia182ClaRa");
+    Library="TILMedia190ClaRa");
 
 end initializePressureDropCorrelations;

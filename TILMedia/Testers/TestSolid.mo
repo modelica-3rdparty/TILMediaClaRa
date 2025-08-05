@@ -7,8 +7,8 @@ model TestSolid
   SI.Temperature T;
 
  //Instance of a Solid object that requires the Temperature T as input
-  Solid solid(T=T, redeclare model SolidType =
-        TILMedia.SolidTypes.TILMedia_St35_8)
+  TILMedia.Solid.Solid solid(T=T, redeclare model SolidType =
+        TILMedia.Solid.Types.TILMedia_St35_8)
               annotation (Placement(transformation(extent={{-20,0},{0,20}},
           rotation=0)));
 

@@ -12,10 +12,10 @@ class SubstanceRecord "Substance Record"
 <li>mixingRatio_propertyCalculation - Array with the mixing ratio of all substances. </li>
 <li>condensingIndex - Only for gas mixtures: Integer with the index of the component that can condense.</li>
 </ul>
-<p>To access the properties of an additional substance, it is recommended to create a new substance record. A new substance record is easily created by duplicating the substance record of an existing medium (e.g. \"TILMedia.VLEFluidTypes.TILMedia_R134a\"). To assign the new substance, the <code>vleFluidNames</code> parameter has to be changed to the new substance name (e.g. \"TILMedia.TILMedia_R1233ZD\"), included in the <a href=\"modelica://TILMedia.UsersGuide.SubstanceNames\">list of available substances</a>. In the record, the parameters listed above have to be specified, using the modifier (brackets behind the base class) of the new substance record. An example of a user-defined substance record is shown below: </p>
+<p>To access the properties of an additional substance, it is recommended to create a new substance record. A new substance record is easily created by duplicating the substance record of an existing medium (e.g. \"TILMedia.VLEFluid.Types.TILMedia_R134a\"). To assign the new substance, the <code>vleFluidNames</code> parameter has to be changed to the new substance name (e.g. \"TILMedia.TILMedia_R1233ZD\"), included in the <a href=\"modelica://TILMedia.UsersGuide.SubstanceNames\">list of available substances</a>. In the record, the parameters listed above have to be specified, using the modifier (brackets behind the base class) of the new substance record. An example of a user-defined substance record is shown below: </p>
 <p>Pure substance example:
 </p><p><code><span style=\"color: #0000ff;\">record</span> TILMedia_R1233ZDE <span style=\"color: #006400;\">\"TILMedia.R1233ZDE\"</span></code>
-<br><code>  <span style=\"color: #0000ff;\">extends </span><span style=\"color: #ff0000;\">TILMedia.VLEFluidTypes.BaseVLEFluid</span>(</code>
+<br><code>  <span style=\"color: #0000ff;\">extends </span><span style=\"color: #ff0000;\">TILMedia.VLEFluid.Types.BaseVLEFluid</span>(</code>
 <br><code>    <span style=\"color: #0000ff;\">final </span>fixedMixingRatio=true,</code>
 <br><code>    <span style=\"color: #0000ff;\">final </span>nc_propertyCalculation=1,</code>
 <br><code>    <span style=\"color: #0000ff;\">final </span>vleFluidNames={\"TILMedia.R1233ZDE\"},</code>
@@ -23,7 +23,7 @@ class SubstanceRecord "Substance Record"
 <br><code><span style=\"color: #0000ff;\">end </span>TILMedia_R1233ZDE;</code></p>
 <p>Mixture example:
 </p><p><code><span style=\"color: #0000ff;\">record</span> TILMediaXTR_MyGasMixture <span style=\"color: #006400;\">\"MyGasMixture\"</span></code>
-<br><code>  <span style=\"color: #0000ff;\">extends </span><span style=\"color: #ff0000;\">TILMedia.GasTypes.BaseGas</span>(</code>
+<br><code>  <span style=\"color: #0000ff;\">extends </span><span style=\"color: #ff0000;\">TILMedia.Gas.Types.BaseGas</span>(</code>
 <br><code>    <span style=\"color: #0000ff;\">final </span>fixedMixingRatio=false,</code>
 <br><code>    <span style=\"color: #0000ff;\">final </span>nc_propertyCalculation=4,</code>
 <br><code>    <span style=\"color: #0000ff;\">final </span>gasNames={\"TILMediaXTR.Water\", \"TILMediaXTR.Oxygen\", \"TILMediaXTR.Nitrogen\", \"TILMediaXTR.Carbon_Dioxide\"},</code>

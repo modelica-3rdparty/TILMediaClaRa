@@ -1436,4 +1436,172 @@ package PartialVLEFluidObjectFunctionPrototypes
     input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
     output SI.MolarMass M_i "Molar mass of component i";
   end molarMass_n;
+  partial function der_specificEnthalpy_dTxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.Density d "Density";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_d "Derivative of Density";
+    input Real der_T "Derivative of Temperature";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_h "Specific enthalpy";
+  end der_specificEnthalpy_dTxi;
+  partial function der_pressure_dTxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.Density d "Density";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_d "Derivative of Density";
+    input Real der_T "Derivative of Temperature";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_p "Pressure";
+  end der_pressure_dTxi;
+  partial function der_specificEntropy_dTxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.Density d "Density";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_d "Derivative of Density";
+    input Real der_T "Derivative of Temperature";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_s "Specific entropy";
+  end der_specificEntropy_dTxi;
+  partial function der_density_phxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEnthalpy h "Specific enthalpy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_h "Derivative of Specific enthalpy";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_d "Density";
+  end der_density_phxi;
+  partial function der_specificEntropy_phxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEnthalpy h "Specific enthalpy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_h "Derivative of Specific enthalpy";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_s "Specific entropy";
+  end der_specificEntropy_phxi;
+  partial function der_temperature_phxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEnthalpy h "Specific enthalpy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_h "Derivative of Specific enthalpy";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_T "Temperature";
+  end der_temperature_phxi;
+  partial function der_density_psxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEntropy s "Specific entropy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_s "Derivative of Specific entropy";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_d "Density";
+  end der_density_psxi;
+  partial function der_specificEnthalpy_psxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEntropy s "Specific entropy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_s "Derivative of Specific entropy";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_h "Specific enthalpy";
+  end der_specificEnthalpy_psxi;
+  partial function der_temperature_psxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.SpecificEntropy s "Specific entropy";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_s "Derivative of Specific entropy";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_T "Temperature";
+  end der_temperature_psxi;
+  partial function der_density_pTxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_T "Derivative of Temperature";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_d "Density";
+  end der_density_pTxi;
+  partial function der_specificEnthalpy_pTxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_T "Derivative of Temperature";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_h "Specific enthalpy";
+  end der_specificEnthalpy_pTxi;
+  partial function der_specificEntropy_pTxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real der_T "Derivative of Temperature";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_s "Specific entropy";
+  end der_specificEntropy_pTxi;
+  partial function der_dewPressure_Txi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_T "Derivative of Temperature";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_p_dew "Pressure at dew point";
+  end der_dewPressure_Txi;
+  partial function der_bubblePressure_Txi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.Temperature T "Temperature";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_T "Derivative of Temperature";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_p_bubble "Pressure at bubble point";
+  end der_bubblePressure_Txi;
+  partial function der_dewTemperature_pxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_T_dew "Temperature at dew point";
+  end der_dewTemperature_pxi;
+  partial function der_bubbleTemperature_pxi
+    extends TILMedia.BaseClasses.PartialVLEFluidObjectFunction;
+    input SI.AbsolutePressure p "Pressure";
+    input SI.MassFraction[:] xi "Mass fractions of the first nc-1 components";
+    input TILMedia.Internals.TILMediaExternalObject vleFluidPointer;
+    input Real der_p "Derivative of Pressure";
+    input Real[:] der_xi "Derivative of Mass fractions of the first nc-1 components";
+    output Real der_T_bubble "Temperature at bubble point";
+  end der_bubbleTemperature_pxi;
 end PartialVLEFluidObjectFunctionPrototypes;

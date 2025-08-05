@@ -5,7 +5,7 @@ package PartialGasFunctionPrototypes
   partial function density_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -17,7 +17,7 @@ package PartialGasFunctionPrototypes
   partial function specificEntropy_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -29,7 +29,7 @@ package PartialGasFunctionPrototypes
   partial function temperature_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -41,7 +41,7 @@ package PartialGasFunctionPrototypes
   partial function specificIsobaricHeatCapacity_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -53,7 +53,7 @@ package PartialGasFunctionPrototypes
   partial function specificIsochoricHeatCapacity_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -65,7 +65,7 @@ package PartialGasFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -77,7 +77,7 @@ package PartialGasFunctionPrototypes
   partial function isothermalCompressibility_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -89,7 +89,7 @@ package PartialGasFunctionPrototypes
   partial function speedOfSound_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -101,7 +101,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTspecificEnthalpy_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -113,7 +113,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTpressure_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -125,7 +125,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTmassFraction_phxin
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -138,7 +138,7 @@ package PartialGasFunctionPrototypes
   partial function partialPressure_phxin
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -151,7 +151,7 @@ package PartialGasFunctionPrototypes
   partial function gaseousMassFraction_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -163,7 +163,7 @@ package PartialGasFunctionPrototypes
   partial function relativeHumidity_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -175,7 +175,7 @@ package PartialGasFunctionPrototypes
   partial function saturationMassFraction_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -187,7 +187,7 @@ package PartialGasFunctionPrototypes
   partial function saturationHumidityRatio_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -199,7 +199,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpy1px_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -211,7 +211,7 @@ package PartialGasFunctionPrototypes
   partial function prandtlNumber_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -223,7 +223,7 @@ package PartialGasFunctionPrototypes
   partial function thermalConductivity_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -235,7 +235,7 @@ package PartialGasFunctionPrototypes
   partial function dynamicViscosity_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -247,7 +247,7 @@ package PartialGasFunctionPrototypes
   partial function dewTemperature_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -259,7 +259,7 @@ package PartialGasFunctionPrototypes
   partial function wetBulbTemperature_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -271,7 +271,7 @@ package PartialGasFunctionPrototypes
   partial function iceBulbTemperature_phxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -283,7 +283,7 @@ package PartialGasFunctionPrototypes
   partial function density_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -295,7 +295,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpy_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -307,7 +307,7 @@ package PartialGasFunctionPrototypes
   partial function temperature_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -319,7 +319,7 @@ package PartialGasFunctionPrototypes
   partial function specificIsobaricHeatCapacity_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -331,7 +331,7 @@ package PartialGasFunctionPrototypes
   partial function specificIsochoricHeatCapacity_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -343,7 +343,7 @@ package PartialGasFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -355,7 +355,7 @@ package PartialGasFunctionPrototypes
   partial function isothermalCompressibility_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -367,7 +367,7 @@ package PartialGasFunctionPrototypes
   partial function speedOfSound_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -379,7 +379,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTspecificEnthalpy_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -391,7 +391,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTpressure_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -403,7 +403,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTmassFraction_psxin
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -416,7 +416,7 @@ package PartialGasFunctionPrototypes
   partial function partialPressure_psxin
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -429,7 +429,7 @@ package PartialGasFunctionPrototypes
   partial function gaseousMassFraction_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -441,7 +441,7 @@ package PartialGasFunctionPrototypes
   partial function relativeHumidity_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -453,7 +453,7 @@ package PartialGasFunctionPrototypes
   partial function saturationMassFraction_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -465,7 +465,7 @@ package PartialGasFunctionPrototypes
   partial function saturationHumidityRatio_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -477,7 +477,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpy1px_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -489,7 +489,7 @@ package PartialGasFunctionPrototypes
   partial function prandtlNumber_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -501,7 +501,7 @@ package PartialGasFunctionPrototypes
   partial function thermalConductivity_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -513,7 +513,7 @@ package PartialGasFunctionPrototypes
   partial function dynamicViscosity_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -525,7 +525,7 @@ package PartialGasFunctionPrototypes
   partial function dewTemperature_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -537,7 +537,7 @@ package PartialGasFunctionPrototypes
   partial function wetBulbTemperature_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -549,7 +549,7 @@ package PartialGasFunctionPrototypes
   partial function iceBulbTemperature_psxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -561,7 +561,7 @@ package PartialGasFunctionPrototypes
   partial function density_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -573,7 +573,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpy_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -585,7 +585,7 @@ package PartialGasFunctionPrototypes
   partial function specificEntropy_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -597,7 +597,7 @@ package PartialGasFunctionPrototypes
   partial function specificIsobaricHeatCapacity_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -609,7 +609,7 @@ package PartialGasFunctionPrototypes
   partial function specificIsochoricHeatCapacity_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -621,7 +621,7 @@ package PartialGasFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -633,7 +633,7 @@ package PartialGasFunctionPrototypes
   partial function isothermalCompressibility_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -645,7 +645,7 @@ package PartialGasFunctionPrototypes
   partial function speedOfSound_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -657,7 +657,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTspecificEnthalpy_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -669,7 +669,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTpressure_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -681,7 +681,7 @@ package PartialGasFunctionPrototypes
   partial function densityDerivativeWRTmassFraction_pTxin
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -694,7 +694,7 @@ package PartialGasFunctionPrototypes
   partial function partialPressure_pTxin
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -707,7 +707,7 @@ package PartialGasFunctionPrototypes
   partial function gaseousMassFraction_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -719,7 +719,7 @@ package PartialGasFunctionPrototypes
   partial function relativeHumidity_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -731,7 +731,7 @@ package PartialGasFunctionPrototypes
   partial function saturationMassFraction_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -743,7 +743,7 @@ package PartialGasFunctionPrototypes
   partial function saturationHumidityRatio_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -755,7 +755,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpy1px_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -767,7 +767,7 @@ package PartialGasFunctionPrototypes
   partial function prandtlNumber_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -779,7 +779,7 @@ package PartialGasFunctionPrototypes
   partial function thermalConductivity_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -791,7 +791,7 @@ package PartialGasFunctionPrototypes
   partial function dynamicViscosity_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -803,7 +803,7 @@ package PartialGasFunctionPrototypes
   partial function dewTemperature_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -815,7 +815,7 @@ package PartialGasFunctionPrototypes
   partial function wetBulbTemperature_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -827,7 +827,7 @@ package PartialGasFunctionPrototypes
   partial function iceBulbTemperature_pTxi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -839,7 +839,7 @@ package PartialGasFunctionPrototypes
   partial function saturationPartialPressure_T
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     output SI.PartialPressure p_s "Saturation partial pressure of condensing component";
@@ -847,7 +847,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpyOfVaporisation_T
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     output SI.SpecificEnthalpy delta_hv "Specific enthalpy of vaporisation of condensing component";
@@ -855,7 +855,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpyOfDesublimation_T
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     output SI.SpecificEnthalpy delta_hd "Specific enthalpy of desublimation of condensing component";
@@ -863,7 +863,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpyOfPureGas_Tn
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input Integer compNo "Component ID";
@@ -872,7 +872,7 @@ package PartialGasFunctionPrototypes
   partial function specificIsobaricHeatCapacityOfPureGas_Tn
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input Integer compNo "Component ID";
@@ -881,7 +881,7 @@ package PartialGasFunctionPrototypes
   partial function averageMolarMass_xi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
   input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(gasType.mixingRatio_propertyCalculation) "Mass fractions of the first nc-1 components";
@@ -890,7 +890,7 @@ package PartialGasFunctionPrototypes
   partial function humidityRatio_xi
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
   input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(gasType.mixingRatio_propertyCalculation) "Mass fractions of the first nc-1 components";
@@ -899,7 +899,7 @@ package PartialGasFunctionPrototypes
   partial function molarMass_n
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input Integer compNo "Component ID";
     output SI.MolarMass M_i "Molar mass of component i";
@@ -907,7 +907,7 @@ package PartialGasFunctionPrototypes
   partial function specificEnthalpyOfFormation_n
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     input Integer compNo "Component ID";
     output SI.SpecificEnthalpy hF_i "Specific enthalpy of formation";
@@ -915,7 +915,7 @@ package PartialGasFunctionPrototypes
   partial function freezingPoint
     extends TILMedia.BaseClasses.PartialGasFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.GasTypes.BaseGas gasType "Gas type"
+    input TILMedia.Gas.Types.BaseGas gasType "Gas type"
       annotation (choicesAllMatching=true);
     output SI.Temperature T_freeze "Freezing point of condensing component";
   end freezingPoint;

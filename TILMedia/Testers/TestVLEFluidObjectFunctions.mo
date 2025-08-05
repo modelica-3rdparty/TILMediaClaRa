@@ -18,7 +18,7 @@ model TestVLEFluidObjectFunctions
   SI.MassFraction xi[vleFluidType.nc-1];
 
   // Record which defines the VLEFluid (see User's Guide -> Substance Record)
-  parameter TILMedia.VLEFluidTypes.TILMedia_GERGCO2 vleFluidType;
+  parameter TILMedia.VLEFluid.Types.TILMedia_GERGCO2 vleFluidType;
 
   // Start values for the the temperature
   parameter SI.Temperature T_start = 273.15+20;
@@ -26,17 +26,17 @@ model TestVLEFluidObjectFunctions
 
   // A start value for the enthalpy can be calculated
   // either by using VLEFluidFuctions.specificEnthalpy_pTxi:
-  parameter Real h_start = TILMedia.VLEFluidFunctions.specificEnthalpy_pTxi(vleFluidType,  p_start, T_start);
+  parameter Real h_start = TILMedia.VLEFluid.Functions.specificEnthalpy_pTxi(vleFluidType,  p_start, T_start);
   // or by using the vleFluid instance:
   parameter Real T_startValue = vleFluid.T_phxi(13e5, 300e3, zeros(0));
   // xi does not exist for a pure substance like GERGCO2, because the array of mass fractions has the size nc-1.
   // Therefore xi is set to zeros(0).
 
   // Instance of a VLEFluid object that requires the vleFluidType as input.
-  VLEFluid vleFluid(vleFluidType=vleFluidType)
+  TILMedia.VLEFluid.VLEFluid vleFluid(vleFluidType=vleFluidType)
     annotation (Placement(transformation(extent={{-10,-12},{10,8}})));
 
-  VLEFluid vleFluid2(vleFluidType=vleFluidType)
+  TILMedia.VLEFluid.VLEFluid vleFluid2(vleFluidType=vleFluidType)
     annotation (Placement(transformation(extent={{20,-12},{40,8}})));
 equation
   p = 4e6;
@@ -49,14 +49,14 @@ equation
   d = vleFluid.d_phxi(p, h, xi);
   T = vleFluid.T_phxi(p, h, xi);
 
-  // The continuous calculation of the speed of sound w and the temperature T1 can also be done with VLEFluidObjectFunctions.
+  // The continuous calculation of the speed of sound w and the temperature T1 can also be done with VLEFluid.ObjectFunctions.
   // These functions refer to an external object with the pointer vleFluid.vleFluidPointer.
-  w = TILMedia.VLEFluidObjectFunctions.speedOfSound_dTxi(d, T, xi, vleFluid.vleFluidPointer);
-  T1 = TILMedia.VLEFluidObjectFunctions.temperature_phxi(p, h, xi, vleFluid.vleFluidPointer);
+  w = TILMedia.Internals.VLEFluid.ObjectFunctions.speedOfSound_dTxi(d, T, xi, vleFluid.vleFluidPointer);
+  T1 = TILMedia.Internals.VLEFluid.ObjectFunctions.temperature_phxi(p, h, xi, vleFluid.vleFluidPointer);
   // T1 = T
   // The speed of sound w2 differs to the state point and calculations before.
   // Therefore is a new pointer needed.
-  w2 = TILMedia.VLEFluidObjectFunctions.speedOfSound_phxi(30e5, h_start, xi, vleFluid2.vleFluidPointer);
+  w2 = TILMedia.Internals.VLEFluid.ObjectFunctions.speedOfSound_phxi(30e5, h_start, xi, vleFluid2.vleFluidPointer);
 
   // Equivalent calculations are possible for Gas and Liquid.
 

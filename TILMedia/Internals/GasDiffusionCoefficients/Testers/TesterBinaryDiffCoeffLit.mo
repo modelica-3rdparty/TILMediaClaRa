@@ -2,23 +2,55 @@
 model TesterBinaryDiffCoeffLit
   extends TILMedia.Internals.ClassTypes.ExampleModel;
 
-  parameter TILMedia.GasTypes.BaseGas gasType= TILMedia.GasTypes.BaseGas(
+  parameter TILMedia.Internals.GetIDXfromCAS.ListOfSubstances listOfSubstances;
+  parameter Integer idxVector[:]=TILMedia.Internals.GetIDXfromCAS.getGasIDXVector(gasType,listOfSubstances);
+  parameter Integer idxVector2[:]=TILMedia.Internals.GetIDXfromCAS.getGasIDXVector(gasType2,listOfSubstances);
+
+  parameter TILMedia.Gas.Types.BaseGas gasType=TILMedia.Gas.Types.BaseGas(
       fixedMixingRatio=false,
       nc_propertyCalculation=7,
-      gasNames={"TILMediaXTR.Water","TILMediaXTR.Methane","TILMediaXTR.Hydrogen","TILMediaXTR.Carbon_Monoxide","TILMediaXTR.Carbon_Dioxide",
-          "TILMediaXTR.Oxygen","TILMediaXTR.Nitrogen"},
+      gasNames={"TILMediaXTR.Water","TILMediaXTR.Methane","TILMediaXTR.Hydrogen","TILMediaXTR.Carbon_Monoxide",
+        "TILMediaXTR.Carbon_Dioxide","TILMediaXTR.Oxygen","TILMediaXTR.Nitrogen"},
       condensingIndex=1,
       mixingRatio_propertyCalculation={0.00579111,1e-6,1e-6,1e-6,1e-6,0.230146,0.764063})
     annotation (Placement(transformation(extent={{52,72},{72,92}})));
 
-  parameter TILMedia.GasTypes.BaseGas gasType2= TILMedia.GasTypes.BaseGas(
+  parameter TILMedia.Gas.Types.BaseGas gasType2=TILMedia.Gas.Types.BaseGas(
       fixedMixingRatio=false,
       nc_propertyCalculation=7,
-      gasNames={"TILMediaXTR.Water","TILMediaXTR.Methane","TILMediaXTR.Hydrogen","TILMediaXTR.Argon","TILMediaXTR.Ammonia","TILMediaXTR.Oxygen",
-          "TILMediaXTR.Nitrogen"},
+      gasNames={"TILMediaXTR.Water","TILMediaXTR.Methane","TILMediaXTR.Hydrogen","TILMediaXTR.Argon",
+        "TILMediaXTR.Ammonia","TILMediaXTR.Oxygen","TILMediaXTR.Nitrogen"},
       condensingIndex=1,
       mixingRatio_propertyCalculation={0.00579111,1e-6,1e-6,1e-6,1e-6,0.230146,0.764063})
     annotation (Placement(transformation(extent={{72,72},{92,92}})));
+
+  parameter TILMedia.Internals.TILMediaExternalObject gasPointer=TILMedia.Internals.TILMediaExternalObject(
+        "Gas",
+        gasType.concatGasName,
+        TILMedia.Internals.calcComputeFlags(
+          false,
+          false,
+          true,
+          false,
+          false),
+        gasType.mixingRatio_propertyCalculation[1:end - 1]/sum(gasType.mixingRatio_propertyCalculation),
+        gasType.nc,
+        gasType.condensingIndex,
+        getInstanceName());
+
+  parameter TILMedia.Internals.TILMediaExternalObject gasPointer2=TILMedia.Internals.TILMediaExternalObject(
+        "Gas",
+        gasType2.concatGasName,
+        TILMedia.Internals.calcComputeFlags(
+          false,
+          false,
+          true,
+          false,
+          false),
+        gasType2.mixingRatio_propertyCalculation[1:end - 1]/sum(gasType2.mixingRatio_propertyCalculation),
+        gasType2.nc,
+        gasType2.condensingIndex,
+        getInstanceName());
 
   //********************************************************//
 
@@ -27,14 +59,16 @@ model TesterBinaryDiffCoeffLit
     T_CH4_H2O,
     1,
     2,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_CH4_H2O_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_CH4_H2O,
     1,
     2,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_CH4_H2O_Chapman_Enskog_soll = 0.29241e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_CH4_H2O_Fuller_soll = 0.35378e-4;// [Poling2020]
@@ -52,14 +86,16 @@ model TesterBinaryDiffCoeffLit
     T_CO2_H2O,
     1,
     5,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_CO2_H2O_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_CO2_H2O,
     1,
     5,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_CO2_H2O_Chapman_Enskog_soll =  0.15879e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_CO2_H2O_Fuller_soll =  0.22311e-4;// [Poling2020]
@@ -77,14 +113,16 @@ model TesterBinaryDiffCoeffLit
     T_CO2_N2,
     7,
     5,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_CO2_N2_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_CO2_N2,
     7,
     5,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_CO2_N2_Chapman_Enskog_soll = 0.15717e-4;  // [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_CO2_N2_Fuller_soll = 0.16393e-4;  // [Poling2020]
@@ -102,14 +140,16 @@ model TesterBinaryDiffCoeffLit
     T_CO_N2,
     7,
     4,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_CO_N2_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_CO_N2,
     7,
     4,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_CO_N2_Chapman_Enskog_soll = 0.30268e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_CO_N2_Fuller_soll = 0.30912e-4;// [Poling2020]
@@ -127,14 +167,16 @@ model TesterBinaryDiffCoeffLit
     T_H2_H2O,
     1,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_H2_H2O_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_H2_H2O,
     1,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_H2_H2O_Chapman_Enskog_soll = 0.81576e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_H2_H2O_Fuller_soll =  0.96408e-4;// [Poling2020]
@@ -152,14 +194,16 @@ model TesterBinaryDiffCoeffLit
     T_H2_N2,
     7,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_H2_N2_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_H2_N2,
     7,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_H2_N2_Chapman_Enskog_soll = 0.73435e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_H2_N2_Fuller_soll = 0.76527e-4;// [Poling2020]
@@ -177,14 +221,16 @@ model TesterBinaryDiffCoeffLit
     T_H2_N2_1,
     7,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_H2_N2_1_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_H2_N2_1,
     7,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_H2_N2_1_Chapman_Enskog_soll = 2.25308e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_H2_N2_1_Fuller_soll = 2.47349e-4;// [Poling2020]
@@ -202,14 +248,16 @@ model TesterBinaryDiffCoeffLit
     T_H2_N2_2,
     7,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_H2_N2_2_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_H2_N2_2,
     7,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType);
+    gasPointer,
+    idxVector);
 
   Modelica.Units.SI.DiffusionCoefficient D_H2_N2_2_exp = 0.674e-4;// [Bird]
 
@@ -225,14 +273,16 @@ model TesterBinaryDiffCoeffLit
     T_Ar_H2_1,
     4,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_Ar_H2_1_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_Ar_H2_1,
     4,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_Ar_H2_1_Chapman_Enskog_soll = 0.7644e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_Ar_H2_1_Fuller_soll = 0.8064e-4;// [Poling2020]
@@ -250,14 +300,16 @@ model TesterBinaryDiffCoeffLit
     T_Ar_H2_2,
     4,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_Ar_H2_2_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_Ar_H2_2,
     4,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_Ar_H2_2_Chapman_Enskog_soll = 2.7625e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_Ar_H2_2_Fuller_soll = 3.0225e-4;// [Poling2020]
@@ -275,14 +327,16 @@ model TesterBinaryDiffCoeffLit
     T_NH3_H2_1,
     5,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_1_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_NH3_H2_1,
     5,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_1_Chapman_Enskog_soll =  0.5974e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_1_Fuller_soll = 0.6206e-4;// [Poling2020]
@@ -300,14 +354,16 @@ model TesterBinaryDiffCoeffLit
     T_NH3_H2_2,
     5,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_2_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_NH3_H2_2,
     5,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_2_Chapman_Enskog_soll = 1.0656e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_2_Fuller_soll = 1.0656e-4;// [Poling2020]
@@ -325,14 +381,16 @@ model TesterBinaryDiffCoeffLit
     T_NH3_H2_3,
     5,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.fuller,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_3_Chapman_Enskog = GasDiffusionCoefficients.binaryDiffCoeff_ij(
     100000,
     T_NH3_H2_3,
     5,
     3,TILMedia.Internals.GasDiffusionCoefficients.BinaryFunctionType.chapmanEnskog,
-    gasType2);
+    gasPointer2,
+    idxVector2);
 
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_3_Chapman_Enskog_soll = 1.7766e-4;// [Poling2020]
   Modelica.Units.SI.DiffusionCoefficient D_NH3_H2_3_Fuller_soll = 1.7199e-4;// [Poling2020]

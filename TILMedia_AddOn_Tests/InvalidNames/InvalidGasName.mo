@@ -1,8 +1,8 @@
 ﻿within TILMedia_AddOn_Tests.InvalidNames;
 model InvalidGasName "This model should fail"
   extends TILMedia.Internals.ClassTypes.ExampleModel;
-  TILMedia.Gas_ph gas(
-    redeclare TILMedia.GasTypes.BaseGas gasType(
+  TILMedia.Gas.Gas_ph gas(
+    redeclare TILMedia.Gas.Types.BaseGas gasType(
       fixedMixingRatio=false,
       nc_propertyCalculation=1,
       gasNames={"doesntexist"},

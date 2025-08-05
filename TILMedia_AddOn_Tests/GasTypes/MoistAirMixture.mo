@@ -1,6 +1,7 @@
 ﻿within TILMedia_AddOn_Tests.GasTypes;
 record MoistAirMixture "Moist air gas mixture with a condensing component"
-  extends TILMedia.GasTypes.BaseGas(
+  extends TILMedia.Gas.Types.BaseGas
+                                   (
     final fixedMixingRatio=false,
     final nc_propertyCalculation=10,
     final gasNames={"TILMedia.Ash","TILMediaXTR.Carbon_Monoxide","TILMediaXTR.Carbon_Dioxide","TILMediaXTR.Sulfur_Dioxide","TILMediaXTR.Nitrogen","TILMediaXTR.Oxygen","TILMediaXTR.Nitrous_Oxide","TILMediaXTR.Water","TILMediaXTR.Ammonia","TILMediaXTR.Argon"},

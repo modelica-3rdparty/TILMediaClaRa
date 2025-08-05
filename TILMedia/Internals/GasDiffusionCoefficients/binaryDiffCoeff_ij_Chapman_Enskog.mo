@@ -9,16 +9,18 @@ function binaryDiffCoeff_ij_Chapman_Enskog
   input Modelica.Units.SI.Temperature T "Temperature";
   input Integer i "First component ID";
   input Integer j "Second component ID";
-  input TILMedia.GasTypes.BaseGas gasType "Gas type";
+  input TILMedia.Internals.TILMediaExternalObject gasPointer;
+  input Integer gasIDXVector[:];
 
   output Modelica.Units.SI.DiffusionCoefficient D_ij "Binary diffusion coefficient";
 
   import k_b = Modelica.Constants.k;
 
 protected
-  parameter Modelica.Units.SI.MolarMass M_i=TILMedia.GasFunctions.molarMass_n(gasType, i - 1)
+  parameter Integer nc = size(gasIDXVector,1);
+  Modelica.Units.SI.MolarMass M_i=TILMedia.Gas.ObjectFunctions.molarMass_n(i - 1, gasPointer)
     "Molar mass component i";
-  parameter Modelica.Units.SI.MolarMass M_j=TILMedia.GasFunctions.molarMass_n(gasType, j - 1)
+  Modelica.Units.SI.MolarMass M_j=TILMedia.Gas.ObjectFunctions.molarMass_n(j - 1, gasPointer)
     "Molar mass component i";
 
   Modelica.Units.SI.Length sigma_i "Molecular radius i";
@@ -49,52 +51,6 @@ protected
   parameter Real G(unit="1")=1.76474;// [Bird2007] and [Poling2020]
   parameter Real H(unit="1")=3.89411;// [Bird2007] and [Poling2020]
 
-  //______/ Checking number of component  \_________
-  parameter Integer idx_NH3=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.NH3.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_Ar=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.Ar.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_CO2=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.CO2.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_CO=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.CO.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_CH4=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.CH4.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_CH3OH=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.CH3OH.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_O2=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.O2.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_SO2=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.SO2.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_N2=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.N2.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_H2O=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.H2O.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-  parameter Integer idx_H2=TILMedia.Internals.GetIDXfromCAS.getIDXfromCAS(TILMedia.Internals.GetIDXfromCAS.Substances.H2.name,
-        gasType,
-        getInstanceName(),TILMedia.Internals.GetIDXfromCAS.assertionLevel.nomessage)
-                                                                          annotation (Evaluate=false);
-
   //______/ Material data  \_________
                                     // [Poling2020]  //  [Bird2007]
   Modelica.Units.SI.Energy epsilon_NH3=558.3*k_b;
@@ -109,6 +65,8 @@ protected
   Modelica.Units.SI.Energy epsilon_H2O=809.1*k_b;
   Modelica.Units.SI.Energy epsilon_H2=59.7*k_b;      //38*k_b;
 
+  Modelica.Units.SI.Energy epsilon[:]={epsilon_NH3, epsilon_Ar, epsilon_H2O, epsilon_H2, epsilon_H2,epsilon_H2,epsilon_O2,epsilon_N2,epsilon_CH3OH,epsilon_CH4,epsilon_CO,epsilon_CO2,epsilon_SO2};
+
   // sigma in Angstroem (10^-10 m)  // [Poling2020] //  [Bird2007]
   Modelica.Units.SI.Length sigma_NH3=2.900e-10;     //
   Modelica.Units.SI.Length sigma_Ar=3.542e-10;      //3.432*1e-10;
@@ -121,88 +79,19 @@ protected
   Modelica.Units.SI.Length sigma_N2=3.798e-10;      //3.667*1e-10;
   Modelica.Units.SI.Length sigma_H2O=2.641e-10;     //
   Modelica.Units.SI.Length sigma_H2=2.827e-10;      //2.915*1e-10;
+
+  Modelica.Units.SI.Length sigma[:]={sigma_NH3, sigma_Ar, sigma_H2O, sigma_H2, sigma_H2,sigma_H2,sigma_O2,sigma_N2,sigma_CH3OH,sigma_CH4,sigma_CO,sigma_CO2,sigma_SO2};
+
 algorithm
   //______/ Checking number of component  \_________
-  assert(i<=gasType.nc,  "The index i is out of range of gasType in function binaryDiffCoeff_ij_Chapman_Enskog.", level = AssertionLevel.error);
+  assert(i<=nc,  "The index i is out of range of gasType in function binaryDiffCoeff_ij_Chapman_Enskog.", level = AssertionLevel.error);
+  assert(j<=nc,  "The index j is out of range of gasType in function binaryDiffCoeff_ij_Chapman_Enskog.", level = AssertionLevel.error);
 
-  if i == idx_NH3 then
-    epsilon_i := epsilon_NH3;
-    sigma_i := sigma_NH3;
-  elseif i == idx_Ar then
-    epsilon_i := epsilon_Ar;
-    sigma_i := sigma_Ar;
-  elseif i == idx_CO2 then
-    epsilon_i := epsilon_CO2;
-    sigma_i := sigma_CO2;
-  elseif i == idx_CO then
-    epsilon_i := epsilon_CO;
-    sigma_i := sigma_CO;
-  elseif i == idx_CH4 then
-    epsilon_i := epsilon_CH4;
-    sigma_i := sigma_CH4;
-  elseif i == idx_CH3OH then
-    epsilon_i := epsilon_CH3OH;
-    sigma_i := sigma_CH3OH;
-  elseif i == idx_O2 then
-    epsilon_i := epsilon_O2;
-    sigma_i := sigma_O2;
-  elseif i == idx_SO2 then
-    epsilon_i := epsilon_SO2;
-    sigma_i := sigma_SO2;
-  elseif i == idx_N2 then
-    epsilon_i := epsilon_N2;
-    sigma_i := sigma_N2;
-  elseif i == idx_H2O then
-    epsilon_i := epsilon_H2O;
-    sigma_i := sigma_H2O;
-  elseif i == idx_H2 then
-    epsilon_i := epsilon_H2;
-    sigma_i := sigma_H2;
-  else
-    assert(false, "The function binaryDiffCoeff_ij_Chapman_Enskog is not defined for the chosen index i of gasType.", level = AssertionLevel.error);
-    epsilon_i := 0;
-    sigma_i := 0;
-  end if;
+  epsilon_i := epsilon[gasIDXVector[i]];
+  sigma_i := sigma[gasIDXVector[i]];
 
-  assert(j<=gasType.nc,  "The index j is out of range of gasType in function binaryDiffCoeff_ij_Chapman_Enskog.", level = AssertionLevel.error);
-  if j == idx_NH3 then
-    epsilon_j := epsilon_NH3;
-    sigma_j := sigma_NH3;
-  elseif j == idx_Ar then
-    epsilon_j := epsilon_Ar;
-    sigma_j := sigma_Ar;
-  elseif j == idx_CO2 then
-    epsilon_j := epsilon_CO2;
-    sigma_j := sigma_CO2;
-  elseif j == idx_CO then
-    epsilon_j := epsilon_CO;
-    sigma_j := sigma_CO;
-  elseif j == idx_CH4 then
-    epsilon_j := epsilon_CH4;
-    sigma_j := sigma_CH4;
-  elseif j == idx_CH3OH then
-    epsilon_j := epsilon_CH3OH;
-    sigma_j := sigma_CH3OH;
-  elseif j == idx_O2 then
-    epsilon_j := epsilon_O2;
-    sigma_j := sigma_O2;
-  elseif j == idx_SO2 then
-    epsilon_j := epsilon_SO2;
-    sigma_j := sigma_SO2;
-  elseif j == idx_N2 then
-    epsilon_j := epsilon_N2;
-    sigma_j := sigma_N2;
-  elseif j == idx_H2O then
-    epsilon_j := epsilon_H2O;
-    sigma_j := sigma_H2O;
-  elseif j == idx_H2 then
-    epsilon_j := epsilon_H2;
-    sigma_j := sigma_H2;
-  else
-    assert(false, "The function binaryDiffCoeff_ij_Chapman_Enskog is not defined for the chosen index j of gasType.", level = AssertionLevel.error);
-    epsilon_j := 0;
-    sigma_j := 0;
-  end if;
+  epsilon_j := epsilon[gasIDXVector[j]];
+  sigma_j := sigma[gasIDXVector[j]];
 
   sigma_ij := 0.5*(sigma_i + sigma_j);    // valid for nonpolar gases [Bird2007]
   epsilon_ij := (epsilon_i*epsilon_j)^(1/2);   // valid for nonpolar gases [Bird2007]
@@ -220,7 +109,6 @@ algorithm
 \\\\]
 Here \\\\(D_{i,j}\\\\) is the binary diffusion coefficient (\\\\(\\mathrm{cm^2/s}\\\\))  of species \\\\(i\\\\) and \\\\(j\\\\), \\\\(p\\\\) is the total pressure (bar), \\\\(T\\\\) is the temperature (K) 
 and \\\\(M_i\\\\), \\\\(M_j\\\\) are the molecular weights.
-
 The charateristic length \\\\(\\sigma_{i,j}\\\\) (\\\\( \\mathrm{10^{-10} m}\\\\)) is calculated with
 \\\\[
         \\sigma_{i,j}= \\frac{\\sigma_{i}+\\sigma_{j}}{2}
@@ -238,7 +126,6 @@ The solution of the function \\\\(\\Omega_{D,i,j}= f \\left(k T /\\varepsilon_{i
 \\\\]
 
 The way of calculating \\\\(\\Omega_{D,i,j}\\\\) via \\\\(\\sigma_{i,j}= \\frac{\\sigma_{i}+\\sigma_{j}}{2}\\\\) and \\\\(\\varepsilon_{i,j}= \\left(\\varepsilon_i \\varepsilon_j \\right)^{\\frac{1}{2}}\\\\) is valid for unpolar gases [Bird2007].
-
 </p><h4>References</h4>
 <table border=\"0\" cellspacing=\"0\" cellpadding=\"2\">
   <tr>

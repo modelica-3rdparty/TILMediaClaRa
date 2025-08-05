@@ -4,10 +4,11 @@ package TILMedia "TILMedia-Library with thermophysical properties of Fluids and 
 
 
 // access=Access.nonPackageDuplicate
+
 annotation (
 preferredView="info",
-   version="1.8.2 ClaRa",
-   versionDate="2024-09-26",
+   version="1.9.0 ClaRa",
+   versionDate="2025-04-23",
    uses(Modelica(version="4.0.0")),
 Documentation(info="<html>
 <p><img src=\"modelica://TILMedia/Resources/Images/infoTILMedia.png\"></p>
@@ -23,6 +24,14 @@ Documentation(info="<html>
       __Dymola_showVariables=true,
       __Dymola_showDiagnostics=true,
       __Dymola_showStatistics=true,
-      __Dymola_showFlat=true));
-
+      __Dymola_showFlat=true),
+	conversion(
+    from(version={"1.8.2 ClaRa","1.8.1 ClaRa", "1.8.0 ClaRa", "1.7.0 ClaRa", "1.6.0 ClaRa"}, to="1.8.2 ClaRa_1",
+     script="modelica://TILMedia/Resources/Scripts/Conversion/ConvertTILMedia_from_182_ClaRa.mos"),
+    from(version={"1.8.2 ClaRa_1"}, to="1.8.2 ClaRa_2",
+     script="modelica://TILMedia/Resources/Scripts/Conversion/ConvertTILMedia_from_182_ClaRa_1.mos"),
+    from(version={"1.8.2 ClaRa_2"}, to="1.8.2 ClaRa_3",
+     script="modelica://TILMedia/Resources/Scripts/Conversion/ConvertTILMedia_from_182_ClaRa_2.mos"),
+    from(version={"1.8.2 ClaRa_3"},
+     script="modelica://TILMedia/Resources/Scripts/Conversion/ConvertTILMedia_from_182_ClaRa_3.mos")));
 end TILMedia;

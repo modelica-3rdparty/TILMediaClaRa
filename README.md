@@ -18,14 +18,14 @@ The calculation of thermophysical properties with the TILMedia Modelica interfac
 
 ## Current release
 
-[TILMedia ClaRa 1.8.2](https://github.com/TLK-Thermo/TILMediaClaRa/archive/refs/tags/1.8.2.zip)
+[TILMedia ClaRa 1.9.0](https://github.com/TLK-Thermo/TILMediaClaRa/archive/refs/tags/1.9.0.zip)
 
 [https://www.claralib.com/](https://www.claralib.com/#modal-download)
 
 
 ## License
 
-Copyright © 2022 TLK-Thermo GmbH
+Copyright © 2025 TLK-Thermo GmbH
 
 [BSD-3-Clause License](LICENSE.txt)
 

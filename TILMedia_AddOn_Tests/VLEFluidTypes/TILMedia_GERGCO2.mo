@@ -1,6 +1,7 @@
 ﻿within TILMedia_AddOn_Tests.VLEFluidTypes;
 record TILMedia_GERGCO2 "TILMedia.GERGCO2"
-  extends TILMedia.VLEFluidTypes.BaseVLEFluid(
+  extends TILMedia.VLEFluid.Types.BaseVLEFluid
+                                             (
     final fixedMixingRatio=true,
     final nc_propertyCalculation=1,
     final vleFluidNames={"TILMedia.GERGCO2"},

@@ -1,9 +1,8 @@
 ﻿within TILMedia.BaseClasses;
 partial model PartialGas_ps
   "Gas vapor model with p, s and xi as independent variables"
-  replaceable parameter TILMedia.GasTypes.BaseGas gasType constrainedby
-    TILMedia.GasTypes.BaseGas "type record of the gas or gas mixture"
-    annotation (choicesAllMatching=true);
+  replaceable parameter TILMedia.Gas.Types.BaseGas gasType constrainedby TILMedia.Gas.Types.BaseGas
+    "type record of the gas or gas mixture" annotation (choicesAllMatching=true);
 
   parameter TILMedia.Internals.TILMediaExternalObject gasPointer annotation(Dialog(tab="Advanced"));
 

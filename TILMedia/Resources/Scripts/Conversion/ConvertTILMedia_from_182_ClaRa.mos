@@ -1,0 +1,15 @@
+
+// clear
+convertClear();
+
+//-----------------------------------------------
+// First part of the conversion from TILMedia ClaRa 1.8.2 to 1.9.0
+
+convertClass("TILMedia.Gas","TILMedia.Gas.Gas");
+convertClass("TILMedia.Liquid","TILMedia.Liquid.Liquid");
+convertClass("TILMedia.SLEMedium","TILMedia.SLEMedium.SLEMedium");
+convertClass("TILMedia.Solid","TILMedia.Solid.Solid");
+convertClass("TILMedia.VLEFluid","TILMedia.VLEFluid.VLEFluid");
+
+// End first part of the conversion from TILMedia ClaRa 1.8.2 to 1.9.0
+//-----------------------------------------------

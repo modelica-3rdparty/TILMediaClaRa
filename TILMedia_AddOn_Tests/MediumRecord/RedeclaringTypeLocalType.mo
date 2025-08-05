@@ -4,7 +4,7 @@ model RedeclaringTypeLocalType
 
   record MyGasType = GasTypes.FlueGasTILMedia;
 
-  TILMedia.Gas_pT gas(
+  TILMedia.Gas.Gas_pT gas(
     redeclare parameter MyGasType gasType,
     p=100000,
     T=25 + time*10) annotation (Placement(transformation(extent={{-20,60},{0,80}})));

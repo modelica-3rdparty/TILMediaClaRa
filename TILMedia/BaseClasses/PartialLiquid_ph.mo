@@ -1,8 +1,7 @@
 ﻿within TILMedia.BaseClasses;
 partial model PartialLiquid_ph
   "Incompressible liquid model with p and h as independent variables"
-  replaceable parameter TILMedia.LiquidTypes.BaseLiquid liquidType
-    constrainedby TILMedia.LiquidTypes.BaseLiquid
+  replaceable parameter TILMedia.Liquid.Types.BaseLiquid liquidType constrainedby TILMedia.Liquid.Types.BaseLiquid
     "type record of the liquid" annotation (choicesAllMatching=true);
 
   parameter TILMedia.Internals.TILMediaExternalObject liquidPointer annotation (Dialog(tab="Advanced"));
@@ -35,6 +34,7 @@ partial model PartialLiquid_ph
       s=s,
       T=T,
       cp=cp,
+      beta=beta,
       Pr=transp.Pr,
       lambda=transp.lambda,
       eta=transp.eta,

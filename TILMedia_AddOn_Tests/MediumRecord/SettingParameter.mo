@@ -2,7 +2,7 @@
 model SettingParameter
   extends TILMedia.Internals.ClassTypes.ExampleModel;
 
-  TILMedia.Gas_pT gas(
+  TILMedia.Gas.Gas_pT gas(
     gasType=GasTypes.FlueGasTILMedia(),
     p=100000,
     T=25 + time*10) annotation (Placement(transformation(extent={{-20,60},{0,80}})));

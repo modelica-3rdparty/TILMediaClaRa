@@ -5,7 +5,7 @@ package PartialLiquidFunctionPrototypes
   partial function specificEntropy_phxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -17,7 +17,7 @@ package PartialLiquidFunctionPrototypes
   partial function specificEntropy_pTxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -29,7 +29,7 @@ package PartialLiquidFunctionPrototypes
   partial function density_Txi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -40,7 +40,7 @@ package PartialLiquidFunctionPrototypes
   partial function specificEnthalpy_Txi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -51,7 +51,7 @@ package PartialLiquidFunctionPrototypes
   partial function specificIsobaricHeatCapacity_Txi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -62,7 +62,7 @@ package PartialLiquidFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_Txi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -73,7 +73,7 @@ package PartialLiquidFunctionPrototypes
   partial function prandtlNumber_Txi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -84,7 +84,7 @@ package PartialLiquidFunctionPrototypes
   partial function thermalConductivity_Txi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -95,7 +95,7 @@ package PartialLiquidFunctionPrototypes
   partial function dynamicViscosity_Txi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -106,7 +106,7 @@ package PartialLiquidFunctionPrototypes
   partial function density_hxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.SpecificEnthalpy h "Specific enthalpy";
     input SI.MassFraction[:] xi=
@@ -117,7 +117,7 @@ package PartialLiquidFunctionPrototypes
   partial function temperature_hxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.SpecificEnthalpy h "Specific enthalpy";
     input SI.MassFraction[:] xi=
@@ -128,7 +128,7 @@ package PartialLiquidFunctionPrototypes
   partial function specificIsobaricHeatCapacity_hxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.SpecificEnthalpy h "Specific enthalpy";
     input SI.MassFraction[:] xi=
@@ -139,7 +139,7 @@ package PartialLiquidFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_hxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.SpecificEnthalpy h "Specific enthalpy";
     input SI.MassFraction[:] xi=
@@ -150,7 +150,7 @@ package PartialLiquidFunctionPrototypes
   partial function prandtlNumber_hxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.SpecificEnthalpy h "Specific enthalpy";
     input SI.MassFraction[:] xi=
@@ -161,7 +161,7 @@ package PartialLiquidFunctionPrototypes
   partial function thermalConductivity_hxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.SpecificEnthalpy h "Specific enthalpy";
     input SI.MassFraction[:] xi=
@@ -172,7 +172,7 @@ package PartialLiquidFunctionPrototypes
   partial function dynamicViscosity_hxi
     extends TILMedia.BaseClasses.PartialLiquidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.LiquidTypes.BaseLiquid liquidType "Liquid type"
+    input TILMedia.Liquid.Types.BaseLiquid liquidType "Liquid type"
       annotation (choicesAllMatching=true);
     input SI.SpecificEnthalpy h "Specific enthalpy";
     input SI.MassFraction[:] xi=

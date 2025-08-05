@@ -4,50 +4,47 @@ model VLEFluidMixture
   parameter Real dp = -1e5;
   parameter Real dh = 500e3;
 
-  TILMedia.Internals.VLEFluidConfigurations.FullyMixtureCompatible.VLEFluid_ph vleFluid_nc4(
-    redeclare TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType(
+  TILMedia.VLEFluid.MixtureCompatible.VLEFluid_ph vleFluid_nc4(
+    redeclare TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType(
       fixedMixingRatio=false,
       nc_propertyCalculation=4,
-      vleFluidNames={"VDIWA2006.METHANE(REF=STP)", "VDIWA2006.CARBON DIOXIDE", "VDIWA2006.WATER", "VDIWA2006.HYDROGEN"},
+      vleFluidNames={"VDIWA2006.METHANE(REF=STP)","VDIWA2006.CARBON DIOXIDE","VDIWA2006.WATER","VDIWA2006.HYDROGEN"},
       mixingRatio_propertyCalculation={10,10,1,1}),
     deactivateDensityDerivatives=true,
     p=vleFluid_nc4.crit.p - dp,
-    h=vleFluid_nc4.crit.h + dh*(time-0.5))
-    annotation (Placement(transformation(extent={{-60,80},{-40,100}})));
+    h=vleFluid_nc4.crit.h + dh*(time - 0.5)) annotation (Placement(transformation(extent={{-60,80},{-40,100}})));
 
-  TILMedia.Internals.VLEFluidConfigurations.FullyMixtureCompatible.VLEFluid_ph vleFluid_nc4_2(
-    redeclare TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType(
+  TILMedia.VLEFluid.MixtureCompatible.VLEFluid_ph vleFluid_nc4_2(
+    redeclare TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType(
       fixedMixingRatio=false,
       nc_propertyCalculation=4,
-      vleFluidNames={"VDIWA2006.METHANE(REF=STP)", "VDIWA2006.CARBON DIOXIDE", "VDIWA2006.WATER", "VDIWA2006.HYDROGEN"},
+      vleFluidNames={"VDIWA2006.METHANE(REF=STP)","VDIWA2006.CARBON DIOXIDE","VDIWA2006.WATER","VDIWA2006.HYDROGEN"},
       mixingRatio_propertyCalculation={10,10,1,1}),
     deactivateDensityDerivatives=true,
     p=vleFluid_nc4.crit.p - dp,
-    h=vleFluid_nc4.crit.h + dh*(time-0.5),
+    h=vleFluid_nc4.crit.h + dh*(time - 0.5),
     xi=vleFluid_nc4_2.vleFluidType.xi_default + {-time*0.04,time*0.03,0})
     annotation (Placement(transformation(extent={{-30,80},{-10,100}})));
 
-  TILMedia.Internals.VLEFluidConfigurations.FullyMixtureCompatible.VLEFluid_ph vleFluid_nc4_fixedMixingRatio(
-    redeclare TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType(
+  TILMedia.VLEFluid.MixtureCompatible.VLEFluid_ph vleFluid_nc4_fixedMixingRatio(
+    redeclare TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType(
       fixedMixingRatio=true,
       nc_propertyCalculation=4,
-      vleFluidNames={"VDIWA2006.METHANE(REF=STP)", "VDIWA2006.CARBON DIOXIDE", "VDIWA2006.WATER", "VDIWA2006.HYDROGEN"},
+      vleFluidNames={"VDIWA2006.METHANE(REF=STP)","VDIWA2006.CARBON DIOXIDE","VDIWA2006.WATER","VDIWA2006.HYDROGEN"},
       mixingRatio_propertyCalculation={10,10,1,1}),
     deactivateDensityDerivatives=true,
     p=vleFluid_nc4.crit.p - dp,
-    h=vleFluid_nc4.crit.h + dh*(time-0.5))
-    annotation (Placement(transformation(extent={{0,80},{20,100}})));
+    h=vleFluid_nc4.crit.h + dh*(time - 0.5)) annotation (Placement(transformation(extent={{0,80},{20,100}})));
 
-  TILMedia.Internals.VLEFluidConfigurations.FullyMixtureCompatible.VLEFluid_ph vleFluid_nc4_fixedMixingRatio_2(
-    redeclare TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType(
+  TILMedia.VLEFluid.MixtureCompatible.VLEFluid_ph vleFluid_nc4_fixedMixingRatio_2(
+    redeclare TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType(
       fixedMixingRatio=true,
       nc_propertyCalculation=4,
-      vleFluidNames={"VDIWA2006.METHANE(REF=STP)", "VDIWA2006.CARBON DIOXIDE", "VDIWA2006.WATER", "VDIWA2006.HYDROGEN"},
+      vleFluidNames={"VDIWA2006.METHANE(REF=STP)","VDIWA2006.CARBON DIOXIDE","VDIWA2006.WATER","VDIWA2006.HYDROGEN"},
       mixingRatio_propertyCalculation={10,6,1,1}),
     deactivateDensityDerivatives=true,
     p=vleFluid_nc4.crit.p - dp,
-    h=vleFluid_nc4.crit.h + dh*(time-0.5))
-    annotation (Placement(transformation(extent={{30,80},{50,100}})));
+    h=vleFluid_nc4.crit.h + dh*(time - 0.5)) annotation (Placement(transformation(extent={{30,80},{50,100}})));
 
 initial equation
   assert(abs(vleFluid_nc4.T - vleFluid_nc4_2.T) < 1e-5, "These values should be equal");

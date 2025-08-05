@@ -5,7 +5,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificEnthalpy_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -17,7 +17,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function pressure_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -29,7 +29,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificEntropy_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -41,7 +41,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function moleFraction_dTxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -54,7 +54,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function steamMassFraction_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -66,7 +66,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificIsobaricHeatCapacity_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -78,7 +78,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificIsochoricHeatCapacity_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -90,7 +90,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -102,7 +102,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function isothermalCompressibility_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -114,7 +114,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function speedOfSound_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -126,7 +126,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTspecificEnthalpy_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -138,7 +138,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTpressure_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -150,7 +150,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTmassFraction_dTxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -163,7 +163,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function heatCapacityRatio_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -175,7 +175,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function prandtlNumber_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -187,7 +187,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function thermalConductivity_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -199,7 +199,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dynamicViscosity_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -211,7 +211,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function surfaceTension_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -223,7 +223,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidDensity_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -235,7 +235,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourDensity_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -247,7 +247,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificEnthalpy_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -259,7 +259,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificEnthalpy_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -271,7 +271,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidPressure_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -283,7 +283,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourPressure_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -295,7 +295,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificEntropy_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -307,7 +307,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificEntropy_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -319,7 +319,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidMassFraction_dTxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -332,7 +332,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourMassFraction_dTxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -345,7 +345,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificHeatCapacity_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -357,7 +357,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificHeatCapacity_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -369,7 +369,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidIsobaricThermalExpansionCoefficient_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -381,7 +381,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourIsobaricThermalExpansionCoefficient_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -393,7 +393,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidIsothermalCompressibility_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -405,7 +405,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourIsothermalCompressibility_dTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Density d "Density";
     input SI.Temperature T "Temperature";
@@ -417,7 +417,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function density_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -429,7 +429,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificEntropy_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -441,7 +441,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function temperature_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -453,7 +453,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function moleFraction_phxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -466,7 +466,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function steamMassFraction_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -478,7 +478,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificIsobaricHeatCapacity_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -490,7 +490,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificIsochoricHeatCapacity_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -502,7 +502,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -514,7 +514,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function isothermalCompressibility_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -526,7 +526,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function speedOfSound_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -538,7 +538,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTspecificEnthalpy_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -550,7 +550,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTpressure_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -562,7 +562,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTmassFraction_phxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -575,7 +575,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function heatCapacityRatio_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -587,7 +587,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function prandtlNumber_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -599,7 +599,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function thermalConductivity_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -611,7 +611,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dynamicViscosity_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -623,7 +623,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function surfaceTension_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -635,7 +635,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidDensity_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -647,7 +647,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourDensity_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -659,7 +659,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificEnthalpy_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -671,7 +671,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificEnthalpy_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -683,7 +683,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificEntropy_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -695,7 +695,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificEntropy_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -707,7 +707,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidTemperature_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -719,7 +719,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourTemperature_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -731,7 +731,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidMassFraction_phxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -744,7 +744,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourMassFraction_phxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -757,7 +757,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificHeatCapacity_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -769,7 +769,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificHeatCapacity_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -781,7 +781,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidIsobaricThermalExpansionCoefficient_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -793,7 +793,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourIsobaricThermalExpansionCoefficient_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -805,7 +805,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidIsothermalCompressibility_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -817,7 +817,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourIsothermalCompressibility_phxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEnthalpy h "Specific enthalpy";
@@ -829,7 +829,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function density_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -841,7 +841,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificEnthalpy_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -853,7 +853,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function temperature_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -865,7 +865,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function moleFraction_psxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -878,7 +878,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function steamMassFraction_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -890,7 +890,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificIsobaricHeatCapacity_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -902,7 +902,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificIsochoricHeatCapacity_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -914,7 +914,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -926,7 +926,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function isothermalCompressibility_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -938,7 +938,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function speedOfSound_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -950,7 +950,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTspecificEnthalpy_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -962,7 +962,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTpressure_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -974,7 +974,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTmassFraction_psxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -987,7 +987,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function heatCapacityRatio_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -999,7 +999,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function prandtlNumber_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1011,7 +1011,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function thermalConductivity_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1023,7 +1023,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dynamicViscosity_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1035,7 +1035,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function surfaceTension_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1047,7 +1047,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidDensity_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1059,7 +1059,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourDensity_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1071,7 +1071,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificEnthalpy_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1083,7 +1083,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificEnthalpy_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1095,7 +1095,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificEntropy_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1107,7 +1107,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificEntropy_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1119,7 +1119,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidTemperature_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1131,7 +1131,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourTemperature_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1143,7 +1143,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidMassFraction_psxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1156,7 +1156,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourMassFraction_psxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1169,7 +1169,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificHeatCapacity_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1181,7 +1181,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificHeatCapacity_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1193,7 +1193,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidIsobaricThermalExpansionCoefficient_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1205,7 +1205,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourIsobaricThermalExpansionCoefficient_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1217,7 +1217,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidIsothermalCompressibility_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1229,7 +1229,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourIsothermalCompressibility_psxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.SpecificEntropy s "Specific entropy";
@@ -1241,7 +1241,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function density_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1253,7 +1253,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificEnthalpy_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1265,7 +1265,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificEntropy_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1277,7 +1277,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function moleFraction_pTxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1290,7 +1290,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function steamMassFraction_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1302,7 +1302,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificIsobaricHeatCapacity_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1314,7 +1314,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function specificIsochoricHeatCapacity_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1326,7 +1326,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function isobaricThermalExpansionCoefficient_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1338,7 +1338,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function isothermalCompressibility_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1350,7 +1350,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function speedOfSound_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1362,7 +1362,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTspecificEnthalpy_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1374,7 +1374,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTpressure_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1386,7 +1386,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function densityDerivativeWRTmassFraction_pTxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1399,7 +1399,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function heatCapacityRatio_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1411,7 +1411,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function prandtlNumber_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1423,7 +1423,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function thermalConductivity_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1435,7 +1435,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dynamicViscosity_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1447,7 +1447,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function surfaceTension_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1459,7 +1459,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidDensity_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1471,7 +1471,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourDensity_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1483,7 +1483,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificEnthalpy_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1495,7 +1495,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificEnthalpy_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1507,7 +1507,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificEntropy_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1519,7 +1519,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificEntropy_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1531,7 +1531,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidTemperature_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1543,7 +1543,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourTemperature_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1555,7 +1555,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidMassFraction_pTxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1568,7 +1568,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourMassFraction_pTxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1581,7 +1581,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidSpecificHeatCapacity_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1593,7 +1593,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourSpecificHeatCapacity_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1605,7 +1605,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidIsobaricThermalExpansionCoefficient_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1617,7 +1617,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourIsobaricThermalExpansionCoefficient_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1629,7 +1629,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function liquidIsothermalCompressibility_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1641,7 +1641,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function vapourIsothermalCompressibility_pTxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.Temperature T "Temperature";
@@ -1653,7 +1653,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewDensity_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1664,7 +1664,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleDensity_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1675,7 +1675,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewSpecificEnthalpy_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1686,7 +1686,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleSpecificEnthalpy_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1697,7 +1697,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewPressure_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1708,7 +1708,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubblePressure_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1719,7 +1719,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewSpecificEntropy_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1730,7 +1730,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleSpecificEntropy_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1741,7 +1741,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewLiquidMassFraction_Txin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1753,7 +1753,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleVapourMassFraction_Txin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1765,7 +1765,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewSpecificIsobaricHeatCapacity_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1776,7 +1776,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleSpecificIsobaricHeatCapacity_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1787,7 +1787,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewIsobaricThermalExpansionCoefficient_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1798,7 +1798,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleIsobaricThermalExpansionCoefficient_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1809,7 +1809,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewIsothermalCompressibility_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1820,7 +1820,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleIsothermalCompressibility_Txi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.Temperature T "Temperature";
     input SI.MassFraction[:] xi=
@@ -1831,7 +1831,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewDensity_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1842,7 +1842,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleDensity_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1853,7 +1853,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewSpecificEnthalpy_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1864,7 +1864,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleSpecificEnthalpy_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1875,7 +1875,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewSpecificEntropy_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1886,7 +1886,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleSpecificEntropy_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1897,7 +1897,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewTemperature_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1908,7 +1908,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleTemperature_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1919,7 +1919,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewLiquidMassFraction_pxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1931,7 +1931,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleVapourMassFraction_pxin
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1943,7 +1943,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewSpecificIsobaricHeatCapacity_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1954,7 +1954,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleSpecificIsobaricHeatCapacity_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1965,7 +1965,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewIsobaricThermalExpansionCoefficient_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1976,7 +1976,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleIsobaricThermalExpansionCoefficient_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1987,7 +1987,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function dewIsothermalCompressibility_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -1998,7 +1998,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function bubbleIsothermalCompressibility_pxi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.AbsolutePressure p "Pressure";
     input SI.MassFraction[:] xi=
@@ -2009,7 +2009,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function averageMolarMass_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2019,7 +2019,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalDensity_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2029,7 +2029,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalSpecificEnthalpy_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2039,7 +2039,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalPressure_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2049,7 +2049,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalSpecificEntropy_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2059,7 +2059,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalTemperature_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2069,7 +2069,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalSpecificIsobaricHeatCapacity_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2079,7 +2079,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalIsobaricThermalExpansionCoefficient_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2089,7 +2089,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalIsothermalCompressibility_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2099,7 +2099,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalThermalConductivity_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2109,7 +2109,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalDynamicViscosity_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2119,7 +2119,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function criticalSurfaceTension_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2129,7 +2129,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function cricondenbarTemperature_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2139,7 +2139,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function cricondenthermTemperature_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2149,7 +2149,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function cricondenbarPressure_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2159,7 +2159,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function cricondenthermPressure_xi
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input SI.MassFraction[:] xi=
         TILMedia.Internals.massFraction_mixingRatio(vleFluidType.mixingRatio_propertyCalculation)
@@ -2169,7 +2169,7 @@ package PartialVLEFluidFunctionPrototypes
   partial function molarMass_n
     extends TILMedia.BaseClasses.PartialVLEFluidFunction;
     // Don't use these functions during simulation, Medium classes are always faster! Use only for start and initial values.
-    input TILMedia.VLEFluidTypes.BaseVLEFluid vleFluidType "VLEFluid type"
+    input TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType "VLEFluid type"
       annotation(choicesAllMatching=true);
     input Integer compNo "Component ID";
     output SI.MolarMass M_i "Molar mass of component i";

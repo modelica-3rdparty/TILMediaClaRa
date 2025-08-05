@@ -1,3 +1,4 @@
+BasicHandling
 DefaultSetting
 SettingParameter
 SettingParameterChangingSize
@@ -10,4 +11,3 @@ RedeclaringTypeChangingSize
 RedeclaringTypeLocalType
 RedeclaringTypeLocalModifiedType
 RedeclaringTypeLocalReplaceableModifiedType
-BasicHandling

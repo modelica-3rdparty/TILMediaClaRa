@@ -161,13 +161,82 @@ package PartialGasObjectFunctions
   replaceable partial function freezingPoint =
       TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.freezingPoint;
 
- replaceable partial function saturationMassFraction_pTxidg
-  extends TILMedia.BaseClasses.PartialGasObjectFunction;
-    input SI.AbsolutePressure p "Pressure";
-    input SI.Temperature T "Temperature";
-    input SI.MassFraction xi_dryGas[:] "Mass fraction of dry gas";
-    input TILMedia.Internals.TILMediaExternalObject gasPointer;
-    output SI.MassFraction xi_s "Saturation vapour mass fraction";
- end saturationMassFraction_pTxidg;
+ replaceable partial function saturationMassFraction_pTxidg =
+    TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.saturationMassFraction_pTxidg;
+  replaceable partial function der_density_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_density_phxi;
+  replaceable partial function der_specificEntropy_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificEntropy_phxi;
+  replaceable partial function der_temperature_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_temperature_phxi;
+  replaceable partial function der_specificIsobaricHeatCapacity_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificIsobaricHeatCapacity_phxi;
+  replaceable partial function der_specificIsochoricHeatCapacity_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificIsochoricHeatCapacity_phxi;
+  replaceable partial function der_isobaricThermalExpansionCoefficient_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_isobaricThermalExpansionCoefficient_phxi;
+  replaceable partial function der_isothermalCompressibility_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_isothermalCompressibility_phxi;
+  replaceable partial function der_speedOfSound_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_speedOfSound_phxi;
+  replaceable partial function der_densityDerivativeWRTspecificEnthalpy_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_densityDerivativeWRTspecificEnthalpy_phxi;
+  replaceable partial function der_densityDerivativeWRTpressure_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_densityDerivativeWRTpressure_phxi;
+  replaceable partial function der_densityDerivativeWRTmassFraction_phxin =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_densityDerivativeWRTmassFraction_phxin;
+  replaceable partial function der_relativeHumidity_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_relativeHumidity_phxi;
+  replaceable partial function der_saturationHumidityRatio_phxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_saturationHumidityRatio_phxi;
+  replaceable partial function der_specificEnthalpy_psxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificEnthalpy_psxi;
+  replaceable partial function der_temperature_psxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_temperature_psxi;
+  replaceable partial function der_density_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_density_pTxi;
+  replaceable partial function der_specificEnthalpy_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificEnthalpy_pTxi;
+  replaceable partial function der_specificEntropy_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificEntropy_pTxi;
+  replaceable partial function der_specificIsobaricHeatCapacity_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificIsobaricHeatCapacity_pTxi;
+  replaceable partial function der_specificIsochoricHeatCapacity_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificIsochoricHeatCapacity_pTxi;
+  replaceable partial function der_isobaricThermalExpansionCoefficient_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_isobaricThermalExpansionCoefficient_pTxi;
+  replaceable partial function der_isothermalCompressibility_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_isothermalCompressibility_pTxi;
+  replaceable partial function der_speedOfSound_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_speedOfSound_pTxi;
+  replaceable partial function der_partialPressure_pTxin =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_partialPressure_pTxin;
+  replaceable partial function der_gaseousMassFraction_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_gaseousMassFraction_pTxi;
+  replaceable partial function der_relativeHumidity_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_relativeHumidity_pTxi;
+  replaceable partial function der_saturationHumidityRatio_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_saturationHumidityRatio_pTxi;
+  replaceable partial function der_prandtlNumber_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_prandtlNumber_pTxi;
+  replaceable partial function der_thermalConductivity_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_thermalConductivity_pTxi;
+  replaceable partial function der_dynamicViscosity_pTxi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_dynamicViscosity_pTxi;
+  replaceable partial function der_saturationPartialPressure_T =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_saturationPartialPressure_T;
+  replaceable partial function der_specificEnthalpyOfVaporisation_T =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificEnthalpyOfVaporisation_T;
+  replaceable partial function der_specificEnthalpyOfDesublimation_T =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificEnthalpyOfDesublimation_T;
+  replaceable partial function der_specificEnthalpyOfPureGas_Tn =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificEnthalpyOfPureGas_Tn;
+  replaceable partial function der_specificIsobaricHeatCapacityOfPureGas_Tn =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_specificIsobaricHeatCapacityOfPureGas_Tn;
+  replaceable partial function der_humidityRatio_xi =
+      TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_humidityRatio_xi;
+
+ replaceable partial function der_saturationMassFraction_pTxidg =
+    TILMedia.BaseClasses.PartialGasObjectFunctionPrototypes.der_saturationMassFraction_pTxidg;
 
 end PartialGasObjectFunctions;

@@ -8,6 +8,7 @@ record PropertyRecordND "Property record"
   SI.Temperature T "Temperature";
   SI.MassFraction q "Steam mass fraction (quality)";
   SI.SpecificHeatCapacity cp "Specific isobaric heat capacity cp";
+  SI.LinearExpansionCoefficient beta "Isobaric expansion coefficient";
 
   TILMedia.Internals.CriticalDataRecord crit
     "Critical data record";

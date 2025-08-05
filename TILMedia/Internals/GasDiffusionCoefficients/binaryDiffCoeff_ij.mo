@@ -6,7 +6,8 @@ function binaryDiffCoeff_ij
   input Integer i "First component ID";
   input Integer j "Second component ID";
   input BinaryFunctionType binaryFunctionType;
-  input TILMedia.GasTypes.BaseGas gasType;
+  input TILMedia.Internals.TILMediaExternalObject gasPointer;
+  input Integer gasIDXVector[:];
 
   output Modelica.Units.SI.DiffusionCoefficient D_ij "Binary diffusion coefficient";
 
@@ -19,14 +20,16 @@ algorithm
           T,
           i,
           j,
-          gasType);
+          gasPointer,
+          gasIDXVector);
   elseif binaryFunctionType == BinaryFunctionType.fuller then
     D := binaryDiffCoeff_ij_Fuller(
           p,
           T,
           i,
           j,
-          gasType);
+          gasPointer,
+          gasIDXVector);
   else
     D := -1;
     assert(false, "The binaryFunctionType is not implemented in the function binaryDiffCoeff_ij.", level = AssertionLevel.error);

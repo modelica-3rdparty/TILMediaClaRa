@@ -3,7 +3,7 @@ function getIDXfromCAS
   "Function getIDXfromCAS(CAS, gasType, modelName) returns the Index IDX of  the substance identified w/ the given CAS number"
   input String CAS "CAS Number of the substance (as String)";
   //input TIL3_AddOn_HydrogenEnergySystems.TILMediaAddOn.Internals.CASstring CAS;
-  input TILMedia.GasTypes.BaseGas gasType;
+  input TILMedia.Gas.Types.BaseGas gasType;
   input String modelName;
   input TILMedia.Internals.GetIDXfromCAS.assertionLevel assertionLevel=TILMedia.Internals.GetIDXfromCAS.assertionLevel.warning
     "given warning level, if component not exists: warning and noMessage results in output = -1";
@@ -61,7 +61,7 @@ algorithm
 <p><code>parameter Integer idx_O2 = getIDXfromCAS(TIL3_AddOn_HydrogenEnergySystems.Internals.Substances.O2.name, gasType, modelName);</code></p>
 <p><code>parameter Integer idx_H2O = getIDXfromCAS(TIL3_AddOn_HydrogenEnergySystems.Internals.Substances.H2O.name, gasType, modelName);</code></p>
 <p><b>Error Handling</b></p>
-<p>If the gasType does not contain the required substance different ways of error handling can be chosen via the input <code><a href=\"modelica://Diffusion_170624.Internals.Enumerations.assertionLevel\">assertionLevel</a>: </code></p>
+<p>If the gasType does not contain the required substance different ways of error handling can be chosen via the input <code><a href=\"modelica://TILMedia.Internals.GetIDXfromCAS.assertionLevel\">assertionLevel</a>: </code></p>
 <table cellspacing=\"2\" cellpadding=\"0\" border=\"0\"><tr>
 <td><p><span style=\"font-family: Courier;\">assertionLevel = error</span>:</p></td>
 <td></td>

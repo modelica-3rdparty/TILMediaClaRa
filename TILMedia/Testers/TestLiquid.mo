@@ -9,17 +9,17 @@ model TestLiquid
   SI.Temperature T;
 
   // Instance of a liquid object that requires the pressure p and the temperature T as inputs.
-  TILMedia.Liquid_pT liquid1(
+  TILMedia.Liquid.Liquid_pT liquid1(
     p=p,
     T=T,
-    redeclare TILMedia.LiquidTypes.TILMedia_Water liquidType)
+    redeclare TILMedia.Liquid.Types.TILMedia_Water liquidType)
                           annotation (Placement(transformation(extent={{-20,20},{0,40}},
           rotation=0)));
   // Instance of a liquid object that requires the pressure p and the specific enthalpy h as inputs.
-  TILMedia.Liquid_ph liquid2(
+  TILMedia.Liquid.Liquid_ph liquid2(
     p=p,
     h=liquid1.h,
-    redeclare TILMedia.LiquidTypes.TILMedia_Water liquidType)
+    redeclare TILMedia.Liquid.Types.TILMedia_Water liquidType)
                           annotation (Placement(transformation(extent={{-20,-20},
             {0,0}},
           rotation=0)));

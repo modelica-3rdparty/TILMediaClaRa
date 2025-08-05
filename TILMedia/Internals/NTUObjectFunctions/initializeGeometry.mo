@@ -1,5 +1,5 @@
 ﻿within TILMedia.Internals.NTUObjectFunctions;
-function initializeGeometry
+impure function initializeGeometry
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
   //// Inputs ///////////////////////////////////////////////////////////////////////////////////
@@ -23,6 +23,6 @@ external"C" outputFlag = TILMedia_NTU_initializeGeometry(
     Include="int TILMedia_NTU_initializeGeometry(
     const int, const int, const double*,
     void*);",
-     Library="TILMedia182ClaRa");
+    Library="TILMedia190ClaRa");
 
 end initializeGeometry;

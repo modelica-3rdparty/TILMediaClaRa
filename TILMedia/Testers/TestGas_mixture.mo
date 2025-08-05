@@ -14,24 +14,24 @@ model TestGas_mixture
 
   // Instance of the gas object Gas_pT that requires the pressure p, the temperature T and the mass fractions xi[i] as inputs.
   // The gasType is FlueGas
-  TILMedia.Gas_pT
+  TILMedia.Gas.Gas_pT
              gas_pT(p=p, T=T, xi=xi,
-    redeclare GasTypes.FlueGasTILMedia gasType)
+    redeclare Gas.Types.FlueGasTILMedia gasType)
           annotation (Placement(transformation(extent={{-20,0},
             {0,20}})));
-  // Instance of the gas object Gas_ph that requires the pressure p, the specific enthalpy and the mass fractions xi[i] as inputs.
-  // The gasType is GlueGas
-  TILMedia.Gas_ph
+   // Instance of the gas object Gas_ph that requires the pressure p, the specific enthalpy and the mass fractions xi[i] as inputs.
+   // The gasType is FlueGas
+  TILMedia.Gas.Gas_ph
              gas_ph(p=p, h=gas_pT.h, xi=xi,
-    redeclare GasTypes.FlueGasTILMedia gasType)
+    redeclare Gas.Types.FlueGasTILMedia gasType)
           annotation (Placement(transformation(extent={{0,0},{
             20,20}})));
 
 //   // Custom definition of an ideal gas mixture that consists of Argon, Nitrogen, Oxygen and Helium
 //   // Note, that the condensingIndex is set to 0, i.e. there is no condensation allowed.
-//   // In contrast, in e.g. TILMedia.GasTypes.TILMedia_MoistAir the condensingIndex is set to 1,
+//   // In contrast, in e.g. TILMedia.Gas.Types.TILMedia_MoistAir the condensingIndex is set to 1,
 //   // i.e. the first component (water) of TILMedia_MoistAir can condensate
-//   record MyGasMixture = TILMedia.GasTypes.BaseGas (
+//   record MyGasMixture = TILMedia.Gas.Types.BaseGas (
 //     final fixedMixingRatio=false,
 //     final nc_propertyCalculation=4,
 //     final gasNames={"VDIWA2006.Argon","VDIWA2006.Nitrogen","VDIWA2006.Oxygen","VDIWA2006.Helium"},
@@ -40,7 +40,7 @@ model TestGas_mixture
 //
 //   // Instance of the gas object Gas_pT that requires the pressure p, the temperature T and the mass fractions xi[i] as inputs.
 //   // The gasType is MyGasMixture
-//   TILMedia.Gas_pT myGas( p=p, T=T, xi={0.02,0.6,0.3}, redeclare MyGasMixture gasType)
+//   TILMedia.Gas.Gas_pT myGas( p=p, T=T, xi={0.02,0.6,0.3}, redeclare MyGasMixture gasType)
 //           annotation (Placement(transformation(extent={{-18,-40},
 //             {2,-20}})));
 equation
