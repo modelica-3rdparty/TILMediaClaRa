@@ -448,5 +448,8 @@ equation
     fOmegay_[i] = A/(fOmegax[i]^B) + C/exp(D*fOmegax[i]) + E/exp(F*fOmegax[i]) + G/exp(H*fOmegax[i]);
   end for;
 
-  annotation (experiment(StopTime=100, __Dymola_Algorithm="Dassl"));
+  annotation (experiment(
+      StopTime=100,
+      Interval=0.2,
+      __Dymola_Algorithm="Dassl"));
 end TesterBinaryDiffCoeffLit;

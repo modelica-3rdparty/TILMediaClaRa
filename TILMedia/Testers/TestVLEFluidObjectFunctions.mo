@@ -60,5 +60,7 @@ equation
 
   // Equivalent calculations are possible for Gas and Liquid.
 
-  annotation (experiment(StopTime=2));
+  annotation (experiment(
+      StopTime=2,
+      Interval=0.004));
 end TestVLEFluidObjectFunctions;

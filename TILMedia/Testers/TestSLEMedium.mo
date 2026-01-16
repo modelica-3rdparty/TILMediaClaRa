@@ -31,5 +31,7 @@ equation
     supercooledPhaseIsUnstable = false;
   end if;
 
-  annotation (experiment(StopTime=100));
+  annotation (experiment(
+      StopTime=100,
+      Interval=0.2));
 end TestSLEMedium;

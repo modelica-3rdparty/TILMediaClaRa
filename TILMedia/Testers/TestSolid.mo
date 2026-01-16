@@ -15,5 +15,7 @@ model TestSolid
 equation
   T = 273.15 + 1000*time;
 
-  annotation (experiment(StopTime=1));
+  annotation (experiment(
+      StopTime=1,
+      Interval=0.002));
 end TestSolid;

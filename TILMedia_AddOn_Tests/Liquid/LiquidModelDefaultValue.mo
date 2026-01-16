@@ -15,7 +15,8 @@ model LiquidModelDefaultValue
     Icon(coordinateSystem(preserveAspectRatio=false)),
     Diagram(coordinateSystem(preserveAspectRatio=false)),
     experiment(
-      __Dymola_NumberOfIntervals=50,
-      __Dymola_fixedstepsize=0.001,
-      __Dymola_Algorithm="Dassl"));
+      StopTime=1,
+      Interval=0.02,
+      __Dymola_Algorithm="Dassl",
+      __Dymola_fixedstepsize=0.001));
 end LiquidModelDefaultValue;

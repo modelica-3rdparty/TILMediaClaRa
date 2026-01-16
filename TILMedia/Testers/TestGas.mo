@@ -28,5 +28,7 @@ equation
   p = 1e5;
   T = 274 + 50*time;
 
-  annotation (experiment(StopTime=1));
+  annotation (experiment(
+      StopTime=1,
+      Interval=0.002));
 end TestGas;

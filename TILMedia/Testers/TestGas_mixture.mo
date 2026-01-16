@@ -50,5 +50,7 @@ equation
   // Calculate the mass fractions xi[i] from the defaultMixingRatio of FlueGas (see definition in TILMedia.GasTypes.FlueGasTILMedia)
   xi=gas_pT.gasType.defaultMixingRatio[1:end-1]/sum(gas_pT.gasType.defaultMixingRatio);
 
-  annotation (experiment(StopTime=1));
+  annotation (experiment(
+      StopTime=1,
+      Interval=0.002));
 end TestGas_mixture;

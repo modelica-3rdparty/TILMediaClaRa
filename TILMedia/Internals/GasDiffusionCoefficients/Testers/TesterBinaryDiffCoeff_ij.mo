@@ -48,5 +48,8 @@ equation
     gas.gasPointer,
     idxVector);
 
-  annotation (experiment(StopTime=100, __Dymola_Algorithm="Dassl"));
+  annotation (experiment(
+      StopTime=100,
+      Interval=0.2,
+      __Dymola_Algorithm="Dassl"));
 end TesterBinaryDiffCoeff_ij;

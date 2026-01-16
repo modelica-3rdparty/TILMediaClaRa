@@ -32,5 +32,7 @@ equation
   moistAir2.xi_dryGas=moistAir1.xi_dryGas;
   moistAir2.phi = 90;
 
-  annotation (experiment(StopTime=1));
+  annotation (experiment(
+      StopTime=1,
+      Interval=0.002));
 end TestGas_moistAir;

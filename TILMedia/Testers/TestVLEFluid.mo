@@ -1,4 +1,4 @@
-﻿within TILMedia.Testers;
+within TILMedia.Testers;
 model TestVLEFluid
   extends TILMedia.Internals.ClassTypes.ExampleModel;
 
@@ -61,5 +61,7 @@ equation
   s=vleFluid1.s;
   d=vleFluid1.d;
 
-  annotation (experiment(StopTime=1));
+  annotation (experiment(
+      StopTime=1,
+      Interval=0.002));
 end TestVLEFluid;

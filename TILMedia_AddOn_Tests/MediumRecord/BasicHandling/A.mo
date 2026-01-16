@@ -4,5 +4,9 @@ model A
   parameter TILMedia.VLEFluid.Types.BaseVLEFluid vleFluidType=VLEFluidTypes.TILMedia_Water()
     annotation (choicesAllMatching);
 
-  annotation (Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(coordinateSystem(preserveAspectRatio=false)));
+  annotation(
+    experiment(
+      StopTime=1,
+      Interval=0.002),
+    Icon(coordinateSystem(preserveAspectRatio=false)), Diagram(coordinateSystem(preserveAspectRatio=false)));
 end A;
